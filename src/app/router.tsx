@@ -8,6 +8,7 @@ import { AdminDashboardPage } from '@/features/admin/AdminDashboardPage';
 import { CategoryManagement } from '@/features/admin/CategoryManagement';
 import { ProductManagement } from '@/features/admin/ProductManagement';
 import { ExtrasManagement } from '@/features/admin/ExtrasManagement';
+import { QRCodeGeneratorPage } from '@/features/admin/QRCodeGeneratorPage';
 import { useAuth } from '@/hooks/useAuth';
 import { LoadingScreen } from '@/components/ui/Spinner';
 
@@ -87,6 +88,10 @@ export const router = createBrowserRouter([
       {
         path: 'extras',
         element: <ExtrasManagement />,
+      },
+      {
+        path: 'qr',
+        element: <QRCodeGeneratorPage />,
       },
     ],
   },

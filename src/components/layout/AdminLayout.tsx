@@ -5,6 +5,7 @@ import {
   FolderOpen,
   Coffee,
   Puzzle,
+  QrCode,
   LogOut,
   Languages,
   ChevronLeft,
@@ -38,6 +39,7 @@ export function AdminLayout() {
     { to: '/admin/categories', icon: FolderOpen, label: t('admin.categories') },
     { to: '/admin/products', icon: Coffee, label: t('admin.products') },
     { to: '/admin/extras', icon: Puzzle, label: t('admin.extras') },
+    { to: '/admin/qr', icon: QrCode, label: isRTL ? 'رمز QR للطاولات' : 'Table QR Codes' },
   ];
 
   const isActive = (path: string, exact = false) =>
@@ -104,7 +106,7 @@ export function AdminLayout() {
         {/* Bottom actions */}
         <div className="p-3 space-y-1 border-t border-brand-cream-200">
           <Link
-            to="/"
+            to="/menu"
             className="flex items-center gap-3 px-4 py-2.5 rounded-brand text-sm font-medium text-brand-olive-400 hover:bg-brand-olive-50 transition-colors"
           >
             <ChevronLeft size={18} />
