@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="30" fill="#4A5D3A" />
+  <text x="32" y="28" text-anchor="middle" font-family="serif" font-weight="700" font-size="16" fill="#F5F0E8">3+2</text>
+  <text x="32" y="44" text-anchor="middle" font-family="sans-serif" font-weight="400" font-size="6" fill="#C5A572" letter-spacing="1.5">COFFEE</text>
+</svg>
