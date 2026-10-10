@@ -32,8 +32,8 @@ export function useCategories(visibleOnly = false) {
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
       setCategories(data ?? []);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch categories');
+    } catch (err: any) {
+      setError(err?.message || (err instanceof Error ? err.message : 'Failed to fetch categories'));
     } finally {
       setLoading(false);
     }
@@ -85,8 +85,8 @@ export function useProducts(categoryId?: string, visibleOnly = false) {
       })) as ProductWithSizes[];
 
       setProducts(productsWithSortedSizes);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch products');
+    } catch (err: any) {
+      setError(err?.message || (err instanceof Error ? err.message : 'Failed to fetch products'));
     } finally {
       setLoading(false);
     }
@@ -138,8 +138,8 @@ export function useMenuData() {
       })) as CategoryWithProducts[];
 
       setMenuData(sorted);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch menu');
+    } catch (err: any) {
+      setError(err?.message || (err instanceof Error ? err.message : 'Failed to fetch menu'));
     } finally {
       setLoading(false);
     }
@@ -175,8 +175,8 @@ export function useExtras(availableOnly = false) {
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
       setExtras(data ?? []);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch extras');
+    } catch (err: any) {
+      setError(err?.message || (err instanceof Error ? err.message : 'Failed to fetch extras'));
     } finally {
       setLoading(false);
     }

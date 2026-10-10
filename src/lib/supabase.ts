@@ -7,7 +7,9 @@ import {
 import type { Category, ProductWithSizes, Extra } from '@/types';
 
 const rawUrl = import.meta.env.VITE_SUPABASE_URL;
-const rawKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+const rawKey =
+  import.meta.env.VITE_SUPABASE_ANON_KEY ||
+  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
 export const hasValidSupabaseConfig = Boolean(
   rawUrl &&

@@ -228,3 +228,15 @@ create policy "Owner image deletion"
     on storage.objects for delete
     to authenticated
     using (bucket_id = 'menu-images');
+
+-- ==============================================================================
+-- ROLE PERMISSIONS & PRIVILEGES
+-- ==============================================================================
+grant usage on schema public to anon, authenticated;
+grant select on all tables in schema public to anon, authenticated;
+grant all on all tables in schema public to authenticated;
+grant usage, select on all sequences in schema public to authenticated;
+
+alter default privileges in schema public grant select on tables to anon, authenticated;
+alter default privileges in schema public grant all on tables to authenticated;
+alter default privileges in schema public grant usage, select on sequences to authenticated;
