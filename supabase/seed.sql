@@ -183,7 +183,7 @@ values
 -- 5. Insert Site Settings
 insert into public.site_settings (key, value_en, value_ar)
 values
-('currency', 'SAR', 'ر.س'),
+('currency', 'EGP', 'ج.م'),
 ('brand_story', '3 Sisters, 2 Brothers', '٣ أخوات، أخوان اثنان'),
 ('brand_tagline', 'One Perfect Cup', 'كوب واحد متقن')
 on conflict (key) do nothing;

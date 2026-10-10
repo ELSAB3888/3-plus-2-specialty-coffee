@@ -3,14 +3,14 @@ import { formatPrice, slugify, localized } from '@/lib/utils';
 
 describe('Utility Functions', () => {
   describe('formatPrice', () => {
-    it('formats price in English with SAR', () => {
-      expect(formatPrice(18, 'en')).toBe('18.0 SAR');
-      expect(formatPrice(24.5, 'en')).toBe('24.5 SAR');
+    it('formats price in English with EGP', () => {
+      expect(formatPrice(18, 'en')).toBe('EGP 18');
+      expect(formatPrice(24.5, 'en')).toBe('EGP 24.5');
     });
 
-    it('formats price in Arabic with ر.س', () => {
-      expect(formatPrice(18, 'ar')).toBe('18.0 ر.س');
-      expect(formatPrice(24.5, 'ar')).toBe('24.5 ر.س');
+    it('formats price in Arabic with ج.م', () => {
+      expect(formatPrice(18, 'ar')).toBe('18 ج.م');
+      expect(formatPrice(24.5, 'ar')).toBe('24.5 ج.م');
     });
   });
 

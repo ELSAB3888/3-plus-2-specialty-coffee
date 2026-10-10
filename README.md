@@ -22,7 +22,7 @@ A production-ready, mobile-first bilingual web application and digital menu desi
    - Directly scannable from café tables without redirects or app downloads.
    - Sticky horizontally scrollable category navigation bar on mobile devices.
    - Real-time client-side search matching English, Arabic, and tasting notes.
-   - Product detail accordion displaying cup sizes, prices in SAR, and tasting notes.
+   - Product detail accordion displaying cup sizes, prices in EGP, and tasting notes.
    - Dedicated **Extras** section at the bottom for milk alternatives and artisan add-ons.
 
 2. **Welcome Landing Page (`/`):**

@@ -19,13 +19,13 @@ export function localized(
   return typeof value === 'string' ? value : '';
 }
 
-/** Format price for display (SAR) */
+/** Format price for display (EGP) */
 export function formatPrice(price: number, language: Language): string {
-  const formatted = price.toFixed(1);
+  const formatted = price % 1 === 0 ? price.toFixed(0) : price.toFixed(1);
   if (language === 'ar') {
-    return `${formatted} ر.س`;
+    return `${formatted} ج.م`;
   }
-  return `${formatted} SAR`;
+  return `EGP ${formatted}`;
 }
 
 /** Generate a URL-safe slug from English text */

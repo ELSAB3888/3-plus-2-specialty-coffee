@@ -74,7 +74,7 @@ describe('MenuItem Component', () => {
     render(<MenuItem product={singlePriceProduct} isExpanded={false} onToggleExpand={onToggle} />);
 
     expect(screen.getByText('Single Espresso')).toBeInTheDocument();
-    expect(screen.getByText('16.0 SAR')).toBeInTheDocument();
+    expect(screen.getByText('EGP 16')).toBeInTheDocument();
   });
 
   it('renders multi-size product with "From" prefix and minimum price', () => {
@@ -83,7 +83,7 @@ describe('MenuItem Component', () => {
 
     expect(screen.getByText('Latte')).toBeInTheDocument();
     expect(screen.getByText('From')).toBeInTheDocument();
-    expect(screen.getByText('20.0 SAR')).toBeInTheDocument();
+    expect(screen.getByText('EGP 20')).toBeInTheDocument();
   });
 
   it('triggers onToggleExpand when header button is clicked', () => {
@@ -100,6 +100,6 @@ describe('MenuItem Component', () => {
 
     expect(screen.getByText('Regular (8 oz)')).toBeInTheDocument();
     expect(screen.getByText('Large (12 oz)')).toBeInTheDocument();
-    expect(screen.getByText('24.0 SAR')).toBeInTheDocument();
+    expect(screen.getByText('EGP 24')).toBeInTheDocument();
   });
 });
