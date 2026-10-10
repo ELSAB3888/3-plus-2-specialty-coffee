@@ -1,24 +1,19 @@
 -- ==============================================================================
 -- 3+2 SPECIALTY COFFEE — MIGRATION 002: HARDENED OWNER-ONLY SECURITY & RLS POLICIES
 --
--- Security Audit & Hardening:
--- 1. Function 'public.is_app_owner()' has 'SET search_path = ''' (empty search path)
---    with fully-qualified schema names (auth.*, public.*) to eliminate search_path hijacking.
--- 2. 'public.app_admins' has NO insert/update/delete grants to anon/authenticated.
---    Regular users cannot register or elevate themselves via any API or function.
--- 3. Removed unnecessary sequence grants (schema uses pure UUIDs).
--- 4. Dynamic cleanup of all legacy/conflicting policies across public tables & menu-images storage.
--- 5. Strict Cascading RLS: Public sees sizes ONLY if size is available, product is visible, AND category is visible.
--- 6. Storage write/delete strictly enforced via 'is_app_owner()'.
--- 7. Zero destructive operations: Preserves all existing tables, products, categories, and prices.
+-- Security Features:
+-- 1. Surgical Storage Cleanup: Targets ONLY policies mentioning 'menu-images' or known legacy names.
+-- 2. Locked-down 'app_admins': Explicitly revokes all write privileges from anon & authenticated.
+-- 3. Hardened 'is_app_owner()': SECURITY DEFINER with 'search_path = ''', fully qualified schemas.
+-- 4. Dynamic cleanup of all legacy policies on public tables to eliminate conflicting permissions.
+-- 5. Cascading RLS for product sizes & products.
+-- 6. Zero data loss: Preserves all existing tables, products, categories, extras, and prices.
 -- ==============================================================================
 
 -- 1. Ensure Schema Usage for standard roles
 grant usage on schema public to anon, authenticated;
 
 -- 2. Create Protected Admin Registry Table
--- Notice: NO INSERT/UPDATE/DELETE grants are given on this table to 'anon' or 'authenticated'.
--- Rows can ONLY be added by the project administrator in Supabase Dashboard / SQL Editor.
 create table if not exists public.app_admins (
     user_id uuid primary key references auth.users(id) on delete cascade,
     email text not null unique,
@@ -27,9 +22,13 @@ create table if not exists public.app_admins (
 
 alter table public.app_admins enable row level security;
 
--- 3. Secure Verification Function with Empty search_path
--- search_path is set to '' (empty string) and all objects are fully qualified
--- to prevent any search path poisoning or function spoofing attacks.
+-- Explicitly lock down app_admins (guarantees NO API-based writes by any role)
+revoke all on public.app_admins from public, anon, authenticated;
+grant select on public.app_admins to authenticated;
+
+-- 3. Secure Verification Function
+-- 'search_path = ''' (empty string) prevents search_path poisoning.
+-- Function body is pure SELECT (no writes, no dynamic SQL, no escalation vectors).
 create or replace function public.is_app_owner()
 returns boolean
 language sql
@@ -40,7 +39,7 @@ as $$
   select (
     auth.role() = 'authenticated'
     and (
-      -- Check tamper-proof app_metadata role set exclusively by Supabase Auth / Admin
+      -- Check tamper-proof app_metadata role set by Supabase Auth service
       (auth.jwt() -> 'app_metadata' ->> 'role') in ('owner', 'admin')
       -- OR check registration in the protected app_admins table
       or exists (
@@ -54,22 +53,19 @@ $$;
 revoke all on function public.is_app_owner() from public;
 grant execute on function public.is_app_owner() to anon, authenticated;
 
--- 4. Least Privilege Table Grants (Only strictly required privileges)
+-- 4. Least Privilege Table Grants
 grant select on public.categories, public.products, public.product_sizes, public.extras, public.product_extras, public.site_settings to anon;
 grant select, insert, update, delete on public.categories, public.products, public.product_sizes, public.extras, public.product_extras, public.site_settings to authenticated;
 
--- 'app_admins' is strictly read-only for authenticated users (filtered by RLS)
-grant select on public.app_admins to authenticated;
-
 -- ==============================================================================
--- 5. CLEAN UP ALL LEGACY POLICIES (Prevent any hidden / conflicting permissions)
+-- 5. CLEAN UP ALL LEGACY / CONFLICTING POLICIES
 -- ==============================================================================
 
+-- Clean up public table policies
 do $$
 declare
   r record;
 begin
-  -- Drop all existing policies on public menu tables
   for r in (
     select policyname, tablename, schemaname
     from pg_policies
@@ -78,18 +74,23 @@ begin
   ) loop
     execute format('drop policy if exists %I on %I.%I', r.policyname, r.schemaname, r.tablename);
   end loop;
+end $$;
 
-  -- Drop any existing storage policies targeting menu-images or general objects
+-- Clean up storage policies strictly targeting menu-images or legacy names
+do $$
+declare
+  r record;
+begin
   for r in (
     select policyname
     from pg_policies
     where schemaname = 'storage'
       and tablename = 'objects'
       and (
-        policyname ilike '%menu-images%'
-        or policyname ilike '%public%'
-        or policyname ilike '%owner%'
-        or policyname ilike '%authenticated%'
+        policyname in ('Public image viewing', 'Owner image upload', 'Owner image update', 'Owner image deletion',
+                       'storage_public_view_policy', 'storage_owner_upload_policy', 'storage_owner_update_policy', 'storage_owner_delete_policy')
+        or qual ilike '%menu-images%'
+        or with_check ilike '%menu-images%'
       )
   ) loop
     execute format('drop policy if exists %I on storage.objects', r.policyname);
@@ -213,7 +214,7 @@ create policy "extras_delete_policy"
     using (public.is_app_owner());
 
 -- --- SITE SETTINGS ---
--- Public can only view non-sensitive public branding configurations
+-- Public can view public branding metadata
 create policy "site_settings_select_policy"
     on public.site_settings for select
     to anon, authenticated
