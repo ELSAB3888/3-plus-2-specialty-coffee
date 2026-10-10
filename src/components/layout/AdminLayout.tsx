@@ -16,6 +16,8 @@ import { useAuth } from '@/hooks/useAuth';
 import { useLanguage } from '@/hooks/useLanguage';
 import { cn } from '@/lib/utils';
 import { LoadingScreen } from '@/components/ui/Spinner';
+import { hasValidSupabaseConfig } from '@/lib/supabase';
+import { AlertTriangle } from 'lucide-react';
 
 export function AdminLayout() {
   const { t } = useTranslation();
@@ -143,6 +145,18 @@ export function AdminLayout() {
             {t('admin.title')}
           </span>
         </header>
+
+        {/* Mock Mode Warning Banner */}
+        {!hasValidSupabaseConfig && (
+          <div className="bg-amber-500/15 border-b border-amber-500/30 px-4 py-2.5 text-xs text-amber-900 flex items-center gap-2">
+            <AlertTriangle size={16} className="text-amber-700 shrink-0" />
+            <span>
+              {isRTL
+                ? '⚠️ تنبيه: التطبيق يعمل في وضع المحاكاة التجريبي (Demo Mode). التعديلات تُحفظ محلياً في متصفحك فقط. لربط الموقع بقاعدة بيانات حقيقية، يرجى إعداد بيانات Supabase في ملف .env.'
+                : '⚠️ Notice: App is currently running in Demo Mock Mode. Admin changes only persist locally in your browser. Connect Supabase in .env to enable real database persistence.'}
+            </span>
+          </div>
+        )}
 
         <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-auto">
           <Outlet />

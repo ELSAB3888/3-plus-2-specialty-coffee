@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Plus, Edit2, Trash2, Eye, EyeOff, Sparkles, X, Coffee, Layers } from 'lucide-react';
 import { useProducts, useCategories } from '@/hooks/useData';
 import { useLanguage } from '@/hooks/useLanguage';
-import { supabase } from '@/lib/supabase';
+import { supabase, hasValidSupabaseConfig } from '@/lib/supabase';
 import { localized, formatPrice, generateStorageFilename } from '@/lib/utils';
 import { toast } from '@/components/ui/Toast';
 import { ConfirmDialog } from '@/components/ui/ConfirmDialog';
@@ -192,7 +192,8 @@ export function ProductManagement() {
             },
           ];
 
-      const productPayload = {
+      // Product fields only (no nested product_sizes for real Supabase)
+      const productFields = {
         category_id: categoryId,
         name_en: nameEn.trim(),
         name_ar: nameAr.trim(),
@@ -202,21 +203,67 @@ export function ProductManagement() {
         display_order: Number(displayOrder),
         is_visible: isVisible,
         is_featured: isFeatured,
-        product_sizes: finalSizes,
       };
 
-      if (editingProduct) {
-        const { error } = await supabase
-          .from('products')
-          .update(productPayload)
-          .eq('id', editingProduct.id);
-        if (error) throw error;
+      if (hasValidSupabaseConfig) {
+        // ── Real Supabase: save product then sync sizes separately ──
+        let productId: string;
+
+        if (editingProduct) {
+          const { error } = await supabase
+            .from('products')
+            .update(productFields)
+            .eq('id', editingProduct.id);
+          if (error) throw error;
+          productId = editingProduct.id;
+        } else {
+          const { data, error } = await supabase
+            .from('products')
+            .insert(productFields)
+            .select('id')
+            .single();
+          if (error) throw error;
+          productId = data.id as string;
+        }
+
+        // Sync sizes: delete existing then insert new
+        const { error: delError } = await supabase
+          .from('product_sizes')
+          .delete()
+          .eq('product_id', productId);
+        if (delError) throw delError;
+
+        const sizesToInsert = finalSizes.map((s) => ({
+          product_id: productId,
+          label_en: s.label_en,
+          label_ar: s.label_ar,
+          price: s.price,
+          display_order: s.display_order,
+          is_available: s.is_available,
+        }));
+
+        const { error: sizeError } = await supabase
+          .from('product_sizes')
+          .insert(sizesToInsert);
+        if (sizeError) throw sizeError;
+
         toast('success', t('admin.saveSuccess'));
       } else {
-        const { error } = await supabase
-          .from('products')
-          .insert(productPayload);
-        if (error) throw error;
+        // ── Mock mode: include sizes in the product payload as before ──
+        const mockPayload = { ...productFields, product_sizes: finalSizes };
+
+        if (editingProduct) {
+          const { error } = await supabase
+            .from('products')
+            .update(mockPayload)
+            .eq('id', editingProduct.id);
+          if (error) throw error;
+        } else {
+          const { error } = await supabase
+            .from('products')
+            .insert(mockPayload);
+          if (error) throw error;
+        }
         toast('success', t('admin.saveSuccess'));
       }
 
