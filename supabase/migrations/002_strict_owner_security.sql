@@ -1,11 +1,13 @@
 -- ==============================================================================
 -- 3+2 SPECIALTY COFFEE — MIGRATION 002: HARDENED OWNER-ONLY SECURITY & RLS POLICIES
--- 
--- Scope:
--- 1. Cleans up all legacy/conflicting policies across public tables & menu-images storage.
--- 2. Restricts table permissions (Least Privilege).
--- 3. Creates protected 'app_admins' table (NO write permissions for public/authenticated).
--- 4. Creates secure 'is_app_owner()' function (search_path pinned, no privilege escalation).
+--
+-- Security Audit & Hardening:
+-- 1. Function 'public.is_app_owner()' has 'SET search_path = ''' (empty search path)
+--    with fully-qualified schema names (auth.*, public.*) to eliminate search_path hijacking.
+-- 2. 'public.app_admins' has NO insert/update/delete grants to anon/authenticated.
+--    Regular users cannot register or elevate themselves via any API or function.
+-- 3. Removed unnecessary sequence grants (schema uses pure UUIDs).
+-- 4. Dynamic cleanup of all legacy/conflicting policies across public tables & menu-images storage.
 -- 5. Strict Cascading RLS: Public sees sizes ONLY if size is available, product is visible, AND category is visible.
 -- 6. Storage write/delete strictly enforced via 'is_app_owner()'.
 -- 7. Zero destructive operations: Preserves all existing tables, products, categories, and prices.
@@ -25,18 +27,20 @@ create table if not exists public.app_admins (
 
 alter table public.app_admins enable row level security;
 
--- 3. Secure Verification Function (Search Path Pinned to prevent search_path hijacking)
+-- 3. Secure Verification Function with Empty search_path
+-- search_path is set to '' (empty string) and all objects are fully qualified
+-- to prevent any search path poisoning or function spoofing attacks.
 create or replace function public.is_app_owner()
 returns boolean
 language sql
 security definer
-set search_path = public, auth
+set search_path = ''
 stable
 as $$
   select (
     auth.role() = 'authenticated'
     and (
-      -- Check tamper-proof app_metadata role set by Supabase Auth service
+      -- Check tamper-proof app_metadata role set exclusively by Supabase Auth / Admin
       (auth.jwt() -> 'app_metadata' ->> 'role') in ('owner', 'admin')
       -- OR check registration in the protected app_admins table
       or exists (
@@ -46,22 +50,16 @@ as $$
   );
 $$;
 
--- Secure function execution privileges
+-- Restrict function execution privileges
 revoke all on function public.is_app_owner() from public;
 grant execute on function public.is_app_owner() to anon, authenticated;
 
--- 4. Least Privilege Table Grants
--- Anon: SELECT only on public menu data
+-- 4. Least Privilege Table Grants (Only strictly required privileges)
 grant select on public.categories, public.products, public.product_sizes, public.extras, public.product_extras, public.site_settings to anon;
-
--- Authenticated: SELECT, INSERT, UPDATE, DELETE on menu data (strictly filtered by RLS)
 grant select, insert, update, delete on public.categories, public.products, public.product_sizes, public.extras, public.product_extras, public.site_settings to authenticated;
 
--- App Admins table: SELECT only for authenticated (writes blocked for regular users)
+-- 'app_admins' is strictly read-only for authenticated users (filtered by RLS)
 grant select on public.app_admins to authenticated;
-
--- Sequences for serial fields
-grant usage, select on all sequences in schema public to authenticated;
 
 -- ==============================================================================
 -- 5. CLEAN UP ALL LEGACY POLICIES (Prevent any hidden / conflicting permissions)
@@ -71,6 +69,7 @@ do $$
 declare
   r record;
 begin
+  -- Drop all existing policies on public menu tables
   for r in (
     select policyname, tablename, schemaname
     from pg_policies
@@ -79,15 +78,23 @@ begin
   ) loop
     execute format('drop policy if exists %I on %I.%I', r.policyname, r.schemaname, r.tablename);
   end loop;
-end $$;
 
--- Clean up storage policies for menu-images bucket
-drop policy if exists "Public image viewing" on storage.objects;
-drop policy if exists "Owner image upload" on storage.objects;
-drop policy if exists "Owner image update" on storage.objects;
-drop policy if exists "Owner image deletion" on storage.objects;
-drop policy if exists "Allow authenticated uploads" on storage.objects;
-drop policy if exists "Give users access to own folder 1oj01fe_0" on storage.objects;
+  -- Drop any existing storage policies targeting menu-images or general objects
+  for r in (
+    select policyname
+    from pg_policies
+    where schemaname = 'storage'
+      and tablename = 'objects'
+      and (
+        policyname ilike '%menu-images%'
+        or policyname ilike '%public%'
+        or policyname ilike '%owner%'
+        or policyname ilike '%authenticated%'
+      )
+  ) loop
+    execute format('drop policy if exists %I on storage.objects', r.policyname);
+  end loop;
+end $$;
 
 -- ==============================================================================
 -- 6. RECREATE HARDENED ROW LEVEL SECURITY (RLS) POLICIES
@@ -206,6 +213,7 @@ create policy "extras_delete_policy"
     using (public.is_app_owner());
 
 -- --- SITE SETTINGS ---
+-- Public can only view non-sensitive public branding configurations
 create policy "site_settings_select_policy"
     on public.site_settings for select
     to anon, authenticated
@@ -217,7 +225,7 @@ create policy "site_settings_modify_policy"
     using (public.is_app_owner())
     with check (public.is_app_owner());
 
--- --- APP ADMINS TABLE ---
+-- --- APP ADMINS TABLE RLS ---
 create policy "app_admins_select_policy"
     on public.app_admins for select
     to authenticated
