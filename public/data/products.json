@@ -1,0 +1,3287 @@
+[
+  {
+    "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "Americano",
+    "name_ar": "أمريكانو",
+    "description_en": "A smooth, rich black coffee with a balanced flavor and a clean finish.",
+    "description_ar": "قهوة أمريكانو سوداء بطعم غني ومتوازن، وقوام خفيف ونهاية ناعمة.",
+    "image": "/images/products/storage-1791642758149-25vtmo.png",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791642758149-25vtmo.png",
+    "display_order": 1,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "afc81d31-c564-4a85-ad89-8d4770b80736",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 80,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T14:32:47.154663+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T11:43:20.662587+00:00",
+    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+  },
+  {
+    "id": "20202020-2020-2020-2020-202020202020",
+    "category_id": "44444444-4444-4444-4444-444444444444",
+    "name_en": "V60 / Iced V60",
+    "name_ar": "في 60 / آيس في 60",
+    "description_en": "A carefully brewed specialty coffee with a clean taste, delicate aroma, and balanced flavor. Available hot or iced.",
+    "description_ar": "قهوة مختصة محضّرة بعناية، تتميز بمذاق نقي ورائحة غنية ونكهة متوازنة، متاحة ساخنة أو مثلجة.",
+    "image": "/images/products/storage-1791646876292-plosej.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791646876292-plosej.jpeg",
+    "display_order": 1,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "fa30a487-b157-4411-ab8c-02722225ebcf",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 135,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:41:43.182375+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T11:43:20.662587+00:00",
+    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+  },
+  {
+    "id": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+    "category_id": "33333333-3333-3333-3333-333333333333",
+    "name_en": "Iced Coconut Matcha",
+    "name_ar": "آيس ماتشا بجوز الهند",
+    "description_en": "A refreshing iced matcha blended with  coconut Serm, combining earthy green tea notes with a smooth tropical finish.",
+    "description_ar": "ماتشا مثلجة ممزوجة بسيرم جوز الهند ، تجمع بين نكهة الشاي الأخضر المميزة ولمسة استوائية ناعمة ومنعشة.",
+    "image": "/images/products/storage-1791646194884-w5j7s6.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791646194884-w5j7s6.jpeg",
+    "display_order": 1,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "60c529a1-9c15-47e4-a097-1aa545e88bbb",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 140,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:30:08.963981+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T11:43:20.662587+00:00",
+    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+  },
+  {
+    "id": "10101010-1010-1010-1010-101010101010",
+    "category_id": "33333333-3333-3333-3333-333333333333",
+    "name_en": "Iced Spanish Matcha",
+    "name_ar": "آيس سبانيش ماتشا",
+    "description_en": "A creamy iced matcha blended with chilled milk and a touch of sweetness, balancing earthy green tea notes with a smooth, velvety finish.",
+    "description_ar": "ماتشا مثلجة ممزوجة بالحليب البارد ولمسة حلاوة متوازنة، تجمع بين نكهة الشاي الأخضر المميزة والقوام الكريمي الناعم.",
+    "image": "/images/products/storage-1791646296097-oimxsy.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791646296097-oimxsy.jpeg",
+    "display_order": 2,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "6497cfe6-d5c4-42e2-bc77-aaff093b96a8",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:31:52.10175+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T11:43:20.662587+00:00",
+    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+  },
+  {
+    "id": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "Cappuccino / Latte",
+    "name_ar": "كابتشينو / لاتيه",
+    "description_en": "Rich espresso blended with silky steamed milk and a smooth, creamy finish.",
+    "description_ar": "إسبريسو غني ممزوج بحليب مبخر ناعم ورغوة كريمية، لمذاق متوازن وقوام حريري.",
+    "image": "/images/products/storage-1791642971206-3f81zc.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791642971206-3f81zc.jpeg",
+    "display_order": 2,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "eddcff12-efab-4e2a-bf58-af5142fbd074",
+        "label_en": "Medium",
+        "label_ar": "Medium",
+        "price": 90,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T14:37:16.090979+00:00"
+      },
+      {
+        "id": "78fb83c4-4124-4b2f-b30d-1d2fdf1882d0",
+        "label_en": "Large",
+        "label_ar": "Large",
+        "price": 110,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T14:37:16.090979+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T11:43:20.662587+00:00",
+    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+  },
+  {
+    "id": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "Nescafé Black",
+    "name_ar": "نسكافيه بلاك",
+    "description_en": "Pure, rich and bold Nescafé Black with a deep coffee flavor and a smooth finish. No milk, no sugar — just pure coffee.",
+    "description_ar": "نسكافيه بلاك غني وقوي بنكهة القهوة المميزة ولمسة ناعمة في النهاية، بدون حليب أو سكر — قهوة صافية لعشاق الطعم الأصلي.",
+    "image": "/images/products/storage-1791643576858-xdf7g5.png",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791643576858-xdf7g5.png",
+    "display_order": 3,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "aa9a96b9-dd60-4925-b31d-bdbce7de47c7",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 60,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T14:49:33.857009+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T11:43:20.662587+00:00",
+    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+  },
+  {
+    "id": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "Nescafé with Milk",
+    "name_ar": "نسكافيه بالحليب",
+    "description_en": "Rich instant coffee blended with smooth milk for a creamy, comforting cup with a balanced coffee flavor.",
+    "description_ar": "نسكافيه غني ممزوج بالحليب الناعم، بطعم كريمي ومذاق قهوة متوازن يناسب أي وقت من اليوم.",
+    "image": "/images/products/storage-1791643891827-e3qco8.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791643891827-e3qco8.jpeg",
+    "display_order": 4,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "3c6b0002-480d-4b73-913c-9fc2ab4efbc3",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 75,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T14:53:25.074697+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T11:43:20.662587+00:00",
+    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+  },
+  {
+    "id": "21767b6c-ea15-4cad-86c7-9cbad95c8ec3",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "Turkish Coffee",
+    "name_ar": "قهوة تركي",
+    "description_en": "Traditional Turkish coffee with a rich aroma, bold flavor, and a smooth layer of natural foam.",
+    "description_ar": "قهوة تركي تقليدية برائحة غنية وطعم قهوة قوي، مع طبقة وش ناعمة تكمّل تجربة القهوة الأصيلة.",
+    "image": "/images/products/storage-1791644098754-xb83ey.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791644098754-xb83ey.jpeg",
+    "display_order": 9,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "038a4c6c-1572-411f-af0a-0061152005e4",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 50,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T14:56:00.420876+00:00"
+      },
+      {
+        "id": "becfc7da-76c9-45ea-9dc4-20ab4fbe662b",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 60,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T14:56:00.420876+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T14:55:59.73534+00:00",
+    "updated_at": "2026-10-10T14:55:59.73534+00:00"
+  },
+  {
+    "id": "c948136e-c707-4bcd-8164-3813b48468ce",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "Hazelnut Coffee",
+    "name_ar": "قهوة بالبندق",
+    "description_en": "Rich hot coffee with a warm hazelnut flavor and a smooth, comforting finish.",
+    "description_ar": "قهوة ساخنة غنية بنكهة البندق المميزة، بطعم متوازن وقوام ناعم ولمسة دافئة في النهاية.",
+    "image": "/images/products/storage-1791644263641-07hge8.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791644263641-07hge8.jpeg",
+    "display_order": 10,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "046215f6-df88-4bbf-bbdd-db3ebc06f422",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 85,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T14:57:58.573903+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T14:57:58.181575+00:00",
+    "updated_at": "2026-10-10T14:57:58.181575+00:00"
+  },
+  {
+    "id": "f962e553-f76d-4ee0-a459-a601ef9e6518",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "French Coffee",
+    "name_ar": "قهوة فرنساوي",
+    "description_en": "Classic French-style coffee with a rich aroma, smooth creamy texture, and a comforting coffee flavor.",
+    "description_ar": "قهوة فرنساوي برائحة غنية وطعم قهوة مميز، بقوام ناعم وكريمي يمنحك كوبًا دافئًا وممتعًا.",
+    "image": "/images/products/storage-1791644355071-ozi82h.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791644355071-ozi82h.jpeg",
+    "display_order": 11,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "706fd7d6-e367-4351-8d85-9446567ce4e9",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 75,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T14:59:22.863725+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T14:59:22.474586+00:00",
+    "updated_at": "2026-10-10T14:59:22.474586+00:00"
+  },
+  {
+    "id": "d3027626-7fa1-476b-badf-3c46af5c2f3d",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "Espresso",
+    "name_ar": "إسبريسو",
+    "description_en": "A concentrated shot of rich espresso with a bold aroma, intense coffee flavor, and a smooth golden crema.",
+    "description_ar": "جرعة إسبريسو مركزة برائحة غنية وطعم قهوة قوي ومميز، تعلوها طبقة كريما ذهبية ناعمة.",
+    "image": "/images/products/storage-1791644420230-0o8rji.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791644420230-0o8rji.jpeg",
+    "display_order": 12,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "2b263e0b-8429-4fd9-b2cf-e065afe1baf0",
+        "label_en": "S",
+        "label_ar": "س",
+        "price": 65,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:03:47.390158+00:00"
+      },
+      {
+        "id": "9667c5a5-4569-4aef-834a-f19345a51a33",
+        "label_en": "D",
+        "label_ar": "د",
+        "price": 75,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T15:03:47.390158+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:00:23.244117+00:00",
+    "updated_at": "2026-10-10T15:00:23.244117+00:00"
+  },
+  {
+    "id": "712752f8-0fce-48f6-b005-c5b6513abb55",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "Cortado",
+    "name_ar": "كورتادو",
+    "description_en": "A balanced blend of rich espresso and silky steamed milk, creating a smooth, velvety coffee with a bold flavor.",
+    "description_ar": "مزيج متوازن من الإسبريسو الغني والحليب المبخر الناعم، بقوام حريري وطعم قهوة واضح ومميز.",
+    "image": "/images/products/storage-1791644498130-5ly23u.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791644498130-5ly23u.jpeg",
+    "display_order": 13,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "25f9feb3-ac98-4886-8bb7-8c9c3b940513",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 85,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:01:43.051325+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:01:42.606729+00:00",
+    "updated_at": "2026-10-10T15:01:42.606729+00:00"
+  },
+  {
+    "id": "e22fae60-c9ed-408f-865a-6d35611c7056",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "Flat White",
+    "name_ar": "فلات وايت",
+    "description_en": "A smooth specialty coffee made with rich espresso and finely textured steamed milk, delivering a balanced flavor and velvety finish.",
+    "description_ar": "قهوة مختصة تجمع بين الإسبريسو الغني والحليب المبخر بقوام ناعم ومخملي، لتمنحك مذاقًا متوازنًا ونهاية حريرية.",
+    "image": "/images/products/storage-1791644692863-oc2m94.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791644692863-oc2m94.jpeg",
+    "display_order": 14,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "66287a86-9824-456e-adbf-0f8b64b686f0",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 105,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:04:56.896743+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:04:56.48588+00:00",
+    "updated_at": "2026-10-10T15:04:56.48588+00:00"
+  },
+  {
+    "id": "3b0491b1-069b-437e-8b71-104f6ad59d47",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "Spanish Latte",
+    "name_ar": "سبانيش لاتيه",
+    "description_en": "A creamy espresso-based latte blended with smooth milk and a touch of sweetness for a rich, velvety finish.",
+    "description_ar": "لاتيه غني بالإسبريسو والحليب الناعم مع لمسة حلاوة متوازنة، بقوام كريمي ومذاق سلس ومميز.",
+    "image": "/images/products/storage-1791644937255-ylx78g.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791644937255-ylx78g.jpeg",
+    "display_order": 15,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "17a65ae0-40af-4928-9e99-1502aa266f32",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 100,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:09:25.818111+00:00"
+      },
+      {
+        "id": "923c46e5-f08a-42b6-9775-e2366bdbbce5",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 130,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T15:09:25.818111+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:09:00.549235+00:00",
+    "updated_at": "2026-10-10T15:09:00.549235+00:00"
+  },
+  {
+    "id": "42491919-e5f0-4da7-9315-88fb42d87cd8",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "Mocha",
+    "name_ar": "موكا",
+    "description_en": "A delicious blend of rich espresso, smooth milk, and chocolate, topped with a creamy finish for a perfectly balanced mocha.",
+    "description_ar": "مزيج لذيذ من الإسبريسو الغني والحليب الناعم والشوكولاتة، بقوام كريمي ومذاق متوازن يجمع بين القهوة والكاكاو.",
+    "image": "/images/products/storage-1791645123503-xo4s2s.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791645123503-xo4s2s.jpeg",
+    "display_order": 16,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "d25d7bda-48aa-4408-bfc9-3fe2452c9f7e",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 100,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:12:08.209264+00:00"
+      },
+      {
+        "id": "d4c943a3-906c-4d64-a9fc-01cb0138bf92",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 130,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T15:12:08.209264+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:12:07.755392+00:00",
+    "updated_at": "2026-10-10T15:12:07.755392+00:00"
+  },
+  {
+    "id": "fa9188da-9542-4529-b763-8691469fd505",
+    "category_id": "11111111-1111-1111-1111-111111111111",
+    "name_en": "Macchiato",
+    "name_ar": "ماكياتو",
+    "description_en": "A bold espresso topped with a small amount of silky milk foam, offering a rich coffee taste with a smooth, creamy touch.",
+    "description_ar": "إسبريسو غني وقوي تعلوه كمية صغيرة من رغوة الحليب الناعمة، لتمنحك طعم القهوة الأصيل مع لمسة كريمية خفيفة.",
+    "image": "/images/products/storage-1791645195017-o2rrr8.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791645195017-o2rrr8.jpeg",
+    "display_order": 17,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "b6ecd6a6-5115-408f-baeb-c9e98772632c",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 80,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:13:17.794021+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:13:17.415448+00:00",
+    "updated_at": "2026-10-10T15:13:17.415448+00:00"
+  },
+  {
+    "id": "5e7f209d-18fe-4cde-9f3b-005228be2253",
+    "category_id": "22222222-2222-2222-2222-222222222222",
+    "name_en": "Iced Latte / Cappuccino",
+    "name_ar": "آيس لاتيه / كابتشينو مثلج",
+    "description_en": "A refreshing iced espresso drink blended with chilled milk and ice, offering a smooth, creamy texture and balanced coffee flavor.",
+    "description_ar": "مشروب قهوة مثلج ومنعش، يجمع بين الإسبريسو والحليب البارد ومكعبات الثلج، بقوام كريمي وطعم قهوة متوازن.",
+    "image": "/images/products/storage-1791645368833-trz1z1.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791645368833-trz1z1.jpeg",
+    "display_order": 18,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "3fb4c64d-4970-497a-a187-5ff769d41798",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 95,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:16:14.517491+00:00"
+      },
+      {
+        "id": "cbe60a93-8622-46d6-965b-7114377ba0c4",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 120,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T15:16:14.517491+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:16:14.078802+00:00",
+    "updated_at": "2026-10-10T15:16:14.078802+00:00"
+  },
+  {
+    "id": "4d65e81c-281d-42be-8540-43c50684f3e2",
+    "category_id": "22222222-2222-2222-2222-222222222222",
+    "name_en": "Iced Spanish Latte",
+    "name_ar": "آيس سبانيش لاتيه",
+    "description_en": "A refreshing iced Spanish latte made with rich espresso, chilled milk, and a touch of sweetness for a creamy, smooth finish.",
+    "description_ar": "آيس سبانيش لاتيه منعش يجمع بين الإسبريسو الغني والحليب البارد ولمسة حلاوة متوازنة، بقوام كريمي ومذاق ناعم.",
+    "image": "/images/products/storage-1791645559336-geruvg.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791645559336-geruvg.jpeg",
+    "display_order": 18,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "c8fa1224-7c89-461e-a95a-f1543e7fe2e8",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:19:24.473294+00:00"
+      },
+      {
+        "id": "ac44cf4d-b1f4-4fdd-aeeb-9288ab5503f2",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 140,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T15:19:24.473294+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:19:24.017677+00:00",
+    "updated_at": "2026-10-10T15:19:24.017677+00:00"
+  },
+  {
+    "id": "992fdc8b-d37a-4a2a-bbad-6e5f677ba27b",
+    "category_id": "22222222-2222-2222-2222-222222222222",
+    "name_en": "Iced Mocha Latte",
+    "name_ar": "آيس موكا لاتيه",
+    "description_en": "A chilled blend of rich espresso, cold milk, and chocolate, served over ice for a creamy and refreshing mocha experience.",
+    "description_ar": "مزيج مثلج من الإسبريسو الغني والحليب البارد والشوكولاتة، يُقدّم مع الثلج ليمنحك مذاق موكا كريمي ومنعش.",
+    "image": "/images/products/storage-1791645666847-b2swnp.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791645666847-b2swnp.jpeg",
+    "display_order": 19,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "57c1a053-3a75-455d-9683-25dc60223f5c",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 130,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:21:10.007469+00:00"
+      },
+      {
+        "id": "a246666d-9d56-480a-b0fb-64b43ea1b3c1",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 145,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T15:21:10.007469+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:21:09.647714+00:00",
+    "updated_at": "2026-10-10T15:21:09.647714+00:00"
+  },
+  {
+    "id": "37f40be9-e860-47a4-a900-1eb55e22c600",
+    "category_id": "22222222-2222-2222-2222-222222222222",
+    "name_en": "Iced Caramel Latte",
+    "name_ar": "آيس كراميل لاتيه",
+    "description_en": "A refreshing iced latte made with rich espresso, chilled milk, and sweet caramel, served over ice for a smooth, creamy finish.",
+    "description_ar": "آيس لاتيه منعش يجمع بين الإسبريسو الغني والحليب البارد ونكهة الكراميل الحلوة، ويُقدّم مع الثلج بقوام كريمي ومذاق ناعم.",
+    "image": "/images/products/storage-1791645763803-hwqi0j.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791645763803-hwqi0j.jpeg",
+    "display_order": 20,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "f00d215c-9385-43c4-8ed2-21da6b5caa02",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:22:52.848722+00:00"
+      },
+      {
+        "id": "63c999b0-d303-4fc8-8c15-e7863f7b3f96",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 140,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T15:22:52.848722+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:22:52.510237+00:00",
+    "updated_at": "2026-10-10T15:22:52.510237+00:00"
+  },
+  {
+    "id": "13cf683b-321b-4064-8865-fdf109dc9f0b",
+    "category_id": "22222222-2222-2222-2222-222222222222",
+    "name_en": "Iced Vanilla Latte",
+    "name_ar": "آيس فانيلا لاتيه",
+    "description_en": "A refreshing iced latte made with rich espresso, chilled milk, and smooth vanilla flavor, served over ice for a creamy, balanced finish.",
+    "description_ar": "آيس لاتيه منعش يجمع بين الإسبريسو الغني والحليب البارد ونكهة الفانيليا الناعمة، ويُقدّم مع الثلج بقوام كريمي ومذاق متوازن.",
+    "image": "/images/products/storage-1791645826489-m3wcgd.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791645826489-m3wcgd.jpeg",
+    "display_order": 21,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "b74bc8ee-fc34-42ea-9e0e-24d74a775fed",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:24:44.220886+00:00"
+      },
+      {
+        "id": "76f2ddaa-ba59-47bf-8b21-afd02a599037",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 140,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T15:24:44.220886+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:24:18.38906+00:00",
+    "updated_at": "2026-10-10T15:24:18.38906+00:00"
+  },
+  {
+    "id": "7391f1d1-60cf-4154-9c60-514d5e5113bb",
+    "category_id": "22222222-2222-2222-2222-222222222222",
+    "name_en": "Iced Americano",
+    "name_ar": "آيس أمريكانو",
+    "description_en": "A refreshing iced Americano made with rich espresso, cold water, and ice, delivering a bold coffee flavor with a clean, crisp finish.",
+    "description_ar": "آيس أمريكانو منعش يجمع بين الإسبريسو الغني والماء البارد ومكعبات الثلج، بطعم قهوة واضح ونهاية خفيفة ومنعشة.",
+    "image": "/images/products/storage-1791645943262-wiw5kd.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791645943262-wiw5kd.jpeg",
+    "display_order": 22,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "a5ce75ff-5f33-422a-82c2-ebd7cc2bbb2f",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 90,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:26:18.045489+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:26:17.671742+00:00",
+    "updated_at": "2026-10-10T15:26:17.671742+00:00"
+  },
+  {
+    "id": "146c0f0d-208c-431c-9c2e-b302ab4126df",
+    "category_id": "33333333-3333-3333-3333-333333333333",
+    "name_en": "Iced Mango Matcha",
+    "name_ar": "آيس مانجو ماتشا",
+    "description_en": "A refreshing iced matcha layered with sweet mango, combining fruity tropical flavor with the distinctive taste of green tea.",
+    "description_ar": "ماتشا مثلجة بطبقات المانجو الحلوة والشاي الأخضر المميز، تجمع بين الانتعاش ونكهة الفاكهة الاستوائية.",
+    "image": "/images/products/storage-1791646384790-umr68n.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791646384790-umr68n.jpeg",
+    "display_order": 23,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "ecd0193e-6691-40d8-9b9a-893f68364a7e",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:33:22.378644+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:33:21.688178+00:00",
+    "updated_at": "2026-10-10T15:33:21.688178+00:00"
+  },
+  {
+    "id": "fa0796b5-c856-4416-8741-8672f6aaa50e",
+    "category_id": "33333333-3333-3333-3333-333333333333",
+    "name_en": "Iced Vanilla Matcha",
+    "name_ar": "آيس فانيلا ماتشا",
+    "description_en": "A refreshing iced matcha blended with smooth vanilla flavor and chilled milk, creating a creamy drink with a delicate sweetness.",
+    "description_ar": "ماتشا مثلجة ممزوجة بالحليب البارد ونكهة الفانيليا الناعمة، بمذاق كريمي وحلاوة خفيفة ومتوازنة.",
+    "image": "/images/products/storage-1791646480467-b0f6qk.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791646480467-b0f6qk.jpeg",
+    "display_order": 24,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "1895ab64-ac6f-4037-b0c8-a0a17c604f1c",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:34:47.221763+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:34:46.900824+00:00",
+    "updated_at": "2026-10-10T15:34:46.900824+00:00"
+  },
+  {
+    "id": "560bdf52-9784-4417-9f3d-03b9103a22b6",
+    "category_id": "33333333-3333-3333-3333-333333333333",
+    "name_en": "Iced Strawberry Matcha",
+    "name_ar": "آيس فراولة ماتشا",
+    "description_en": "A refreshing iced matcha layered with sweet strawberry flavor and creamy milk, bringing together fruity freshness and the distinctive taste of green tea.",
+    "description_ar": "ماتشا مثلجة بطبقات الفراولة الحلوة والحليب الكريمي، تجمع بين انتعاش الفاكهة ونكهة الشاي الأخضر المميزة.",
+    "image": "/images/products/storage-1791646541343-a4v27k.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791646541343-a4v27k.jpeg",
+    "display_order": 25,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "cf6247bb-5c32-40ac-bd3d-820a48e8c3e4",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:35:47.502983+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:35:47.06254+00:00",
+    "updated_at": "2026-10-10T15:35:47.06254+00:00"
+  },
+  {
+    "id": "10033e4a-e026-4bd6-9de0-59455196f8e8",
+    "category_id": "33333333-3333-3333-3333-333333333333",
+    "name_en": "Iced Matcha Latte",
+    "name_ar": "آيس ماتشا لاتيه",
+    "description_en": "A smooth and refreshing iced matcha latte made with finely whisked green tea and chilled milk, offering a creamy texture and a balanced earthy flavor.",
+    "description_ar": "آيس ماتشا لاتيه منعش مصنوع من الشاي الأخضر الماتشا والحليب البارد، بقوام كريمي وطعم متوازن يجمع بين النكهة العشبية المميزة والانتعاش.",
+    "image": "/images/products/storage-1791646674073-lc3jnt.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791646674073-lc3jnt.jpeg",
+    "display_order": 26,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "4a8f4129-4a7a-48da-a016-cb4c5f200ec1",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:38:00.553326+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:37:59.752462+00:00",
+    "updated_at": "2026-10-10T15:37:59.752462+00:00"
+  },
+  {
+    "id": "f1f6c3ff-ee75-4ecf-990f-0a06bd68b9bb",
+    "category_id": "8931c5eb-3764-4c0f-b916-3909e523458d",
+    "name_en": "Hot Chocolate",
+    "name_ar": "هوت شوكليت",
+    "description_en": "A rich and comforting hot chocolate made with smooth chocolate and steamed milk, delivering a creamy texture and a deliciously chocolatey finish.",
+    "description_ar": "مشروب شوكولاتة ساخن غني وكريمي، محضّر بالشوكولاتة والحليب الساخن، بطعم شوكولاتة مميز وقوام ناعم يمنحك الدفء في كل رشفة.",
+    "image": "/images/products/storage-1791646962313-xfxk0t.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791646962313-xfxk0t.jpeg",
+    "display_order": 27,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "c945c3aa-912a-4c79-af55-95dd6b2d9071",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 85,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:43:15.730927+00:00"
+      },
+      {
+        "id": "c5245636-6b95-4787-85cc-4baa068d2ab1",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 100,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T15:43:15.730927+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:43:15.188828+00:00",
+    "updated_at": "2026-10-10T15:43:15.188828+00:00"
+  },
+  {
+    "id": "87bcb6b2-940b-47e4-ac36-45db744d4f74",
+    "category_id": "8931c5eb-3764-4c0f-b916-3909e523458d",
+    "name_en": "Hot Apple Cider",
+    "name_ar": "هوت أبل سايدر",
+    "description_en": "A warm and comforting apple cider with a sweet fruity aroma and a smooth, gently spiced finish.",
+    "description_ar": "مشروب تفاح ساخن ودافئ، يتميز برائحة فاكهية حلوة ومذاق ناعم مع لمسات خفيفة من التوابل.",
+    "image": "/images/products/storage-1791647071443-h47u8a.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791647071443-h47u8a.jpeg",
+    "display_order": 28,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "cfdb27d8-2c43-49dc-a57b-b4f6dbee8098",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 75,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:44:45.868938+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:44:45.449367+00:00",
+    "updated_at": "2026-10-10T15:44:45.449367+00:00"
+  },
+  {
+    "id": "ea287fe9-3265-43f4-b8e3-f216cc8fe48a",
+    "category_id": "8931c5eb-3764-4c0f-b916-3909e523458d",
+    "name_en": "Hot Orange Cider",
+    "name_ar": "هوت أورانج سايدر",
+    "description_en": "A warm citrus drink with a bright orange aroma and a refreshing sweet-tangy flavor, perfect for a cozy moment.",
+    "description_ar": "مشروب حمضيات ساخن برائحة البرتقال المنعشة ومذاق متوازن يجمع بين الحلاوة والحموضة الخفيفة، مثالي لأوقات الدفء والاسترخاء.",
+    "image": "/images/products/storage-1791647149039-jfdi3k.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791647149039-jfdi3k.jpeg",
+    "display_order": 29,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "a5653a0b-6ab3-4692-aa59-05867376de9d",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 75,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:46:15.640167+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:46:15.181858+00:00",
+    "updated_at": "2026-10-10T15:46:15.181858+00:00"
+  },
+  {
+    "id": "16095eeb-cf98-4293-a79d-bedf6fec57fc",
+    "category_id": "8931c5eb-3764-4c0f-b916-3909e523458d",
+    "name_en": "Herbs",
+    "name_ar": "أعشاب",
+    "description_en": "A soothing hot herbal infusion with a fresh aroma and a light, comforting taste, perfect for a relaxing break.",
+    "description_ar": "مشروب أعشاب ساخن ومريح، يتميز برائحة عطرية منعشة ومذاق خفيف يساعدك على الاستمتاع بلحظات من الهدوء والاسترخاء.",
+    "image": "/images/products/storage-1791647235701-hf08xb.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791647235701-hf08xb.jpeg",
+    "display_order": 30,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "39d6606a-a07e-468a-9703-626581d75828",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 50,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:47:25.879179+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:47:25.153539+00:00",
+    "updated_at": "2026-10-10T15:47:25.153539+00:00"
+  },
+  {
+    "id": "0536b7a9-a682-4501-8d07-1e32bcf3654a",
+    "category_id": "8931c5eb-3764-4c0f-b916-3909e523458d",
+    "name_en": "Sahlab",
+    "name_ar": "سحلب",
+    "description_en": "A traditional warm milk drink with a rich, velvety texture and delicate sweetness, finished with a touch of cinnamon and crushed nuts.",
+    "description_ar": "مشروب سحلب ساخن بقوام كريمي غني وحلاوة خفيفة، يُقدّم بلمسة من القرفة والمكسرات المجروشة.",
+    "image": "/images/products/storage-1791647326275-xgsdov.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791647326275-xgsdov.jpeg",
+    "display_order": 31,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "b0879f34-9606-4183-a7d7-042f23c22a8c",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 100,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:48:57.161319+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:48:56.73246+00:00",
+    "updated_at": "2026-10-10T15:48:56.73246+00:00"
+  },
+  {
+    "id": "3be1598a-1910-4bbb-97e7-91c10cce2b8b",
+    "category_id": "be046773-c910-474c-a7ba-cfb6203a88b1",
+    "name_en": "Classic Milkshake",
+    "name_ar": "ميلك شيك كلاسيك",
+    "description_en": "A thick and creamy classic milkshake, available in vanilla, strawberry, chocolate, or mango for a smooth and refreshing treat.",
+    "description_ar": "ميلك شيك كلاسيك بقوام كثيف وكريمي، متوفر بنكهات الفانيليا والفراولة والشوكولاتة والمانجو، لمذاق غني ومنعش.",
+    "image": "/images/products/storage-1791647460819-iywtwd.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791647460819-iywtwd.jpeg",
+    "display_order": 32,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "b7ad1ed3-448a-4c28-8530-94bc3a319b39",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:51:15.203376+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:51:14.772356+00:00",
+    "updated_at": "2026-10-10T15:51:14.772356+00:00"
+  },
+  {
+    "id": "3b53b45e-ddb6-4e9d-99c5-e6f3ea97bf81",
+    "category_id": "be046773-c910-474c-a7ba-cfb6203a88b1",
+    "name_en": "Flavors Milkshake",
+    "name_ar": "ميلك شيك بالنكهات الخاصة",
+    "description_en": "A rich and creamy milkshake made for indulgence, available in your choice of Nutella, Lotus, Oreo, or KitKat flavor.",
+    "description_ar": "ميلك شيك غني وكريمي لعشاق النكهات المميزة، متوفر بنكهات نوتيلا أو لوتس أو أوريو أو كيت كات.",
+    "image": "/images/products/storage-1791647545969-gdsgla.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791647545969-gdsgla.jpeg",
+    "display_order": 33,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "e78f9d86-2538-4dbc-b6e6-f20f177aba1b",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:52:39.949811+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:52:39.523858+00:00",
+    "updated_at": "2026-10-10T15:52:39.523858+00:00"
+  },
+  {
+    "id": "55b01a71-76e0-4066-b4a2-0fe70761d1a2",
+    "category_id": "2dde8f03-fa24-4194-bd18-04288f5f6268",
+    "name_en": "Tea",
+    "name_ar": "شاي",
+    "description_en": "A freshly brewed cup of classic tea with a rich aroma and a smooth, comforting taste.",
+    "description_ar": "كوب شاي كلاسيكي مُحضّر طازجًا، برائحة غنية ومذاق ناعم يمنحك لحظة من الراحة والاستمتاع.",
+    "image": "/images/products/storage-1791647616795-sy1pfj.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791647616795-sy1pfj.jpeg",
+    "display_order": 34,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "c98f7b40-98b6-49ec-9f15-3d720bb4406d",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 35,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:53:46.345273+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:53:45.917873+00:00",
+    "updated_at": "2026-10-10T15:53:45.917873+00:00"
+  },
+  {
+    "id": "f7924885-c21d-4ac6-9193-01688069b4d1",
+    "category_id": "2dde8f03-fa24-4194-bd18-04288f5f6268",
+    "name_en": "Tea with Milk",
+    "name_ar": "شاي بالحليب",
+    "description_en": "A comforting cup of freshly brewed tea blended with milk for a smooth, creamy texture and a mellow, balanced flavor.",
+    "description_ar": "كوب شاي مُحضّر طازجًا وممزوج بالحليب، بقوام ناعم وكريمي ومذاق متوازن ولطيف.",
+    "image": "/images/products/storage-1791647676301-l1kyaq.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791647676301-l1kyaq.jpeg",
+    "display_order": 35,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "795a34ad-5f32-4f96-8403-72153e49312f",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 50,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:54:40.239316+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:54:39.753766+00:00",
+    "updated_at": "2026-10-10T15:54:39.753766+00:00"
+  },
+  {
+    "id": "af27aca0-6a6c-48c8-b265-576986fe50a7",
+    "category_id": "2dde8f03-fa24-4194-bd18-04288f5f6268",
+    "name_en": "Green Tea",
+    "name_ar": "شاي أخضر",
+    "description_en": "A light and refreshing cup of green tea with a delicate herbal aroma and a clean, smooth finish.",
+    "description_ar": "كوب شاي أخضر خفيف ومنعش، برائحة عشبية رقيقة ومذاق نقي وناعم.",
+    "image": "/images/products/storage-1791647752031-huy0us.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791647752031-huy0us.jpeg",
+    "display_order": 36,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "49a4713f-86b3-4a5b-9407-36a705e50a1f",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 40,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:55:55.803689+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:55:55.415978+00:00",
+    "updated_at": "2026-10-10T15:55:55.415978+00:00"
+  },
+  {
+    "id": "c18dfe4d-d723-4d13-a700-9f61392bcf0c",
+    "category_id": "2dde8f03-fa24-4194-bd18-04288f5f6268",
+    "name_en": "Flavored Tea",
+    "name_ar": "شاي بالنكهات",
+    "description_en": "A freshly brewed aromatic tea with a delightful flavored twist, offering a fragrant aroma and a smooth, refreshing finish.",
+    "description_ar": "شاي مُحضّر طازجًا بلمسة من النكهات المميزة، يتميز برائحة عطرية جميلة ومذاق ناعم ومنعش.",
+    "image": "/images/products/storage-1791647828262-bbj8hz.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791647828262-bbj8hz.jpeg",
+    "display_order": 37,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "9d42cee3-d63b-4e8d-80e6-ad90599d732a",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 60,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T15:57:25.607485+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:57:25.165913+00:00",
+    "updated_at": "2026-10-10T15:57:25.165913+00:00"
+  },
+  {
+    "id": "69fd4a63-3f86-4c5a-94f5-5a5ddce5e353",
+    "category_id": "2dde8f03-fa24-4194-bd18-04288f5f6268",
+    "name_en": "Iced Tea",
+    "name_ar": "آيس تي",
+    "description_en": "A refreshing chilled tea served over ice, with a smooth tea flavor and a crisp, cooling finish.",
+    "description_ar": "شاي مثلج منعش يُقدّم مع مكعبات الثلج، بمذاق شاي ناعم ونهاية باردة ومنعشة.اطعم",
+    "image": "/images/products/storage-1791647980620-3mgxwu.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791647980620-3mgxwu.jpeg",
+    "display_order": 38,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "9bc7a339-c079-4a94-ba21-5e2dbc2b12a8",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 85,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:00:14.179219+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T15:59:51.415653+00:00",
+    "updated_at": "2026-10-10T15:59:51.415653+00:00"
+  },
+  {
+    "id": "630e96e4-bfec-4c2e-90b2-3f29b552ea25",
+    "category_id": "13929520-01ab-4030-89b5-7db926e80519",
+    "name_en": "Classic Frappé",
+    "name_ar": "فرابيه كلاسيك",
+    "description_en": "A smooth and refreshing blended frappé with a creamy texture and a light, frothy finish, perfect for a cool café treat.",
+    "description_ar": "فرابيه مثلج ومنعش بقوام كريمي وطبقة رغوية خفيفة، اختيار مثالي لمشروب بارد ولذيذ.",
+    "image": "/images/products/storage-1791648066180-qcb1te.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791648066180-qcb1te.jpeg",
+    "display_order": 39,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "d0dbd807-6290-403b-b966-34d799cfcf89",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:01:37.050007+00:00"
+      },
+      {
+        "id": "6c550d73-5653-4d33-a7c7-8af876fc3eef",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 150,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T16:01:37.050007+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:01:36.610048+00:00",
+    "updated_at": "2026-10-10T16:01:36.610048+00:00"
+  },
+  {
+    "id": "3f0faf2d-9977-4a8f-bae1-4ba6349d6a3f",
+    "category_id": "13929520-01ab-4030-89b5-7db926e80519",
+    "name_en": "Frappé Flavor",
+    "name_ar": "فرابيه بالنكهات",
+    "description_en": "A creamy blended frappé available in your choice of vanilla, caramel, Oreo, Lotus, or Nutella flavor for a rich and indulgent treat.",
+    "description_ar": "فرابيه مثلج بقوام كريمي، متوفر بنكهات الفانيليا أو الكراميل أو أوريو أو لوتس أو نوتيلا، لتجربة غنية ومميزة.",
+    "image": "/images/products/storage-1791648150140-moi9xw.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791648150140-moi9xw.jpeg",
+    "display_order": 40,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "b1fe4b7b-9b80-49e7-a84d-bd6be280d03c",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 140,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:02:56.366001+00:00"
+      },
+      {
+        "id": "5e091ddb-7be3-4e5e-a566-de3a29f678ba",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 160,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T16:02:56.366001+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:02:55.837052+00:00",
+    "updated_at": "2026-10-10T16:02:55.837052+00:00"
+  },
+  {
+    "id": "0148b1e4-534c-4467-8b5c-63c5e447b961",
+    "category_id": "13929520-01ab-4030-89b5-7db926e80519",
+    "name_en": "Frappé Coffee",
+    "name_ar": "فرابيه بالقهوة",
+    "description_en": "A refreshing blended coffee frappé with a rich coffee aroma, smooth creamy texture, and a cool, energizing finish.",
+    "description_ar": "فرابيه بالقهوة مثلج ومنعش، برائحة قهوة غنية وقوام كريمي ناعم ومذاق يمنحك الانتعاش.",
+    "image": "/images/products/storage-1791648231365-58ex97.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791648231365-58ex97.jpeg",
+    "display_order": 41,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "fea22424-6c42-4e50-a84e-e8fb62a619b7",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 130,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:04:22.907092+00:00"
+      },
+      {
+        "id": "9e8567ff-a861-4897-b87a-02ca3298ecba",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 150,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T16:04:22.907092+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:04:22.41938+00:00",
+    "updated_at": "2026-10-10T16:04:22.41938+00:00"
+  },
+  {
+    "id": "61852d28-3de6-42dd-8279-45326fb9c66a",
+    "category_id": "4eb384fb-ada7-4859-97ef-8ac1df045dff",
+    "name_en": "Mango",
+    "name_ar": "مانجو",
+    "description_en": "A rich and refreshing mango drink with a naturally sweet tropical flavor and a smooth, velvety texture.",
+    "description_ar": "عصير مانجو غني ومنعش، يتميز بحلاوة طبيعية استوائية وقوام ناعم وكريمي.",
+    "image": "/images/products/storage-1791648363445-nui0k8.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791648363445-nui0k8.jpeg",
+    "display_order": 42,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "5207b297-33e3-49f5-85d6-cb7b13404fa8",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 95,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:06:20.92118+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:06:20.464936+00:00",
+    "updated_at": "2026-10-10T16:06:20.464936+00:00"
+  },
+  {
+    "id": "aebe9bf8-719a-43eb-8b05-5fc6f606d5d4",
+    "category_id": "4eb384fb-ada7-4859-97ef-8ac1df045dff",
+    "name_en": "Strawberry",
+    "name_ar": "فراولة",
+    "description_en": "A refreshing strawberry drink bursting with fruity sweetness, made with a smooth texture and a fresh berry flavor.",
+    "description_ar": "عصير فراولة منعش بطعم الفاكهة الحلو وقوام ناعم، مع نكهة الفراولة الغنية والمميزة.",
+    "image": "/images/products/storage-1791648438971-quhp9j.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791648438971-quhp9j.jpeg",
+    "display_order": 43,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "b5c1953e-5cea-4fd3-a008-63b2fb1a76d0",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 95,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:07:29.92322+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:07:29.529039+00:00",
+    "updated_at": "2026-10-10T16:07:29.529039+00:00"
+  },
+  {
+    "id": "dde25965-74f5-4928-bfab-3e3045e4c997",
+    "category_id": "4eb384fb-ada7-4859-97ef-8ac1df045dff",
+    "name_en": "Guava",
+    "name_ar": "جوافة",
+    "description_en": "A smooth and refreshing guava drink with a naturally sweet tropical aroma and a rich, fruity taste.",
+    "description_ar": "عصير جوافة ناعم ومنعش، يتميز برائحة استوائية حلوة ومذاق فاكهي غني.",
+    "image": "/images/products/storage-1791648504723-8jah47.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791648504723-8jah47.jpeg",
+    "display_order": 44,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "482d9c22-0ccf-46e8-a22c-a0242e03540b",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 95,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:08:35.024177+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:08:34.671012+00:00",
+    "updated_at": "2026-10-10T16:08:34.671012+00:00"
+  },
+  {
+    "id": "c7a30aff-959c-4e8f-b877-3039864fe808",
+    "category_id": "4eb384fb-ada7-4859-97ef-8ac1df045dff",
+    "name_en": "Banana Milk",
+    "name_ar": "موز بالحليب",
+    "description_en": "A creamy banana and milk drink with a naturally sweet flavor and a smooth, satisfying texture.",
+    "description_ar": "مشروب الموز بالحليب بقوام كريمي ناعم وحلاوة طبيعية، يجمع بين طعم الموز الغني والحليب.",
+    "image": "/images/products/storage-1791648579128-xur31q.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791648579128-xur31q.jpeg",
+    "display_order": 45,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "a8b1ac5c-fa8d-42c5-a044-3cda5510ccfc",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 100,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:09:56.02445+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:09:55.641612+00:00",
+    "updated_at": "2026-10-10T16:09:55.641612+00:00"
+  },
+  {
+    "id": "e3d67530-c652-46a8-acbc-1721a02d9194",
+    "category_id": "4eb384fb-ada7-4859-97ef-8ac1df045dff",
+    "name_en": "Lemon",
+    "name_ar": "ليمون",
+    "description_en": "A refreshing lemon drink with a bright citrus aroma and a crisp, tangy flavor, served chilled for a revitalizing sip.",
+    "description_ar": "مشروب ليمون منعش برائحة حمضيات مميزة ومذاق حامضي لطيف، يُقدّم باردًا لمزيد من الانتعاش.",
+    "image": "/images/products/storage-1791648654750-vkuuxo.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791648654750-vkuuxo.jpeg",
+    "display_order": 46,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "293b6ebb-3df8-44b1-9d3b-fbb22b3a5cbe",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 90,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:11:06.426778+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:11:06.076211+00:00",
+    "updated_at": "2026-10-10T16:11:06.076211+00:00"
+  },
+  {
+    "id": "556eb6be-9a8b-421b-af51-372e5acb8bca",
+    "category_id": "4eb384fb-ada7-4859-97ef-8ac1df045dff",
+    "name_en": "Lemon Mint",
+    "name_ar": "ليمون بالنعناع",
+    "description_en": "A refreshing blend of fresh lemon and mint with a bright citrus taste and a cool, invigorating finish, served chilled.",
+    "description_ar": "مزيج منعش من الليمون الطازج والنعناع، بطعم حمضيات مميز وانتعاش بارد، يُقدّم مثلجًا.",
+    "image": "/images/products/storage-1791648697208-vdm5vl.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791648697208-vdm5vl.jpeg",
+    "display_order": 47,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "ac22d737-2b90-46cc-98dc-d2be30cfdf8f",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 90,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:12:06.387717+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:12:06.071239+00:00",
+    "updated_at": "2026-10-10T16:12:06.071239+00:00"
+  },
+  {
+    "id": "0acdfb00-a503-4f7a-a8ae-399aecbbab93",
+    "category_id": "4eb384fb-ada7-4859-97ef-8ac1df045dff",
+    "name_en": "Orange",
+    "name_ar": "برتقال",
+    "description_en": "Fresh orange juice with a bright citrus aroma and naturally sweet, refreshing flavor, served chilled.",
+    "description_ar": "عصير برتقال طازج برائحة حمضيات منعشة وحلاوة طبيعية، يُقدّم باردًا للاستمتاع بمذاقه المنعش.",
+    "image": "/images/products/storage-1791648772423-ymafo6.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791648772423-ymafo6.jpeg",
+    "display_order": 48,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "2f626131-20d1-4065-9bd0-68ad36a0a689",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 90,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:13:10.165907+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:13:09.777796+00:00",
+    "updated_at": "2026-10-10T16:13:09.777796+00:00"
+  },
+  {
+    "id": "12073c26-83e5-4672-a12e-e524cca13711",
+    "category_id": "4eb384fb-ada7-4859-97ef-8ac1df045dff",
+    "name_en": "Kiwi",
+    "name_ar": "كيوي",
+    "description_en": "A refreshing kiwi drink with a vibrant green color, a naturally tangy-sweet flavor, and a smooth fruity texture, served chilled.",
+    "description_ar": "مشروب كيوي منعش بلونه الأخضر المميز ومذاقه الفاكهي الذي يجمع بين الحلاوة والحموضة الخفيفة، بقوام ناعم ويُقدّم باردًا.",
+    "image": null,
+    "image_url_original": null,
+    "display_order": 49,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "9fddd0c7-0151-49dc-9aff-46a5dfd64f1c",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:15:37.502819+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:15:37.109298+00:00",
+    "updated_at": "2026-10-10T16:15:37.109298+00:00"
+  },
+  {
+    "id": "98a03580-4e39-4c01-99dd-6a2c93393078",
+    "category_id": "4eb384fb-ada7-4859-97ef-8ac1df045dff",
+    "name_en": "Avocado",
+    "name_ar": "أفوكادو",
+    "description_en": "A rich and creamy avocado drink with a smooth texture and a delicate, naturally mild flavor, served chilled for a refreshing treat.",
+    "description_ar": "مشروب أفوكادو غني بقوام كريمي ناعم ومذاق طبيعي خفيف، يُقدّم باردًا لتجربة منعشة ومميزة.",
+    "image": "/images/products/storage-1791648988440-hn0nue.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791648988440-hn0nue.jpeg",
+    "display_order": 50,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "a9583383-df71-4287-b3a9-a5b107fba11d",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 160,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:16:36.445553+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:16:36.092555+00:00",
+    "updated_at": "2026-10-10T16:16:36.092555+00:00"
+  },
+  {
+    "id": "8c5c7825-abbd-401c-96e5-768ccd55f9f8",
+    "category_id": "4eb384fb-ada7-4859-97ef-8ac1df045dff",
+    "name_en": "Avocado Mango",
+    "name_ar": "أفوكادو مانجو",
+    "description_en": "A delicious blend of creamy avocado and sweet tropical mango, combining a smooth texture with a rich, fruity flavor, served chilled.",
+    "description_ar": "مزيج لذيذ من الأفوكادو الكريمي والمانجو الاستوائية الحلوة، بقوام ناعم ومذاق فاكهي غني، يُقدّم باردًا لمزيد من الانتعاش.",
+    "image": "/images/products/storage-1791649046542-vuws9k.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649046542-vuws9k.jpeg",
+    "display_order": 51,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "052299c3-e37e-4743-a212-e764afea5c47",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 175,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:17:38.61832+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:17:38.269267+00:00",
+    "updated_at": "2026-10-10T16:17:38.269267+00:00"
+  },
+  {
+    "id": "2b3a8ad4-fabe-450f-b428-89abd95d8646",
+    "category_id": "4eb384fb-ada7-4859-97ef-8ac1df045dff",
+    "name_en": "3+2 Cocktail",
+    "name_ar": "كوكتيل 3+2",
+    "description_en": "A refreshing fruit cocktail combining delicious fruity flavors in one colorful drink, served chilled for a sweet and revitalizing experience.",
+    "description_ar": "كوكتيل فواكه منعش يجمع بين نكهات فاكهية لذيذة في مشروب غني بالألوان، يُقدّم باردًا لتجربة حلوة ومليئة بالانتعاش.",
+    "image": null,
+    "image_url_original": null,
+    "display_order": 52,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "0e2f37c3-5c84-4c6d-bab4-ecca778e2458",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:18:53.036095+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:18:52.716572+00:00",
+    "updated_at": "2026-10-10T16:18:52.716572+00:00"
+  },
+  {
+    "id": "c0172bfa-e112-4dc0-9feb-96090405521d",
+    "category_id": "5ac8d862-69d8-493b-a23d-c31ea9cbcedd",
+    "name_en": "Mango Smoothie",
+    "name_ar": "سموذي مانجو",
+    "description_en": "A thick and refreshing mango smoothie with a naturally sweet tropical flavor and a smooth, creamy texture, served chilled.",
+    "description_ar": "سموذي مانجو كثيف ومنعش، يتميز بحلاوة المانجو الاستوائية الطبيعية وقوام ناعم وكريمي، ويُقدّم باردًا لمزيد من الانتعاش.",
+    "image": "/images/products/storage-1791649231203-j8grol.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649231203-j8grol.jpeg",
+    "display_order": 53,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "ef4e6d57-5f97-4ee7-80d0-1a010d779705",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:20:50.020166+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:20:49.508945+00:00",
+    "updated_at": "2026-10-10T16:20:49.508945+00:00"
+  },
+  {
+    "id": "06f2a9ef-58fe-4482-bd3c-5bdcf11f471d",
+    "category_id": "5ac8d862-69d8-493b-a23d-c31ea9cbcedd",
+    "name_en": "Strawberry Smoothie",
+    "name_ar": "سموذي فراولة",
+    "description_en": "A refreshing strawberry smoothie with a naturally sweet berry flavor and a smooth, creamy texture, blended to create a delicious chilled treat.",
+    "description_ar": "سموذي فراولة منعش يجمع بين حلاوة الفراولة الطبيعية والقوام الكريمي الناعم، ممزوج بعناية ليمنحك مشروبًا باردًا ولذيذًا.",
+    "image": "/images/products/storage-1791649293123-mfmnn5.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649293123-mfmnn5.jpeg",
+    "display_order": 54,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "0d2042de-b687-4a6e-b7ae-0749543eb992",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:21:40.205465+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:21:39.769691+00:00",
+    "updated_at": "2026-10-10T16:21:39.769691+00:00"
+  },
+  {
+    "id": "675c7b79-1909-4938-969a-f5406c09400b",
+    "category_id": "5ac8d862-69d8-493b-a23d-c31ea9cbcedd",
+    "name_en": "Lemon Smoothie",
+    "name_ar": "سموذي ليمون",
+    "description_en": "A cool and refreshing lemon smoothie with a bright citrus aroma and a lively sweet-tangy flavor, blended into a smooth chilled drink.",
+    "description_ar": "سموذي ليمون بارد ومنعش، برائحة حمضيات مميزة ومذاق حيوي يجمع بين الحلاوة والحموضة، بقوام ناعم ومنعش.",
+    "image": "/images/products/storage-1791649348163-oeajgk.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649348163-oeajgk.jpeg",
+    "display_order": 55,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "272847ec-17bc-4589-a8fb-66eb181ba3f7",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 100,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:22:37.059701+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:22:36.678271+00:00",
+    "updated_at": "2026-10-10T16:22:36.678271+00:00"
+  },
+  {
+    "id": "37cd5759-eed6-44ec-9ef3-e3884b357ef5",
+    "category_id": "5ac8d862-69d8-493b-a23d-c31ea9cbcedd",
+    "name_en": "Lemon Mint Smoothie",
+    "name_ar": "سموذي ليمون بالنعناع",
+    "description_en": "A refreshing lemon and mint smoothie with a bright citrus flavor and a cool, aromatic mint finish, blended into a smooth chilled drink.",
+    "description_ar": "سموذي ليمون بالنعناع منعش، يجمع بين مذاق الليمون الحمضي وانتعاش النعناع العطري، بقوام ناعم ويُقدّم باردًا.",
+    "image": "/images/products/storage-1791649407816-kvrono.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649407816-kvrono.jpeg",
+    "display_order": 56,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "b3d93c5c-ab32-42fb-813a-35dc2aef3a73",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:23:35.20371+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:23:34.841965+00:00",
+    "updated_at": "2026-10-10T16:23:34.841965+00:00"
+  },
+  {
+    "id": "98597feb-736e-4e62-8c0f-d7029caed58a",
+    "category_id": "5ac8d862-69d8-493b-a23d-c31ea9cbcedd",
+    "name_en": "Kiwi Smoothie",
+    "name_ar": "سموذي كيوي",
+    "description_en": "A refreshing kiwi smoothie with a vibrant fruity flavor, a naturally tangy-sweet taste, and a smooth, creamy texture, served chilled.",
+    "description_ar": "سموذي كيوي منعش بنكهة فاكهية مميزة تجمع بين الحلاوة والحموضة الخفيفة، بقوام ناعم وكريمي ويُقدّم باردًا.",
+    "image": "/images/products/storage-1791649464750-rgz0jq.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649464750-rgz0jq.jpeg",
+    "display_order": 57,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "3e26349c-2bfe-429e-9a6a-48deec68396d",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:24:45.323919+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:24:45.009841+00:00",
+    "updated_at": "2026-10-10T16:24:45.009841+00:00"
+  },
+  {
+    "id": "dcdc7dd9-d7eb-4cba-b617-62a2f498ba00",
+    "category_id": "5ac8d862-69d8-493b-a23d-c31ea9cbcedd",
+    "name_en": "Mango Passion Fruit Smoothie",
+    "name_ar": "سموذي مانجو باشن فروت",
+    "description_en": "A tropical smoothie blending sweet mango with the bright, tangy flavor of passion fruit for a vibrant, refreshing drink with a smooth texture.",
+    "description_ar": "سموذي استوائي يجمع بين حلاوة المانجو ونكهة الباشن فروت الحمضية المميزة، بقوام ناعم ومذاق منعش وغني بالفواكه.",
+    "image": "/images/products/storage-1791649540004-t7njsa.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649540004-t7njsa.jpeg",
+    "display_order": 58,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "760ddd26-1db6-4d6a-b166-051620d10081",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 125,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:25:49.896456+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:25:49.570351+00:00",
+    "updated_at": "2026-10-10T16:25:49.570351+00:00"
+  },
+  {
+    "id": "951af8ed-73ec-402c-9fee-71281ac1d2bc",
+    "category_id": "5ac8d862-69d8-493b-a23d-c31ea9cbcedd",
+    "name_en": "Blueberry Smoothie",
+    "name_ar": "سموذي بلوبيري",
+    "description_en": "A delicious blueberry smoothie with a rich berry flavor, a naturally sweet-tart taste, and a smooth, creamy texture, served chilled.",
+    "description_ar": "سموذي بلوبيري لذيذ بنكهة التوت الغنية ومذاق متوازن يجمع بين الحلاوة والحموضة الخفيفة، بقوام ناعم وكريمي ويُقدّم باردًا.",
+    "image": "/images/products/storage-1791649658004-q4rjie.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649658004-q4rjie.jpeg",
+    "display_order": 59,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "197c17c3-aa4e-40e9-b2f2-6db295bade50",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:27:46.496569+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:27:46.128768+00:00",
+    "updated_at": "2026-10-10T16:27:46.128768+00:00"
+  },
+  {
+    "id": "939df3c8-4ed2-44c2-8685-2612e56625d0",
+    "category_id": "5ac8d862-69d8-493b-a23d-c31ea9cbcedd",
+    "name_en": "Passion Fruit Smoothie",
+    "name_ar": "سموذي باشن فروت",
+    "description_en": "A refreshing passion fruit smoothie with a vibrant tropical aroma and a distinctive sweet-tangy flavor, blended into a smooth chilled drink.",
+    "description_ar": "سموذي باشن فروت منعش برائحة استوائية مميزة ومذاق يجمع بين الحلاوة والحموضة، بقوام ناعم ويُقدّم باردًا.",
+    "image": "/images/products/storage-1791649734586-oipn3j.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649734586-oipn3j.jpeg",
+    "display_order": 60,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "52842442-3daf-4cec-a1b9-48bfcb8de958",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:29:06.731108+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:29:06.161199+00:00",
+    "updated_at": "2026-10-10T16:29:06.161199+00:00"
+  },
+  {
+    "id": "9dcbc820-9296-425e-8104-fa29111a9079",
+    "category_id": "5ac8d862-69d8-493b-a23d-c31ea9cbcedd",
+    "name_en": "Pina Colada Smoothie",
+    "name_ar": "سموذي بينا كولادا",
+    "description_en": "A creamy tropical smoothie inspired by the classic piña colada, combining sweet pineapple and smooth coconut flavors in a refreshing chilled drink.",
+    "description_ar": "سموذي استوائي كريمي مستوحى من مشروب البينا كولادا الشهير، يجمع بين حلاوة الأناناس ونكهة جوز الهند الناعمة في مشروب بارد ومنعش.",
+    "image": "/images/products/storage-1791649793947-upek0v.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649793947-upek0v.jpeg",
+    "display_order": 61,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "328327ca-b216-417b-83f5-674e1ae9f6c0",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 125,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:30:20.419459+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:30:19.669542+00:00",
+    "updated_at": "2026-10-10T16:30:19.669542+00:00"
+  },
+  {
+    "id": "7fcf32d6-889d-43e7-8aa1-c8ce9a829ac8",
+    "category_id": "5ac8d862-69d8-493b-a23d-c31ea9cbcedd",
+    "name_en": "Cherry Smoothie",
+    "name_ar": "سموذي كرز",
+    "description_en": "A delicious cherry smoothie with a rich fruity aroma, a sweet-tart berry flavor, and a smooth, refreshing texture, served chilled.",
+    "description_ar": "سموذي كرز لذيذ برائحة فاكهية غنية ومذاق يجمع بين الحلاوة والحموضة الخفيفة، بقوام ناعم ومنعش ويُقدّم باردًا.",
+    "image": "/images/products/storage-1791649873446-8eabq2.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649873446-8eabq2.jpeg",
+    "display_order": 62,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "79dbc696-40dc-4c94-a154-14e6fb45a317",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:31:21.876366+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:31:21.488728+00:00",
+    "updated_at": "2026-10-10T16:31:21.488728+00:00"
+  },
+  {
+    "id": "9a595ad8-f8a0-4996-a3ca-5b83ee131e7a",
+    "category_id": "5ac8d862-69d8-493b-a23d-c31ea9cbcedd",
+    "name_en": "Pineapple Smoothie",
+    "name_ar": "سموذي أناناس",
+    "description_en": "A tropical pineapple smoothie with a naturally sweet and tangy flavor, blended into a smooth, refreshing drink and served chilled.",
+    "description_ar": "سموذي أناناس استوائي بمذاق طبيعي يجمع بين الحلاوة والحموضة الخفيفة، بقوام ناعم ومنعش ويُقدّم باردًا.",
+    "image": "/images/products/storage-1791649928019-hcmf60.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649928019-hcmf60.jpeg",
+    "display_order": 63,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "b44b0217-292a-4d17-9683-ca4adfb6ee18",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:32:19.218189+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:32:18.837309+00:00",
+    "updated_at": "2026-10-10T16:32:18.837309+00:00"
+  },
+  {
+    "id": "ec7e696d-c97d-4bf6-bfef-9aeadefbc7e6",
+    "category_id": "5ac8d862-69d8-493b-a23d-c31ea9cbcedd",
+    "name_en": "Coconut Smoothie",
+    "name_ar": "سموذي جوز الهند",
+    "description_en": "A creamy coconut smoothie with a delicate tropical aroma and a smooth, refreshing flavor, blended into a cool and satisfying drink.",
+    "description_ar": "سموذي جوز الهند بقوام كريمي ناعم ورائحة استوائية رقيقة، ومذاق منعش ولذيذ يمنحك تجربة باردة ومميزة.",
+    "image": "/images/products/storage-1791649985838-1t5ou2.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649985838-1t5ou2.jpeg",
+    "display_order": 64,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "67b643ab-8a1e-4997-b779-bf7792402af1",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:33:16.793235+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:33:16.430297+00:00",
+    "updated_at": "2026-10-10T16:33:16.430297+00:00"
+  },
+  {
+    "id": "564a2cc3-5571-456d-8fe7-a0cd72c8cabb",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Soft Drinks",
+    "name_ar": "مشروبات غازية",
+    "description_en": "A selection of chilled soft drinks, served cold for a crisp and refreshing taste.",
+    "description_ar": "تشكيلة من المشروبات الغازية الباردة، تُقدّم باردة لمذاق منعش وانتعاش في كل رشفة.",
+    "image": "/images/products/storage-1791650127442-0clyc1.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791650127442-0clyc1.jpeg",
+    "display_order": 65,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "f73863e2-b243-440b-ab73-3e3210d323e8",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 50,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:35:41.289053+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:35:40.871395+00:00",
+    "updated_at": "2026-10-10T16:35:40.871395+00:00"
+  },
+  {
+    "id": "4bc3dc75-c0c6-4e65-b239-4ea9532bf2fe",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Redbull",
+    "name_ar": "ريد بول",
+    "description_en": "A chilled energy drink with a crisp, distinctive flavor, served cold for a refreshing boost.",
+    "description_ar": "مشروب طاقة بارد بنكهة مميزة ومنعشة، يُقدّم باردًا للاستمتاع بمذاقه القوي والمنعش.",
+    "image": "/images/products/storage-1791650192848-5e1o7p.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791650192848-5e1o7p.jpeg",
+    "display_order": 66,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "1b3be478-4bef-42c4-bf54-612732ac80e4",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 100,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:36:43.206679+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:36:42.749791+00:00",
+    "updated_at": "2026-10-10T16:36:42.749791+00:00"
+  },
+  {
+    "id": "55bb71b5-8a42-4f99-9352-404483475854",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Mojito Redbull",
+    "name_ar": "موهيتو ريد بول",
+    "description_en": "A refreshing mojito-style drink combining the crisp taste of Red Bull with fresh mint, zesty lime, and ice for a vibrant, sparkling finish.",
+    "description_ar": "مشروب موهيتو منعش يجمع بين مذاق ريد بول والنعناع الطازج والليمون مع الثلج، بانتعاش فوار ونكهة مميزة.",
+    "image": "/images/products/storage-1791650246961-me02yx.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791650246961-me02yx.jpeg",
+    "display_order": 67,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "7f89f937-41ba-4ae0-a092-7b47256fe1f8",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:37:37.029779+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:37:36.658945+00:00",
+    "updated_at": "2026-10-10T16:37:36.658945+00:00"
+  },
+  {
+    "id": "02b0fe2c-b395-4576-96ac-e57d12c3e262",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Sunshine",
+    "name_ar": "صن شاين",
+    "description_en": "A bright and refreshing tropical mocktail with fruity flavors and a sunny citrus character, served chilled for a vibrant, refreshing experience.",
+    "description_ar": "موكتيل استوائي منعش بنكهة فاكهية ولمسة حمضيات مشرقة، يُقدّم باردًا ليمنحك مذاقًا حيويًا وانتعاشًا مميزًا.",
+    "image": "/images/products/storage-1791650333349-cy3i55.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791650333349-cy3i55.jpeg",
+    "display_order": 68,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "f1a81a08-b605-4021-a126-6a66313e6446",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 100,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:39:09.556032+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:39:09.141389+00:00",
+    "updated_at": "2026-10-10T16:39:09.141389+00:00"
+  },
+  {
+    "id": "8eb50c5d-a5a7-42c5-bdca-94b526f2b1a2",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Hammer Head",
+    "name_ar": "هامر هيد",
+    "description_en": "A bold and refreshing signature mocktail with a vibrant fruity flavor, served over ice for a cool and lively experience.",
+    "description_ar": "موكتيل مميز ومنعش بنكهة فاكهية غنية، يُقدّم مع الثلج لتجربة باردة وحيوية.",
+    "image": "/images/products/storage-1791650408414-ez3n48.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791650408414-ez3n48.jpeg",
+    "display_order": 69,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "346acf10-6def-474e-bc34-a3b8d03cb3d7",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 130,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:40:19.269712+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:40:18.893996+00:00",
+    "updated_at": "2026-10-10T16:40:18.893996+00:00"
+  },
+  {
+    "id": "ce73db52-166e-46aa-b546-c44a27c7e77b",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Mojito Classic",
+    "name_ar": "موهيتو كلاسيك",
+    "description_en": "Refreshing classic mojito with a crisp, cool taste.",
+    "description_ar": "موهيتو كلاسيك منعش بطعم مميز ومنعش.",
+    "image": "/images/products/storage-1791650541612-qevvob.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791650541612-qevvob.jpeg",
+    "display_order": 70,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "21b87e4d-365e-4e23-9074-54c58f3e381b",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 100,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:42:52.828707+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:42:30.595859+00:00",
+    "updated_at": "2026-10-10T16:42:30.595859+00:00"
+  },
+  {
+    "id": "123033fc-a442-46da-aeb7-744f584d757a",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Mojito Flavors",
+    "name_ar": "موهيتو بالنكهات",
+    "description_en": "A refreshing mojito with a delicious fruity flavor.",
+    "description_ar": "موهيتو منعش بنكهة فاكهية لذيذة.",
+    "image": "/images/products/storage-1791650616658-skkyvc.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791650616658-skkyvc.jpeg",
+    "display_order": 71,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "182c04c9-df84-4129-8ce0-f73c1e16674e",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:43:46.232637+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:43:45.890383+00:00",
+    "updated_at": "2026-10-10T16:43:45.890383+00:00"
+  },
+  {
+    "id": "4bc71935-57a3-4c5a-9c61-1afb7bc3f502",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Cherry Cola",
+    "name_ar": "كرز كولا",
+    "description_en": "Refreshing cola with a delicious cherry flavor.",
+    "description_ar": "كولا منعشة بنكهة الكرز اللذيذة.",
+    "image": "/images/products/storage-1791650686571-qojwpj.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791650686571-qojwpj.jpeg",
+    "display_order": 72,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "5ef150ca-971f-4f0d-bfe4-f628e1e37f4c",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 100,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:44:54.928578+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:44:54.588175+00:00",
+    "updated_at": "2026-10-10T16:44:54.588175+00:00"
+  },
+  {
+    "id": "454b2d5b-94c8-42e4-b341-3c9f6c138cbd",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Passion Fruit Soda",
+    "name_ar": "صودا باشن فروت",
+    "description_en": "Refreshing sparkling soda with a tropical passion fruit flavor.",
+    "description_ar": "صودا فوارة ومنعشة بنكهة الباشن فروت الاستوائية.",
+    "image": "/images/products/storage-1791650740749-muj4n4.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791650740749-muj4n4.jpeg",
+    "display_order": 73,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "baf89010-33ef-48b8-a303-b3f091523617",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:45:49.000892+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:45:48.636347+00:00",
+    "updated_at": "2026-10-10T16:45:48.636347+00:00"
+  },
+  {
+    "id": "95e13106-eb80-4099-a2c3-894eeca0b227",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Pineapple Soda",
+    "name_ar": "صودا أناناس",
+    "description_en": "Refreshing sparkling soda with a sweet tropical pineapple flavor.",
+    "description_ar": "صودا فوارة ومنعشة بنكهة الأناناس الاستوائية الحلوة.",
+    "image": "/images/products/storage-1791650803164-60acv2.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791650803164-60acv2.jpeg",
+    "display_order": 74,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "b6bbef6a-deba-4e87-96c0-afe765a2a626",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:46:53.59581+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:46:53.216993+00:00",
+    "updated_at": "2026-10-10T16:46:53.216993+00:00"
+  },
+  {
+    "id": "2af99f99-42dc-4eb9-8cef-79be8ea8be02",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Strawberry Soda",
+    "name_ar": "صودا فراولة",
+    "description_en": "Refreshing sparkling soda with a sweet strawberry flavor.",
+    "description_ar": "صودا فوارة ومنعشة بنكهة الفراولة الحلوة.",
+    "image": "/images/products/storage-1791650891823-5sbbti.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791650891823-5sbbti.jpeg",
+    "display_order": 75,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "4c99de4a-4264-4d13-bb12-f5b1fb865a9d",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:48:19.697417+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:48:19.341413+00:00",
+    "updated_at": "2026-10-10T16:48:19.341413+00:00"
+  },
+  {
+    "id": "e91f2b75-c363-4492-bcf9-c1dd57b5345f",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Blueberry Soda",
+    "name_ar": "صودا بلوبيري",
+    "description_en": "Refreshing sparkling soda with a sweet and tangy blueberry flavor.",
+    "description_ar": "صودا فوارة ومنعشة بنكهة البلوبيري الحلوة والمنعشة.",
+    "image": "/images/products/storage-1791650937005-g590nm.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791650937005-g590nm.jpeg",
+    "display_order": 76,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "f7cc050e-d9c3-4840-86a0-c855d1c22cc9",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:49:13.30865+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:49:12.936742+00:00",
+    "updated_at": "2026-10-10T16:49:12.936742+00:00"
+  },
+  {
+    "id": "c579e88c-d876-4969-b8d0-60a68b6a5d08",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Mango Passion Fruit",
+    "name_ar": "مانجو باشن فروت",
+    "description_en": "A refreshing tropical blend of sweet mango and tangy passion fruit.",
+    "description_ar": "مزيج استوائي منعش من المانجو الحلوة والباشن فروت المميزة.",
+    "image": "/images/products/storage-1791651024546-o3hgdk.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791651024546-o3hgdk.jpeg",
+    "display_order": 77,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "e055da48-ab0b-4ece-a767-4f0cd02d5066",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:50:31.900999+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:50:30.805183+00:00",
+    "updated_at": "2026-10-10T16:50:30.805183+00:00"
+  },
+  {
+    "id": "4e57dc45-0586-42ac-905e-7d9bb88c2327",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Soda",
+    "name_ar": "صودا",
+    "description_en": "Crisp, refreshing sparkling soda served chilled.",
+    "description_ar": "صودا فوارة ومنعشة تُقدم باردة.",
+    "image": "/images/products/storage-1791651086064-3ow87y.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791651086064-3ow87y.jpeg",
+    "display_order": 78,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "5b6334f4-8518-4865-855a-c8711f2f46cb",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 110,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:51:33.953615+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:51:33.588706+00:00",
+    "updated_at": "2026-10-10T16:51:33.588706+00:00"
+  },
+  {
+    "id": "6877e305-f27c-4c63-831b-49cbc33e40b6",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Lemonada",
+    "name_ar": "ليمونادة",
+    "description_en": "Fresh, tangy lemonade served chilled for a refreshing taste.",
+    "description_ar": "ليمونادة طازجة ومنعشة بطعم الليمون المميز، تُقدم باردة.",
+    "image": "/images/products/storage-1791651148221-66tlnh.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791651148221-66tlnh.jpeg",
+    "display_order": 79,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "90e83172-6a53-4a0d-8091-b9c8169e5a5a",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:52:39.207219+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:52:38.832147+00:00",
+    "updated_at": "2026-10-10T16:52:38.832147+00:00"
+  },
+  {
+    "id": "196ef1b5-7ac5-475e-a21c-0758e534b902",
+    "category_id": "a4725bd6-ad17-4e94-9533-39dada62c35d",
+    "name_en": "Lemonada Flavors",
+    "name_ar": "ليمونادة بالنكهات",
+    "description_en": "Refreshing lemonade with a delicious fruity flavor.",
+    "description_ar": "ليمونادة منعشة بنكهة فاكهية لذيذة.",
+    "image": "/images/products/storage-1791651212176-vgyegh.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791651212176-vgyegh.jpeg",
+    "display_order": 80,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "0b34bb27-f506-4a12-aed3-cecbbc0ffb58",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 145,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T16:53:49.372567+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T16:53:49.027707+00:00",
+    "updated_at": "2026-10-10T16:53:49.027707+00:00"
+  },
+  {
+    "id": "68cd113f-b5d8-4b58-bd5e-cf9fe989b608",
+    "category_id": "faf63be2-359d-476f-8e47-cce99aa39c77",
+    "name_en": "Caramel Frappuccino",
+    "name_ar": "فرابتشينو كراميل",
+    "description_en": "A smooth, creamy blended coffee with rich caramel flavor, served chilled.",
+    "description_ar": "قهوة مثلجة مخفوقة بقوام كريمي ونكهة الكراميل الغنية.",
+    "image": "/images/products/storage-1791651846028-cubhl5.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791651846028-cubhl5.jpeg",
+    "display_order": 81,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "e0f6a217-e03f-4b9b-b760-181bf5da4d34",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T17:04:48.715792+00:00"
+      },
+      {
+        "id": "4bb61dcb-5c62-4598-b626-0220449c74d3",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 170,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T17:04:48.715792+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T17:04:48.360481+00:00",
+    "updated_at": "2026-10-10T17:04:48.360481+00:00"
+  },
+  {
+    "id": "b2e87cb3-3371-422c-a662-55ce3d3136e4",
+    "category_id": "faf63be2-359d-476f-8e47-cce99aa39c77",
+    "name_en": "Coffee Frappuccino",
+    "name_ar": "فرابتشينو قهوة",
+    "description_en": "A rich, creamy blended coffee drink served chilled for a refreshing coffee experience.",
+    "description_ar": "مشروب قهوة مخفوق بقوام كريمي وطعم قهوة غني، يُقدم مثلجًا.",
+    "image": "/images/products/storage-1791651945391-9yu4is.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791651945391-9yu4is.jpeg",
+    "display_order": 82,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "7fd909d0-7490-48fd-a12f-8b4e6704307b",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 140,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T17:06:17.545721+00:00"
+      },
+      {
+        "id": "f5b3511e-9c93-4b7a-b96f-2e6fc8fe8fda",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 160,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T17:06:17.545721+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T17:06:17.180849+00:00",
+    "updated_at": "2026-10-10T17:06:17.180849+00:00"
+  },
+  {
+    "id": "aad67f5d-e96f-4250-9af0-f2ab98834bd7",
+    "category_id": "faf63be2-359d-476f-8e47-cce99aa39c77",
+    "name_en": "Lotus Frappuccino",
+    "name_ar": "فرابتشينو لوتس",
+    "description_en": "A creamy blended frappuccino with a rich caramelized biscuit flavor.",
+    "description_ar": "فرابتشينو كريمي مخفوق بنكهة بسكويت الكراميل الغنية.",
+    "image": "/images/products/storage-1791652033760-yopdwp.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791652033760-yopdwp.jpeg",
+    "display_order": 83,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "b7d092f1-6172-4229-aa72-4b8538658a2e",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T17:07:38.410879+00:00"
+      },
+      {
+        "id": "cba25a76-c23f-40bf-aea1-74e8aafe35b5",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 170,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T17:07:38.410879+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T17:07:37.977249+00:00",
+    "updated_at": "2026-10-10T17:07:37.977249+00:00"
+  },
+  {
+    "id": "1d047e80-2bed-4d71-b3e0-1b38c1b2a30e",
+    "category_id": "faf63be2-359d-476f-8e47-cce99aa39c77",
+    "name_en": "Nutella Frappuccino",
+    "name_ar": "فرابتشينو نوتيلا",
+    "description_en": "A rich, creamy blended frappuccino with a delicious chocolate hazelnut flavor.",
+    "description_ar": "فرابتشينو كريمي وغني بنكهة الشوكولاتة والبندق اللذيذة.",
+    "image": "/images/products/storage-1791652112424-oosptf.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791652112424-oosptf.jpeg",
+    "display_order": 84,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "16874277-5fbb-47af-8521-88345d01f973",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T17:09:05.037969+00:00"
+      },
+      {
+        "id": "f6b8eab7-9b8a-483c-a0a4-6f96024f0860",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 170,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T17:09:05.037969+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T17:09:04.708373+00:00",
+    "updated_at": "2026-10-10T17:09:04.708373+00:00"
+  },
+  {
+    "id": "dd3e35cc-289b-4161-9de0-49378168d0f9",
+    "category_id": "faf63be2-359d-476f-8e47-cce99aa39c77",
+    "name_en": "Oreo Frappuccino",
+    "name_ar": "فرابتشينو أوريو",
+    "description_en": "A creamy blended frappuccino with a rich chocolate cookie flavor.",
+    "description_ar": "فرابتشينو كريمي مخفوق بنكهة بسكويت الشوكولاتة الغنية.",
+    "image": "/images/products/storage-1791652194385-w3mua8.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791652194385-w3mua8.jpeg",
+    "display_order": 85,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "a83a8ee2-4d5c-4cc7-a52b-9b69e4ef96da",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T17:10:24.515054+00:00"
+      },
+      {
+        "id": "99b69bc3-2b52-4ab5-af66-cf7391eb45f8",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 170,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T17:10:24.515054+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T17:10:24.172419+00:00",
+    "updated_at": "2026-10-10T17:10:24.172419+00:00"
+  },
+  {
+    "id": "0defd97d-423b-42fa-8972-96915310d346",
+    "category_id": "faf63be2-359d-476f-8e47-cce99aa39c77",
+    "name_en": "Vanilla Frappuccino",
+    "name_ar": "فرابتشينو فانيليا",
+    "description_en": "A smooth, creamy blended frappuccino with a sweet vanilla flavor, served chilled.",
+    "description_ar": "فرابتشينو مثلج بقوام كريمي ناعم ونكهة الفانيليا الحلوة.",
+    "image": "/images/products/storage-1791652276150-w308d9.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791652276150-w308d9.jpeg",
+    "display_order": 86,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "3d2c7252-be8e-47d4-a0fc-6c5f209857a7",
+        "label_en": "M",
+        "label_ar": "M",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-10T17:11:46.663801+00:00"
+      },
+      {
+        "id": "11efc675-ef8e-4af4-ab03-47ff8fe18ca6",
+        "label_en": "L",
+        "label_ar": "L",
+        "price": 170,
+        "display_order": 2,
+        "is_available": true,
+        "created_at": "2026-10-10T17:11:46.663801+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-10T17:11:46.249909+00:00",
+    "updated_at": "2026-10-10T17:11:46.249909+00:00"
+  },
+  {
+    "id": "c949efb5-d3fd-4d38-ad93-411a01a852e5",
+    "category_id": "bb56fd46-9d48-4387-a31c-16e5504d2630",
+    "name_en": "Caramel Waffle",
+    "name_ar": "وافل بالكراميل",
+    "description_en": "Golden Belgian waffle topped with rich caramel sauce for a sweet and indulgent treat.",
+    "description_ar": "وافل بلجيكي ذهبي مغطى بصوص الكراميل الغني، لتجربة حلوة ولذيذة.",
+    "image": "/images/products/storage-1791804291339-tln598.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791804291339-tln598.jpeg",
+    "display_order": 87,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "bbda1a58-20ed-4bdb-bfb2-7b853294a8c6",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T11:25:23.105685+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T11:25:22.661363+00:00",
+    "updated_at": "2026-10-12T11:25:22.661363+00:00"
+  },
+  {
+    "id": "18fab71e-89d4-46b7-97a7-bb54921d1ce6",
+    "category_id": "bb56fd46-9d48-4387-a31c-16e5504d2630",
+    "name_en": "Dark Chocolate Waffle",
+    "name_ar": "وافل بالشوكولاتة الداكنة",
+    "description_en": "A golden waffle topped with rich dark chocolate sauce for a deliciously indulgent dessert.",
+    "description_ar": "وافل ذهبي مغطى بصوص الشوكولاتة الداكنة الغني، لعشاق الحلويات بطعم الشوكولاتة المميز.",
+    "image": "/images/products/storage-1791804516473-l3p5ul.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791804516473-l3p5ul.jpeg",
+    "display_order": 88,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "458a0293-95ad-482a-ad09-9f78716ed886",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T11:28:52.004925+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T11:28:48.570838+00:00",
+    "updated_at": "2026-10-12T11:28:48.570838+00:00"
+  },
+  {
+    "id": "06c148ed-c094-4c7e-ac3f-1bc0bfb8eb31",
+    "category_id": "bb56fd46-9d48-4387-a31c-16e5504d2630",
+    "name_en": "Fruit Waffle",
+    "name_ar": "وافل بالفواكه",
+    "description_en": "A golden Belgian waffle topped with a colorful selection of fresh seasonal fruits for a refreshing, sweet treat.",
+    "description_ar": "وافل بلجيكي ذهبي مغطى بتشكيلة ملونة من الفواكه الطازجة، لطعم حلو ومنعش.",
+    "image": "/images/products/storage-1791804605994-5chy93.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791804605994-5chy93.jpeg",
+    "display_order": 89,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "01ec99fe-922e-45bb-a888-2ab9d349efac",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T11:30:13.777472+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T11:30:12.253761+00:00",
+    "updated_at": "2026-10-12T11:30:12.253761+00:00"
+  },
+  {
+    "id": "888a7634-1003-46b8-8293-40ae992d109e",
+    "category_id": "bb56fd46-9d48-4387-a31c-16e5504d2630",
+    "name_en": "Lotus Waffle",
+    "name_ar": "وافل لوتس",
+    "description_en": "A golden waffle topped with creamy Lotus Biscoff spread and crunchy biscuit crumbs for a rich caramelized flavor.",
+    "description_ar": "وافل ذهبي مغطى بكريمة اللوتس وفتات بسكويت مقرمش، بنكهة الكراميل الغنية والمميزة.",
+    "image": "/images/products/storage-1791804983432-y1b1ly.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791804983432-y1b1ly.jpeg",
+    "display_order": 90,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "a6617d7f-6547-4bc0-b74a-ac6535c5be29",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 150,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T11:36:40.288396+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T11:36:39.945416+00:00",
+    "updated_at": "2026-10-12T11:36:39.945416+00:00"
+  },
+  {
+    "id": "5693e727-a8e1-44b7-ac8e-d01fcdea5e44",
+    "category_id": "bb56fd46-9d48-4387-a31c-16e5504d2630",
+    "name_en": "Nutella Waffle",
+    "name_ar": "وافل نوتيلا",
+    "description_en": "A freshly made golden waffle topped with smooth Nutella chocolate hazelnut spread for a rich and indulgent treat.",
+    "description_ar": "وافل ذهبي طازج مغطى بشوكولاتة نوتيلا الكريمية بالبندق، لعشاق الطعم الغني والشوكولاتة.",
+    "image": "/images/products/storage-1791805052186-27f2y0.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791805052186-27f2y0.jpeg",
+    "display_order": 91,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "0acbed20-da2f-475b-8833-77b145ed9cb0",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 130,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T11:37:43.452928+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T11:37:43.059924+00:00",
+    "updated_at": "2026-10-12T11:37:43.059924+00:00"
+  },
+  {
+    "id": "c47e80bc-ba0e-4161-9baf-04bceedb97eb",
+    "category_id": "bb56fd46-9d48-4387-a31c-16e5504d2630",
+    "name_en": "Oreo Waffle",
+    "name_ar": "وافل أوريو",
+    "description_en": "A golden waffle topped with Oreo cookie pieces, crunchy crumbs, and rich chocolate sauce.",
+    "description_ar": "وافل ذهبي مغطى بقطع بسكويت أوريو وفتاته المقرمشة مع صوص الشوكولاتة الغني.",
+    "image": "/images/products/storage-1791805124825-iqermd.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791805124825-iqermd.jpeg",
+    "display_order": 92,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "cf6d0c2c-1569-4664-b2fd-f2b080f9488f",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 130,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T11:38:58.289985+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T11:38:57.960109+00:00",
+    "updated_at": "2026-10-12T11:38:57.960109+00:00"
+  },
+  {
+    "id": "a3689506-48ad-4db3-939d-231d52ec8787",
+    "category_id": "bb56fd46-9d48-4387-a31c-16e5504d2630",
+    "name_en": "White Chocolate Waffle",
+    "name_ar": "وافل بالشوكولاتة البيضاء",
+    "description_en": "A golden waffle topped with smooth, creamy white chocolate sauce for a sweet and delightful dessert.",
+    "description_ar": "وافل ذهبي مغطى بصوص الشوكولاتة البيضاء الكريمي، لتحلية غنية ولذيذة.",
+    "image": "/images/products/storage-1791805187265-8ldukh.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791805187265-8ldukh.jpeg",
+    "display_order": 93,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "1e96cce6-0fee-4d19-9148-d0e14b1d929c",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T11:39:55.172315+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T11:39:54.869862+00:00",
+    "updated_at": "2026-10-12T11:39:54.869862+00:00"
+  },
+  {
+    "id": "f34d2811-9cfe-48fb-bad5-202449c6a961",
+    "category_id": "bb56fd46-9d48-4387-a31c-16e5504d2630",
+    "name_en": "3+2 Waffle",
+    "name_ar": "وافل 3+2",
+    "description_en": "A golden waffle served with rich chocolate sauce and delicious toppings for a special sweet treat.",
+    "description_ar": "وافل ذهبي يُقدم مع صوص الشوكولاتة الغني وإضافات لذيذة لتحلية مميزة.",
+    "image": "/images/products/storage-1791805316175-lnwy0s.png",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791805316175-lnwy0s.png",
+    "display_order": 94,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "2ef6b258-dd82-4d1e-a474-a9c2390dd93e",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 200,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T11:42:17.882845+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T11:42:17.571333+00:00",
+    "updated_at": "2026-10-12T11:42:17.571333+00:00"
+  },
+  {
+    "id": "df7013c4-c730-42ff-8cf0-0d3c6d6e5e70",
+    "category_id": "12391287-0629-4de8-9898-9b03ff3107a6",
+    "name_en": "Cheesy Ciabatta",
+    "name_ar": "شباتا بالجبنة",
+    "description_en": "Toasted ciabatta bread filled with Gouda cheese, white cheddar, lettuce, cherry tomatoes, and a delicious combination of mayonnaise and mustard and pesto sauces.",
+    "description_ar": "عيش شباتا محمص محشو بجبنة جودة والشيدر الأبيض والخس وطماطم شيري، مع مزيج لذيذ من صوص المايونيز والمستردة و البستو.",
+    "image": "/images/products/storage-1791806554749-9gkix0.png",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791806554749-9gkix0.png",
+    "display_order": 95,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "99595f2d-8ac9-414c-937e-9f32b23dde1e",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 125,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:06:44.698775+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:06:44.191952+00:00",
+    "updated_at": "2026-10-12T12:06:44.191952+00:00"
+  },
+  {
+    "id": "c91ab165-7012-40bb-9e58-2a25b27f998f",
+    "category_id": "12391287-0629-4de8-9898-9b03ff3107a6",
+    "name_en": "Cheesy Turkey Ciabatta",
+    "name_ar": "شباتا بالتركي والجبنة",
+    "description_en": "Toasted ciabatta bread filled with tender turkey slices and melted cheese for a warm, savory breakfast sandwich.",
+    "description_ar": "عيش شباتا محمص محشو بشرائح التركي والجبنة السايحة، لساندوتش فطار دافئ وغني بالطعم.",
+    "image": "/images/products/storage-1791806879198-39k4br.png",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791806879198-39k4br.png",
+    "display_order": 96,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "973e6950-f52c-4465-a679-9ee6d2142a29",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 160,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:08:20.07414+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:08:19.586397+00:00",
+    "updated_at": "2026-10-12T12:08:19.586397+00:00"
+  },
+  {
+    "id": "0f4c76fe-6727-4973-9ac0-b43febdc57ba",
+    "category_id": "12391287-0629-4de8-9898-9b03ff3107a6",
+    "name_en": "Golden Scramble",
+    "name_ar": "جولدن سكرامبل",
+    "description_en": "Three individual round portions of beaten eggs, and served golden and tender.",
+    "description_ar": "ثلاث وحدات دائرية من البيض المضروب، وتُقدم بلون ذهبي وقوام طري.",
+    "image": "/images/products/storage-1791807299904-9z3or1.png",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791807299904-9z3or1.png",
+    "display_order": 97,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "528d2f40-f9eb-4f1f-8da1-590fca48e744",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:15:13.769279+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:15:13.352788+00:00",
+    "updated_at": "2026-10-12T12:15:13.352788+00:00"
+  },
+  {
+    "id": "0783ac94-fa0a-48b8-8d3a-f5a8e1b4e7c5",
+    "category_id": "12391287-0629-4de8-9898-9b03ff3107a6",
+    "name_en": "Morning Ritual",
+    "name_ar": "فطار الصباح",
+    "description_en": "A delightful breakfast experience to start your day with a satisfying and flavorful meal.",
+    "description_ar": "تجربة فطار مميزة لبداية يومك بوجبة شهية ومشبعة.",
+    "image": null,
+    "image_url_original": null,
+    "display_order": 98,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "39c6bc3a-b045-489f-8e45-d1a2a79c1cd0",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 250,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:17:55.604617+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:17:55.198365+00:00",
+    "updated_at": "2026-10-12T12:17:55.198365+00:00"
+  },
+  {
+    "id": "531c32b2-25af-4769-9f2c-dcdb5dec2f79",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Croissant",
+    "name_ar": "كرواسون",
+    "description_en": "A freshly served croissant with a golden, flaky crust and a soft, buttery interior.",
+    "description_ar": "كرواسون بقشرة ذهبية مورقة وقوام طري من الداخل، يُقدم طازجًا.",
+    "image": "/images/products/storage-1791808295084-rokddx.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791808295084-rokddx.jpeg",
+    "display_order": 99,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "cb7c4b72-d8af-47e9-8ff0-aec326d1aa82",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 70,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:31:54.728792+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:31:54.278246+00:00",
+    "updated_at": "2026-10-12T12:31:54.278246+00:00"
+  },
+  {
+    "id": "6b31ed0f-89e7-4397-80cf-3089c9078d91",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Brownies with Ice Cream",
+    "name_ar": "براونيز بالآيس كريم",
+    "description_en": "Rich chocolate brownie served with a scoop of creamy ice cream for a delicious dessert.",
+    "description_ar": "قطعة براونيز غنية بالشوكولاتة تُقدم مع سكوب من الآيس كريم الكريمي لتحلية لذيذة.",
+    "image": "/images/products/storage-1791808380655-reblg9.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791808380655-reblg9.jpeg",
+    "display_order": 100,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "faed6c6e-c585-4ec7-990a-f2bff3cc7fea",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:33:09.132367+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:33:08.739347+00:00",
+    "updated_at": "2026-10-12T12:33:08.739347+00:00"
+  },
+  {
+    "id": "b7b08680-bdf4-42e0-8133-25fad664c6a0",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Brownies",
+    "name_ar": "براونيز",
+    "description_en": "A rich chocolate brownie with a soft, fudgy center and a deliciously crackled top.",
+    "description_ar": "براونيز غني بالشوكولاتة، بقوام طري وكثيف من الداخل ووجه مخبوز شهي.",
+    "image": "/images/products/storage-1791808450338-mvbbzh.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791808450338-mvbbzh.jpeg",
+    "display_order": 101,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "b215151d-84c5-473c-8138-203d13092511",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 80,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:34:23.426763+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:34:22.997792+00:00",
+    "updated_at": "2026-10-12T12:34:22.997792+00:00"
+  },
+  {
+    "id": "262ae5fb-3dd2-4950-ae7f-de08021cd0ce",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Cheese Croissant",
+    "name_ar": "كرواسون بالجبنة",
+    "description_en": "A golden, flaky croissant filled with delicious cheese, perfect for a savory bite.",
+    "description_ar": "كرواسون ذهبي مورق ومحشو بالجبنة اللذيذة، مناسب لمحبي المخبوزات المالحة.",
+    "image": "/images/products/storage-1791808522138-bplpp5.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791808522138-bplpp5.jpeg",
+    "display_order": 102,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "e728b745-e350-410a-a3cb-7d3d8834c5cc",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 120,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:35:31.159811+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:35:30.759521+00:00",
+    "updated_at": "2026-10-12T12:35:30.759521+00:00"
+  },
+  {
+    "id": "11d0bf60-eb83-4191-9af0-58f5bddcd5c3",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Cheesecake",
+    "name_ar": "تشيز كيك",
+    "description_en": "A smooth and creamy cheesecake with a buttery biscuit base, served chilled for a delightful dessert.",
+    "description_ar": "قطعة تشيز كيك كريمية وناعمة بقاعدة من البسكويت بالزبدة، تُقدم باردة لتحلية لذيذة.",
+    "image": "/images/products/storage-1791808585868-8pp5m0.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791808585868-8pp5m0.jpeg",
+    "display_order": 103,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "1214daa3-af39-4d65-b2f5-de98f6c706fa",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 100,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:36:38.462073+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:36:38.087775+00:00",
+    "updated_at": "2026-10-12T12:36:38.087775+00:00"
+  },
+  {
+    "id": "52db88d0-a95e-411a-a2c0-60bc7428004b",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Cheesecake Flavors",
+    "name_ar": "تشيز كيك بالنكهات",
+    "description_en": "A delicious selection of creamy cheesecake in a variety of tempting flavors, perfect for a sweet treat.",
+    "description_ar": "تشكيلة لذيذة من التشيز كيك الكريمي بنكهات متنوعة وشهية، مثالية للتحلية.",
+    "image": "/images/products/storage-1791808663846-bfcf1s.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791808663846-bfcf1s.jpeg",
+    "display_order": 104,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "ae80f0bc-1ffb-462a-84e2-1e426726aad5",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 125,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:37:57.043716+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:37:56.66303+00:00",
+    "updated_at": "2026-10-12T12:37:56.66303+00:00"
+  },
+  {
+    "id": "887059c0-d013-45b7-9330-db5a7db785f0",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Dark Chocolate Cookies",
+    "name_ar": "كوكيز دارك شوكولاتة",
+    "description_en": "Rich dark chocolate cookies with a deep cocoa flavor, perfect for chocolate lovers.",
+    "description_ar": "كوكيز دارك شوكولاتة بطعم الكاكاو الغني والعميق، مثالي لعشاق الشوكولاتة الداكنة.",
+    "image": "/images/products/storage-1791808859187-ltnnik.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791808859187-ltnnik.jpeg",
+    "display_order": 105,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "34870b2d-462b-47df-91e6-f10f79cde583",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 60,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:41:06.905053+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:41:06.520471+00:00",
+    "updated_at": "2026-10-12T12:41:06.520471+00:00"
+  },
+  {
+    "id": "7ec21d6d-fe9f-4918-8ba0-e5aa9e146c67",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Cookies Pistachio",
+    "name_ar": "كوكيز بالفستق",
+    "description_en": "Delicious pistachio cookies with a rich nutty flavor and a delightful texture, perfect for a sweet treat.",
+    "description_ar": "كوكيز بالفستق بطعم غني ومذاق مكسرات مميز، لتحلية لذيذة في أي وقت.",
+    "image": "/images/products/storage-1791809034784-5y6q0r.png",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791809034784-5y6q0r.png",
+    "display_order": 106,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "27cc2e83-de84-4c87-b2ea-6cb7c3d82276",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 80,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:44:12.768868+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:44:12.428401+00:00",
+    "updated_at": "2026-10-12T12:44:12.428401+00:00"
+  },
+  {
+    "id": "0c7a9470-5ef5-4820-8a60-d784330917d0",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Dark Chocolate Cookies with Ice Cream",
+    "name_ar": "كوكيز دارك شوكولاتة بالآيس كريم",
+    "description_en": "Rich dark chocolate cookies served with a creamy scoop of ice cream for a delicious chocolate dessert.",
+    "description_ar": "كوكيز دارك شوكولاتة بطعم غني، يُقدم مع سكوب من الآيس كريم الكريمي لتحلية لذيذة.",
+    "image": "/images/products/storage-1791809216245-1ym5mi.png",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791809216245-1ym5mi.png",
+    "display_order": 107,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "90fd1ff0-ab05-414b-8055-6322505a1f73",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 100,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:47:18.171+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:47:17.847236+00:00",
+    "updated_at": "2026-10-12T12:47:17.847236+00:00"
+  },
+  {
+    "id": "3baa7729-0276-4681-ba25-aa4746bff1f6",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "English Cake",
+    "name_ar": "كيك إنجليزي",
+    "description_en": "A classic English cake with a soft, buttery texture and a delicate golden crust, perfect with coffee or tea.",
+    "description_ar": "كيك إنجليزي كلاسيكي بقوام طري وطعم غني بالزبدة ووجه ذهبي خفيف، مثالي مع القهوة أو الشاي.",
+    "image": "/images/products/storage-1791809302880-juw1ew.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791809302880-juw1ew.jpeg",
+    "display_order": 108,
+    "is_visible": true,
+    "is_featured": true,
+    "sizes": [
+      {
+        "id": "7f4a5b96-5e0e-4c11-b7ae-b7cc44724d57",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 45,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:48:31.35658+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:48:31.017874+00:00",
+    "updated_at": "2026-10-12T12:48:31.017874+00:00"
+  },
+  {
+    "id": "13eee692-defe-482d-97b2-7278103b6563",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Muffin",
+    "name_ar": "مافن",
+    "description_en": "A soft, freshly served muffin with a tender crumb, perfect for enjoying alongside your favorite coffee.",
+    "description_ar": "مافن طري بقوام هش ولذيذ، مناسب للاستمتاع به مع مشروب القهوة المفضل لديك.",
+    "image": "/images/products/storage-1791809440580-l00q37.png",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791809440580-l00q37.png",
+    "display_order": 109,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "a9274880-57a8-4a76-b9e6-71e4c3869e15",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 50,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:50:54.603228+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:50:54.260956+00:00",
+    "updated_at": "2026-10-12T12:50:54.260956+00:00"
+  },
+  {
+    "id": "991c4a61-9db6-44db-a87b-f5f7f9123b73",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Pudding",
+    "name_ar": "بودينج",
+    "description_en": "A smooth and creamy pudding with a rich, delicious flavor, served chilled for a delightful dessert.",
+    "description_ar": "بودينج ناعم وكريمي بطعم غني ولذيذ، يُقدم باردًا لتحلية شهية.",
+    "image": "/images/products/storage-1791809505204-9d2uhz.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791809505204-9d2uhz.jpeg",
+    "display_order": 110,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "4b6e7815-eedc-4a1d-90e3-9279923d470b",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 60,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:51:55.317723+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:51:54.845112+00:00",
+    "updated_at": "2026-10-12T12:51:54.845112+00:00"
+  },
+  {
+    "id": "178ccd9d-13a2-47be-a2ab-2944640992b0",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Red Velvet Cream Cookie",
+    "name_ar": "كوكيز ريد فيلفت بالكريمة",
+    "description_en": "A soft red velvet cookie with a rich cocoa flavor, filled with creamy cream cheese for a delicious sweet treat.",
+    "description_ar": "كوكيز ريد فيلفت طري بنكهة الكاكاو الغنية، محشي بكريمة الجبنة لمذاق كريمي ولذيذ.",
+    "image": "/images/products/storage-1791809658723-pcxstd.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791809658723-pcxstd.jpeg",
+    "display_order": 111,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "81c5e5a2-eef5-460f-8912-8f5a707a84c6",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 70,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T12:54:29.28636+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T12:54:28.904962+00:00",
+    "updated_at": "2026-10-12T12:54:28.904962+00:00"
+  },
+  {
+    "id": "16270d34-c318-452a-9846-a38f74d2b1b4",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Smoked Breast Croissant",
+    "name_ar": "كرواسون بالصدور المدخنة",
+    "description_en": "A golden, flaky croissant layered with Gouda cheese, turkey slices, and freshly grated white cheddar cheese.",
+    "description_ar": "كرواسون ذهبي مورق، بطبقات من جبنة جودة وشرائح الرومي، مع جبنة شيدر أبيض مبشورة.",
+    "image": "/images/products/storage-1791809963824-etdf97.png",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791809963824-etdf97.png",
+    "display_order": 112,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "95ccb945-9ea0-4e28-ba8b-35d0903f3054",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 135,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T13:00:12.475729+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T13:00:12.126402+00:00",
+    "updated_at": "2026-10-12T13:00:12.126402+00:00"
+  },
+  {
+    "id": "8927d2fa-df73-4eec-a3e1-3b66bc9b160f",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Sweet Croissant",
+    "name_ar": "كرواسون حلو",
+    "description_en": "A golden, flaky sweet croissant with a deliciously light and buttery texture, perfect for a sweet treat alongside coffee.",
+    "description_ar": "كرواسون حلو ذهبي ومورق بقوام خفيف وطعم غني بالزبدة، مثالي للتحلية مع القهوة.",
+    "image": "/images/products/storage-1791813778842-gytng0.png",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791813778842-gytng0.png",
+    "display_order": 113,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "2631fe19-44fb-411d-9a7d-e4703fcac7d0",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 100,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T14:03:09.365311+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T14:03:08.916285+00:00",
+    "updated_at": "2026-10-12T14:03:08.916285+00:00"
+  },
+  {
+    "id": "4510de10-2731-488b-a74e-a20677ba2ca8",
+    "category_id": "ebd2fb23-b5ef-41f8-90b6-0f1d10bced84",
+    "name_en": "Tiramisu",
+    "name_ar": "تيراميسو",
+    "description_en": "A classic Italian tiramisu layered with creamy mascarpone and coffee-soaked biscuits, finished with a dusting of cocoa powder.",
+    "description_ar": "تيراميسو إيطالي كلاسيكي بطبقات من كريمة الماسكاربوني والبسكويت المشرب بالقهوة، مع رشة من مسحوق الكاكاو.",
+    "image": "/images/products/storage-1791813851963-5041tb.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791813851963-5041tb.jpeg",
+    "display_order": 114,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "119fa9d9-ed6c-4a9d-8b31-7316a11efc7b",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 110,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T14:04:16.315726+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T14:04:15.979912+00:00",
+    "updated_at": "2026-10-12T14:04:15.979912+00:00"
+  },
+  {
+    "id": "723b5be5-89d2-4b42-93b8-c7723cb0803e",
+    "category_id": "22222222-2222-2222-2222-222222222222",
+    "name_en": "Iced Dirty Espresso",
+    "name_ar": "ديرتي إسبريسو مثلج",
+    "description_en": "Iced espresso layered with cold milk, creamy milk foam, and chocolate sauce, finished with a dusting of cocoa powder.",
+    "description_ar": "سبريسو مثلج بطبقات من اللبن البارد ورغوة اللبن الكريمية وصوص الشوكولاتة، مع رشة من الكاكاو البودرة.",
+    "image": "/images/products/storage-1791815814348-hfr200.jpeg",
+    "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791815814348-hfr200.jpeg",
+    "display_order": 115,
+    "is_visible": true,
+    "is_featured": false,
+    "sizes": [
+      {
+        "id": "34436811-d244-4b1f-81d2-f655bfb2a3a7",
+        "label_en": "Standard",
+        "label_ar": "حجم قياسي",
+        "price": 180,
+        "display_order": 1,
+        "is_available": true,
+        "created_at": "2026-10-12T14:37:34.751106+00:00"
+      }
+    ],
+    "extra_ids": [],
+    "created_at": "2026-10-12T14:37:34.40568+00:00",
+    "updated_at": "2026-10-12T14:37:34.40568+00:00"
+  }
+]

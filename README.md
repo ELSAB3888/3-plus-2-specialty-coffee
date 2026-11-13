@@ -1,111 +1,183 @@
 # 3+2 Specialty Coffee — Digital Menu & Management System
 
-> **Brand Story:** 3 Sisters, 2 Brothers  
-> **Brand Tagline:** One Perfect Cup
+> **Brand:** 3 Sisters, 2 Brothers — One Perfect Cup  
+> **Stack:** React 18 · TypeScript · Tailwind CSS · Vite · GitHub Pages · Local Node.js Admin
 
-A production-ready, mobile-first bilingual web application and digital menu designed specifically for **3+2 Specialty Coffee**, featuring customer QR code access, real-time client-side search, multi-size pricing with elegant dotted leader lines, an independent extras section, and an owner-only administrative portal backed by Supabase PostgreSQL and Row Level Security.
-
----
-
-## ☕ Visual Identity & Design Direction
-
-- **Brand Colors:** Warm Cream (`#F5F0E8`), Olive Green (`#4A5D3A`), Espresso (`#3C2A1E`), and Antique Gold (`#C5A572`).
-- **Typography:** Playfair Display & Noto Serif Arabic for headlines; Inter & Noto Sans Arabic for body.
-- **Menu Presentation:** Elegant dotted leader lines connecting beverage names to prices, subtle decorative wavy dividers, and expandable detail panels.
-- **Bilingual Architecture:** Native English (LTR) and Arabic (RTL) with natural localized phrasing and automatic HTML direction synchronization.
+A production-ready, mobile-first **bilingual digital menu website** for **3+2 Specialty Coffee** (Egypt). The public website is a fully static site hosted on GitHub Pages. All menu data lives in local JSON files — no cloud database at runtime.
 
 ---
 
-## 🚀 Key Features
+## ☕ Architecture Overview
 
-1. **Direct QR Menu Access (`/menu`):**
-   - Directly scannable from café tables without redirects or app downloads.
-   - Sticky horizontally scrollable category navigation bar on mobile devices.
-   - Real-time client-side search matching English, Arabic, and tasting notes.
-   - Product detail accordion displaying cup sizes, prices in EGP, and tasting notes.
-   - Dedicated **Extras** section at the bottom for milk alternatives and artisan add-ons.
+```
+3-plus-2-specialty-coffee/
+├── public/
+│   ├── data/              ← Runtime JSON (categories, products, extras, site_settings)
+│   └── images/products/   ← 223 real product photos
+├── src/                   ← React frontend (customer site + admin UI)
+├── admin-server/          ← Local-only Node.js backend (127.0.0.1:3001)
+├── data/                  ← Mirror copy of public/data (source of truth for admin edits)
+├── backups/               ← Auto-generated local backups (gitignored)
+├── migration/             ← One-time Supabase extraction scripts & raw backup (reference only)
+├── .github/workflows/     ← GitHub Actions → GitHub Pages deployment
+└── start-admin.bat        ← Windows launcher for the admin dashboard
+```
 
-2. **Welcome Landing Page (`/`):**
-   - Hero banner with grain overlay and brand story badge ("3 Sisters, 2 Brothers").
-   - Three core craft promises: *Micro-Lot Origins*, *Artisan Profile Roasting*, and *Deliberate Brewing*.
-   - Featured signature drinks showcase.
-   - Heritage story section explaining the sibling collaboration.
-
-3. **Owner-Only Administration (`/admin`):**
-   - Protected route requiring owner authentication via Supabase Auth.
-   - **Categories:** Add, edit, reorder, toggle visibility, and safe deletion protection (prevents deletion if a category contains products).
-   - **Products:** Manage names, descriptions, category assignment, single price vs multiple sizes, featured status, and photo uploads.
-   - **Extras:** Manage signature add-ons and prices.
-   - **Image Uploads:** Drag-and-drop image upload to Supabase Storage with preview and file validation.
-
-4. **Security & Data Integrity:**
-   - PostgreSQL Row Level Security (RLS) policies on all tables.
-   - Anonymous visitors can only query published items (`is_visible = true`).
-   - Mutations strictly restricted to the authenticated owner.
-   - Never exposes privileged keys to client code.
+**Key rule:** The public website reads from `/data/*.json` and `/images/products/` — no backend, no Supabase, no API calls at runtime.
 
 ---
 
-## 🛠️ Technology Stack
+## 🚀 Running Locally
 
-- **Frontend:** React 18 with TypeScript (strict mode enabled).
-- **Build Tool:** Vite 6 with optimized chunk splitting.
-- **Routing:** React Router v6.
-- **Styling:** Tailwind CSS with custom design tokens.
-- **Internationalization:** i18next & react-i18next with bundled JSON dictionaries.
-- **Icons:** Lucide React.
-- **Backend & Database:** Supabase (PostgreSQL with RLS).
-- **Storage:** Supabase Storage (`menu-images` bucket).
+### Customer Website (Dev)
 
----
-
-## 📦 Getting Started
-
-### 1. Install Dependencies
 ```bash
 npm install
-```
-
-### 2. Configure Environment Variables
-Copy `.env.example` to `.env`:
-```bash
-cp .env.example .env
-```
-Fill in your Supabase project credentials:
-```env
-VITE_SUPABASE_URL=https://your-project-id.supabase.co
-VITE_SUPABASE_PUBLISHABLE_KEY=your-supabase-anon-key
-```
-*(Note: If left unconfigured, the application runs seamlessly in local demo mock mode with rich initial seed data).*
-
-### 3. Run Development Server
-```bash
 npm run dev
+# → http://localhost:5173
 ```
-Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### 4. Build for Production
+### Admin Dashboard (Local Only)
+
+The admin dashboard only works from `localhost` or `127.0.0.1`. It is blocked on the public site.
+
+**Windows (recommended):**
+```
+Double-click: start-admin.bat
+```
+
+**Manual:**
+```bash
+# Terminal 1 — Frontend
+npm run dev
+
+# Terminal 2 — Admin backend
+cd admin-server
+node src/server.js
+# → http://127.0.0.1:3001
+
+# Open: http://localhost:5173/#/admin
+```
+
+**Admin token:** Set your own token in `admin-server/.env` → `ADMIN_TOKEN=your-secret-here`  
+*(Never commit the actual token value to version control)*
+
+---
+
+## 🏗️ Build & Deployment
+
+### Build the static site
+
 ```bash
 npm run build
+# Output: dist/
 ```
 
+### Deploy to GitHub Pages
+
+Push to `main` branch — GitHub Actions automatically builds and deploys to the `gh-pages` branch.
+
+**One-time GitHub setup:**
+1. Push the repository to GitHub.
+2. Go to **Settings → Pages → Source → Deploy from a branch → `gh-pages`**.
+3. The site will be live at `https://<username>.github.io/<repo-name>/`.
+
+No secrets needed — the workflow uses the automatic `GITHUB_TOKEN`.
+
 ---
 
-## 🗄️ Database Setup
+## ⚙️ Admin Server Configuration
 
-Follow the instructions in [`supabase/README.md`](supabase/README.md) to apply migrations and seed data in your Supabase project:
-1. Run `supabase/migrations/001_initial_schema.sql` in the Supabase SQL Editor.
-2. Run `supabase/seed.sql` to populate initial menu items.
+Create / edit `admin-server/.env`:
+
+```env
+# Secret token — keep this private, never commit it
+ADMIN_TOKEN=your-secret-token-at-least-32-chars
+
+# Git remote with PAT for push (optional — only needed for "Publish" button)
+GIT_REMOTE=https://ghp_YOUR_PAT@github.com/YOUR_USERNAME/3-plus-2-specialty-coffee.git
+GIT_USER_NAME=3plus2 Admin
+GIT_USER_EMAIL=admin@3plus2coffee.com
+
+PORT=3001
+```
+
+> [!CAUTION]
+> `admin-server/.env` is gitignored. Never commit it. The token is only stored locally.
 
 ---
 
-## 🌐 Hosting & Commercial Deployment
+## 📦 Data Files
 
-For commercial café deployment:
-1. **Frontend Hosting:**
-   - **Cloudflare Pages / Netlify / Vercel Pro:** Free or low-cost commercial-eligible static hosting compatible with Vite SPAs.
-   - Set environment variables `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` in the hosting dashboard.
-   - Set build command: `npm run build` and output directory: `dist`.
-2. **Custom Domain:**
-   - Connect custom domain (e.g. `menu.3plus2coffee.com`).
-   - Generate table QR codes pointing directly to `https://menu.3plus2coffee.com/menu`.
+| File | Contents |
+|------|----------|
+| `public/data/categories.json` | 15 categories (AR + EN names, display order) |
+| `public/data/products.json` | 115 products with sizes, prices (EGP), images |
+| `public/data/extras.json` | 11 extras / add-ons |
+| `public/data/site_settings.json` | Site name, tagline, currency |
+| `public/images/products/` | 223 real product images |
+
+The admin server writes to both `public/data/` and `data/` (mirror). The customer website reads only from `public/data/`.
+
+---
+
+## 🔒 Security Model
+
+| Component | Access |
+|-----------|--------|
+| Public website | Anyone — static, no credentials |
+| Admin UI (`/#/admin`) | Blocked on public domain; local only |
+| Admin backend `:3001` | Binds to `127.0.0.1` only — not reachable from internet |
+| Admin token | Stored only in `admin-server/.env` (gitignored) + browser `sessionStorage` |
+| Supabase | NOT used in the new application at all |
+
+---
+
+## 💾 Backups
+
+Backups are created automatically before every admin write operation and stored in `backups/` (gitignored, local only). Up to 10 backups are kept. Restore from the Admin Dashboard → Backups tab.
+
+> [!IMPORTANT]
+> Restoring a backup does **not** automatically publish to GitHub. You must explicitly click "Publish to GitHub" after verifying the restore.
+
+---
+
+## 🌐 Bilingual Support
+
+- **Arabic (RTL):** Full right-to-left layout, Noto Serif Arabic / Noto Sans Arabic
+- **English (LTR):** Inter / Playfair Display
+- Language toggle in the header
+- Prices: Arabic = `{price} ج.م` · English = `{price} EGP`
+
+---
+
+## 📋 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Production build → `dist/` |
+| `npm run typecheck` | TypeScript type check (no emit) |
+| `npm run preview` | Preview production build locally |
+
+---
+
+## 🏷️ Brand Identity
+
+- **Colors:** Warm Cream `#F5F0E8` · Olive Green `#4A5D3A` · Espresso `#3C2A1E` · Antique Gold `#C5A572`
+- **Fonts:** Playfair Display + Noto Serif Arabic (headings) · Inter + Noto Sans Arabic (body)
+- **Menu UX:** Expandable product cards · dotted price leaders · horizontal category nav · real-time search
+
+---
+
+## 🗂️ Migration Reference
+
+The original menu data was extracted from Supabase once during setup. The extraction scripts are preserved in `migration/` for reference only. **Do not run them again** — the data is already in `public/data/` and `data/`.
+
+```
+migration/
+├── migrate.mjs             ← One-time extraction script
+└── backup/
+    ├── raw-backup-latest.json   ← Original Supabase export (reference)
+    └── validation-report.json  ← Migration validation results
+```

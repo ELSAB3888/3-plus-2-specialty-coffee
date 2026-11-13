@@ -1,58 +1,69 @@
 import { useState, useEffect, useCallback } from 'react';
-import { supabase } from '@/lib/supabase';
 import type { AuthState } from '@/types';
-import type { User, Session } from '@supabase/supabase-js';
+
+const STORAGE_KEY = '3plus2_admin_session_token';
+
+export function isLocalAdminEnvironment(): boolean {
+  if (typeof window === 'undefined') return false;
+  const hostname = window.location.hostname;
+  return hostname === 'localhost' || hostname === '127.0.0.1';
+}
 
 export function useAuth() {
   const [state, setState] = useState<AuthState>({
     isAuthenticated: false,
     isLoading: true,
     userId: null,
+    token: null,
   });
 
   useEffect(() => {
-    // Check current session
-    void supabase.auth.getSession().then(({ data }: { data: { session: Session | null } }) => {
-      setState({
-        isAuthenticated: !!data?.session?.user,
-        isLoading: false,
-        userId: data?.session?.user?.id ?? null,
-      });
+    // Check local session token in sessionStorage
+    const token = sessionStorage.getItem(STORAGE_KEY);
+    const isLocal = isLocalAdminEnvironment();
+
+    setState({
+      isAuthenticated: Boolean(token && isLocal),
+      isLoading: false,
+      userId: token ? 'local-admin' : null,
+      token: token || null,
     });
-
-    // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (_event: string, session: Session | null) => {
-        setState({
-          isAuthenticated: !!session?.user,
-          isLoading: false,
-          userId: session?.user?.id ?? null,
-        });
-      }
-    );
-
-    return () => {
-      subscription?.unsubscribe?.();
-    };
   }, []);
 
-  const signIn = useCallback(
-    async (email: string, password: string): Promise<{ user: User | null; error: string | null }> => {
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      });
-      if (error) {
-        return { user: null, error: error.message };
-      }
-      return { user: data.user, error: null };
-    },
-    []
-  );
+  const loginWithToken = useCallback((token: string) => {
+    sessionStorage.setItem(STORAGE_KEY, token);
+    setState({
+      isAuthenticated: true,
+      isLoading: false,
+      userId: 'local-admin',
+      token,
+    });
+  }, []);
 
   const signOut = useCallback(async () => {
-    await supabase.auth.signOut();
+    sessionStorage.removeItem(STORAGE_KEY);
+    setState({
+      isAuthenticated: false,
+      isLoading: false,
+      userId: null,
+      token: null,
+    });
   }, []);
 
-  return { ...state, signIn, signOut };
+  // For compatibility with any legacy signature
+  const signIn = useCallback(
+    async (_email: string, password: string) => {
+      loginWithToken(password);
+      return { user: { id: 'local-admin', email: 'admin@local' } as any, error: null };
+    },
+    [loginWithToken]
+  );
+
+  return {
+    ...state,
+    isLocal: isLocalAdminEnvironment(),
+    loginWithToken,
+    signIn,
+    signOut,
+  };
 }

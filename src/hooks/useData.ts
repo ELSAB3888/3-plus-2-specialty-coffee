@@ -1,12 +1,16 @@
 import { useState, useEffect, useCallback } from 'react';
-import { supabase } from '@/lib/supabase';
+import {
+  getCategories,
+  getProducts,
+  getExtras,
+  getMenuData,
+} from '@/lib/dataService';
 import type {
   Category,
   Product,
-  ProductWithSizes,
   CategoryWithProducts,
   Extra,
-  ProductSize,
+  DashboardStats,
 } from '@/types';
 
 /* ─── Categories ─── */
@@ -20,20 +24,12 @@ export function useCategories(visibleOnly = false) {
     setLoading(true);
     setError(null);
     try {
-      let query = supabase
-        .from('categories')
-        .select('*')
-        .order('display_order', { ascending: true });
-
-      if (visibleOnly) {
-        query = query.eq('is_visible', true);
-      }
-
-      const { data, error: fetchError } = await query;
-      if (fetchError) throw fetchError;
-      setCategories(data ?? []);
+      let data = await getCategories();
+      data = [...data].sort((a, b) => a.display_order - b.display_order);
+      if (visibleOnly) data = data.filter((c) => c.is_visible);
+      setCategories(data);
     } catch (err: any) {
-      setError(err?.message || (err instanceof Error ? err.message : 'Failed to fetch categories'));
+      setError(err?.message ?? 'Failed to fetch categories');
     } finally {
       setLoading(false);
     }
@@ -49,7 +45,7 @@ export function useCategories(visibleOnly = false) {
 /* ─── Products ─── */
 
 export function useProducts(categoryId?: string, visibleOnly = false) {
-  const [products, setProducts] = useState<ProductWithSizes[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -57,36 +53,18 @@ export function useProducts(categoryId?: string, visibleOnly = false) {
     setLoading(true);
     setError(null);
     try {
-      let query = supabase
-        .from('products')
-        .select(`
-          *,
-          product_sizes (*)
-        `)
-        .order('display_order', { ascending: true });
-
-      if (categoryId) {
-        query = query.eq('category_id', categoryId);
-      }
-
-      if (visibleOnly) {
-        query = query.eq('is_visible', true);
-      }
-
-      const { data, error: fetchError } = await query;
-      if (fetchError) throw fetchError;
-
-      // Sort sizes within each product
-      const productsWithSortedSizes = (data ?? []).map((product: ProductWithSizes) => ({
-        ...product,
-        product_sizes: [...(product.product_sizes || [])].sort(
-          (a: ProductSize, b: ProductSize) => (a.display_order ?? 0) - (b.display_order ?? 0)
-        ),
-      })) as ProductWithSizes[];
-
-      setProducts(productsWithSortedSizes);
+      let data = await getProducts();
+      if (categoryId) data = data.filter((p) => p.category_id === categoryId);
+      if (visibleOnly) data = data.filter((p) => p.is_visible);
+      data = [...data]
+        .sort((a, b) => a.display_order - b.display_order)
+        .map((p) => ({
+          ...p,
+          sizes: [...p.sizes].sort((a, b) => a.display_order - b.display_order),
+        }));
+      setProducts(data);
     } catch (err: any) {
-      setError(err?.message || (err instanceof Error ? err.message : 'Failed to fetch products'));
+      setError(err?.message ?? 'Failed to fetch products');
     } finally {
       setLoading(false);
     }
@@ -99,7 +77,7 @@ export function useProducts(categoryId?: string, visibleOnly = false) {
   return { products, loading, error, refetch: fetchProducts };
 }
 
-/* ─── Menu Data (categories with products, public) ─── */
+/* ─── Menu Data (categories with products, customer view) ─── */
 
 export function useMenuData() {
   const [menuData, setMenuData] = useState<CategoryWithProducts[]>([]);
@@ -110,36 +88,10 @@ export function useMenuData() {
     setLoading(true);
     setError(null);
     try {
-      const { data, error: fetchError } = await supabase
-        .from('categories')
-        .select(`
-          *,
-          products (
-            *,
-            product_sizes (*)
-          )
-        `)
-        .eq('is_visible', true)
-        .order('display_order', { ascending: true });
-
-      if (fetchError) throw fetchError;
-
-      const sorted = (data ?? []).map((cat: any) => ({
-        ...cat,
-        products: [...(cat.products || [])]
-          .filter((p: Product) => p.is_visible)
-          .sort((a: Product, b: Product) => a.display_order - b.display_order)
-          .map((p: any) => ({
-            ...p,
-            product_sizes: [...(p.product_sizes || [])].sort(
-              (a: ProductSize, b: ProductSize) => a.display_order - b.display_order
-            ),
-          })),
-      })) as CategoryWithProducts[];
-
-      setMenuData(sorted);
+      const data = await getMenuData();
+      setMenuData(data);
     } catch (err: any) {
-      setError(err?.message || (err instanceof Error ? err.message : 'Failed to fetch menu'));
+      setError(err?.message ?? 'Failed to fetch menu');
     } finally {
       setLoading(false);
     }
@@ -163,20 +115,12 @@ export function useExtras(availableOnly = false) {
     setLoading(true);
     setError(null);
     try {
-      let query = supabase
-        .from('extras')
-        .select('*')
-        .order('display_order', { ascending: true });
-
-      if (availableOnly) {
-        query = query.eq('is_available', true);
-      }
-
-      const { data, error: fetchError } = await query;
-      if (fetchError) throw fetchError;
-      setExtras(data ?? []);
+      let data = await getExtras();
+      if (availableOnly) data = data.filter((e) => e.is_available);
+      data = [...data].sort((a, b) => a.display_order - b.display_order);
+      setExtras(data);
     } catch (err: any) {
-      setError(err?.message || (err instanceof Error ? err.message : 'Failed to fetch extras'));
+      setError(err?.message ?? 'Failed to fetch extras');
     } finally {
       setLoading(false);
     }
@@ -192,28 +136,27 @@ export function useExtras(availableOnly = false) {
 /* ─── Featured Products ─── */
 
 export function useFeaturedProducts() {
-  const [products, setProducts] = useState<ProductWithSizes[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetch = async () => {
-      const { data } = await supabase
-        .from('products')
-        .select(`*, product_sizes (*)`)
-        .eq('is_visible', true)
-        .eq('is_featured', true)
-        .order('display_order', { ascending: true })
-        .limit(6);
-
-      const sorted = (data ?? []).map((p: any) => ({
-        ...p,
-        product_sizes: [...(p.product_sizes || [])].sort(
-          (a: ProductSize, b: ProductSize) => a.display_order - b.display_order
-        ),
-      })) as ProductWithSizes[];
-
-      setProducts(sorted);
-      setLoading(false);
+      try {
+        const data = await getProducts();
+        const featured = data
+          .filter((p) => p.is_visible && p.is_featured)
+          .sort((a, b) => a.display_order - b.display_order)
+          .slice(0, 6)
+          .map((p) => ({
+            ...p,
+            sizes: [...p.sizes].sort((a, b) => a.display_order - b.display_order),
+          }));
+        setProducts(featured);
+      } catch {
+        // silently fail for featured products on home page
+      } finally {
+        setLoading(false);
+      }
     };
     void fetch();
   }, []);
@@ -222,13 +165,6 @@ export function useFeaturedProducts() {
 }
 
 /* ─── Dashboard Stats ─── */
-
-export interface DashboardStats {
-  totalCategories: number;
-  totalProducts: number;
-  totalExtras: number;
-  visibleProducts: number;
-}
 
 export function useDashboardStats() {
   const [stats, setStats] = useState<DashboardStats>({
@@ -241,23 +177,23 @@ export function useDashboardStats() {
 
   const fetchStats = useCallback(async () => {
     setLoading(true);
-    const [cats, prods, extras, visibleProds] = await Promise.all([
-      supabase.from('categories').select('id', { count: 'exact', head: true }),
-      supabase.from('products').select('id', { count: 'exact', head: true }),
-      supabase.from('extras').select('id', { count: 'exact', head: true }),
-      supabase
-        .from('products')
-        .select('id', { count: 'exact', head: true })
-        .eq('is_visible', true),
-    ]);
-
-    setStats({
-      totalCategories: cats.count ?? 0,
-      totalProducts: prods.count ?? 0,
-      totalExtras: extras.count ?? 0,
-      visibleProducts: visibleProds.count ?? 0,
-    });
-    setLoading(false);
+    try {
+      const [cats, prods, exts] = await Promise.all([
+        getCategories(),
+        getProducts(),
+        getExtras(),
+      ]);
+      setStats({
+        totalCategories: cats.length,
+        totalProducts: prods.length,
+        totalExtras: exts.length,
+        visibleProducts: prods.filter((p) => p.is_visible).length,
+      });
+    } catch {
+      // keep zeroed stats
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   useEffect(() => {

@@ -8,7 +8,7 @@ export function QRCodeGeneratorPage() {
   const { language } = useLanguage();
 
   const [baseUrl, setBaseUrl] = useState(() => {
-    return window.location.origin ? `${window.location.origin}/menu` : 'https://3plus2coffee.com/menu';
+    return window.location.origin ? `${window.location.origin}/#/menu` : 'https://3plus2coffee.com/#/menu';
   });
   const [tableNumber, setTableNumber] = useState('');
   const [includeWifi, setIncludeWifi] = useState(false);

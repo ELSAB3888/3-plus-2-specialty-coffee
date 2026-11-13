@@ -33,3 +33,9 @@ dist-ssr
 
 .vercel
 .env*
+
+# Local Administration & Backups (never commit to git)
+backups/
+admin-server/.env
+admin-server/node_modules/
+*.tmp

@@ -1,4 +1,9 @@
-/* ─── Database Row Types ─── */
+/* ─────────────────────────────────────────────────────────────────────────
+ * 3+2 Specialty Coffee — Shared TypeScript Types
+ * Source of truth: public/data/*.json (local files, no external database)
+ * ───────────────────────────────────────────────────────────────────────── */
+
+/* ─── Core Database Types (matches public/data/*.json) ─── */
 
 export interface Category {
   id: string;
@@ -7,11 +12,24 @@ export interface Category {
   slug: string;
   description_en: string | null;
   description_ar: string | null;
-  image_url: string | null;
+  /** Local image path e.g. /images/products/cat-xxx.jpg, or null */
+  image?: string | null;
+  image_url?: string | null;
+  image_url_original?: string | null;
   display_order: number;
   is_visible: boolean;
   created_at: string;
   updated_at: string;
+}
+
+export interface ProductSize {
+  id: string;
+  label_en: string;
+  label_ar: string;
+  price: number;
+  display_order: number;
+  is_available: boolean;
+  created_at?: string;
 }
 
 export interface Product {
@@ -21,24 +39,22 @@ export interface Product {
   name_ar: string;
   description_en: string | null;
   description_ar: string | null;
-  image_url: string | null;
+  /** Local image path e.g. /images/products/storage-xxx.jpg, or null */
+  image?: string | null;
+  image_url?: string | null;
+  image_url_original?: string | null;
   display_order: number;
   is_visible: boolean;
   is_featured: boolean;
+  sizes: ProductSize[];
+  product_sizes?: ProductSize[];
+  /** IDs of extras that can be added to this product (optional relationship) */
+  extra_ids?: string[];
   created_at: string;
   updated_at: string;
 }
 
-export interface ProductSize {
-  id: string;
-  product_id: string;
-  label_en: string;
-  label_ar: string;
-  price: number;
-  display_order: number;
-  is_available: boolean;
-  created_at: string;
-}
+export type ProductWithSizes = Product;
 
 export interface Extra {
   id: string;
@@ -47,53 +63,33 @@ export interface Extra {
   price: number;
   is_available: boolean;
   display_order: number;
-  created_at: string;
-  updated_at: string;
+  created_at?: string;
+  updated_at?: string;
 }
 
-export interface ProductExtra {
-  id: string;
-  product_id: string;
-  extra_id: string;
-  created_at: string;
+/* ─── Joined / Enriched Types ─── */
+
+export interface CategoryWithProducts extends Category {
+  products: Product[];
 }
 
-export interface SiteSettings {
-  id: string;
-  key: string;
-  value_en: string | null;
-  value_ar: string | null;
-  updated_at: string;
-}
+/* ─── Insert / Update Types ─── */
 
-/* ─── Insert Types (for forms) ─── */
-
-export type CategoryInsert = Omit<Category, 'id' | 'created_at' | 'updated_at'>;
+export type CategoryInsert = Omit<Category, 'id' | 'created_at' | 'updated_at' | 'image_url_original'>;
 export type CategoryUpdate = Partial<CategoryInsert>;
-
-export type ProductInsert = Omit<Product, 'id' | 'created_at' | 'updated_at'>;
-export type ProductUpdate = Partial<ProductInsert>;
 
 export type ProductSizeInsert = Omit<ProductSize, 'id' | 'created_at'>;
 export type ProductSizeUpdate = Partial<ProductSizeInsert>;
 
+export type ProductInsert = Omit<Product, 'id' | 'created_at' | 'updated_at' | 'image_url_original'> & {
+  sizes: ProductSizeInsert[];
+};
+export type ProductUpdate = Partial<Omit<ProductInsert, 'sizes'>> & {
+  sizes?: ProductSizeInsert[];
+};
+
 export type ExtraInsert = Omit<Extra, 'id' | 'created_at' | 'updated_at'>;
 export type ExtraUpdate = Partial<ExtraInsert>;
-
-/* ─── Joined / Enriched Types ─── */
-
-export interface ProductWithSizes extends Product {
-  product_sizes: ProductSize[];
-}
-
-export interface ProductWithDetails extends ProductWithSizes {
-  category: Category;
-  product_extras: (ProductExtra & { extra: Extra })[];
-}
-
-export interface CategoryWithProducts extends Category {
-  products: ProductWithSizes[];
-}
 
 /* ─── UI / App Types ─── */
 
@@ -106,13 +102,62 @@ export interface AppContextValue {
   setLanguage: (lang: Language) => void;
 }
 
-export interface AuthState {
-  isAuthenticated: boolean;
-  isLoading: boolean;
-  userId: string | null;
+export interface DashboardStats {
+  totalCategories: number;
+  totalProducts: number;
+  totalExtras: number;
+  visibleProducts: number;
 }
 
-/* ─── Form Schemas (mirrored from Zod for reference) ─── */
+/* ─── Admin API Types ─── */
+
+export interface AdminApiResponse<T> {
+  success: boolean;
+  data?: T;
+  error?: string;
+}
+
+export interface BackupInfo {
+  id: string;
+  label: string;
+  timestamp: string;
+  counts: {
+    categories: number;
+    products: number;
+    extras: number;
+  };
+}
+
+export interface GitStatus {
+  hasChanges: boolean;
+  modifiedFiles: string[];
+  branch: string;
+}
+
+export interface GitResult {
+  success: boolean;
+  commitHash?: string;
+  error?: string;
+}
+
+export interface HealthStatus {
+  status: 'ok' | 'error';
+  timestamp: string;
+  dataFiles: {
+    categories: number;
+    products: number;
+    extras: number;
+  };
+}
+
+export interface PublishingStatus {
+  state: 'idle' | 'saving' | 'pushing' | 'success' | 'failed';
+  message?: string;
+  timestamp?: string;
+  commitHash?: string;
+}
+
+/* ─── Form Types ─── */
 
 export interface CategoryFormData {
   name_en: string;
@@ -124,24 +169,27 @@ export interface CategoryFormData {
   is_visible: boolean;
 }
 
-export interface ProductFormData {
-  category_id: string;
-  name_en: string;
-  name_ar: string;
-  description_en: string;
-  description_ar: string;
-  display_order: number;
-  is_visible: boolean;
-  is_featured: boolean;
-  sizes: ProductSizeFormData[];
-}
-
 export interface ProductSizeFormData {
+  id?: string;
   label_en: string;
   label_ar: string;
   price: number;
   display_order: number;
   is_available: boolean;
+}
+
+export interface ProductFormData {
+  category_id: string;
+  name_en: string;
+  name_ar: string;
+  description_en: string | null;
+  description_ar: string | null;
+  display_order: number;
+  is_visible: boolean;
+  is_featured: boolean;
+  image: string | null;
+  sizes: ProductSizeFormData[];
+  extra_ids: string[];
 }
 
 export interface ExtraFormData {
@@ -152,7 +200,11 @@ export interface ExtraFormData {
   display_order: number;
 }
 
-export interface LoginFormData {
-  email: string;
-  password: string;
+/* ─── Auth Types ─── */
+
+export interface AuthState {
+  isAuthenticated: boolean;
+  isLoading: boolean;
+  userId: string | null;
+  token?: string | null;
 }

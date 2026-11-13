@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Plus, Edit2, Trash2, Eye, EyeOff, X } from 'lucide-react';
 import { useCategories, useProducts } from '@/hooks/useData';
 import { useLanguage } from '@/hooks/useLanguage';
-import { supabase } from '@/lib/supabase';
+import { createCategory, updateCategory, deleteCategory } from '@/lib/adminApi';
 import { slugify, localized } from '@/lib/utils';
 import { toast } from '@/components/ui/Toast';
 import { ConfirmDialog } from '@/components/ui/ConfirmDialog';
@@ -66,25 +66,18 @@ export function CategoryManagement() {
       name_en: nameEn.trim(),
       name_ar: nameAr.trim(),
       slug: slug.trim() || slugify(nameEn),
-      description_en: descEn.trim() || null,
-      description_ar: descAr.trim() || null,
+      description_en: descEn.trim() || '',
+      description_ar: descAr.trim() || '',
       display_order: Number(displayOrder),
       is_visible: isVisible,
     };
 
     try {
       if (editingCategory) {
-        const { error } = await supabase
-          .from('categories')
-          .update(categoryData)
-          .eq('id', editingCategory.id);
-        if (error) throw error;
+        await updateCategory(editingCategory.id, categoryData);
         toast('success', t('admin.saveSuccess'));
       } else {
-        const { error } = await supabase
-          .from('categories')
-          .insert(categoryData);
-        if (error) throw error;
+        await createCategory(categoryData);
         toast('success', t('admin.saveSuccess'));
       }
 
@@ -114,11 +107,7 @@ export function CategoryManagement() {
 
     setSubmitting(true);
     try {
-      const { error } = await supabase
-        .from('categories')
-        .delete()
-        .eq('id', deletingCategory.id);
-      if (error) throw error;
+      await deleteCategory(deletingCategory.id);
       toast('success', t('admin.deleteSuccess'));
       setDeletingCategory(null);
       void refetch();
@@ -131,11 +120,7 @@ export function CategoryManagement() {
 
   const toggleVisibility = async (cat: Category) => {
     try {
-      const { error } = await supabase
-        .from('categories')
-        .update({ is_visible: !cat.is_visible })
-        .eq('id', cat.id);
-      if (error) throw error;
+      await updateCategory(cat.id, { is_visible: !cat.is_visible });
       void refetch();
       toast('success', t('admin.saveSuccess'));
     } catch (err: any) {
@@ -148,238 +133,221 @@ export function CategoryManagement() {
   }
 
   return (
-    <div className="space-y-6 animate-fade-in">
-      <div className="flex items-center justify-between">
+    <div className="space-y-6">
+      {/* Page Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="font-serif text-2xl font-bold text-brand-espresso">
             {t('admin.categories')}
           </h1>
           <p className="text-xs text-brand-olive-500 mt-1">
-            {language === 'ar'
-              ? 'إدارة أقسام وتصنيفات القائمة والتحكم بظهورها وترتيبها'
-              : 'Organize menu sections, bilingual descriptions, and display sequence'}
+            {language === 'ar' ? 'إدارة أقسام المنيو وترتيب عرضها' : 'Manage menu sections and display order'}
           </p>
         </div>
-        <button onClick={startCreate} className="btn-primary text-xs">
-          <Plus size={16} />
-          <span>{t('admin.addCategory')}</span>
-        </button>
+        {!isCreating && !editingCategory && (
+          <button onClick={startCreate} className="btn-primary text-xs self-start">
+            <Plus size={16} />
+            <span>{t('admin.addCategory')}</span>
+          </button>
+        )}
       </div>
 
-      {/* Editor Modal / Drawer */}
-      {(isCreating || editingCategory) && (
-        <div className="card p-6 border-brand-olive/30 shadow-brand-md bg-white">
-          <div className="flex items-center justify-between mb-4 border-b border-brand-cream-300 pb-3">
-            <h2 className="font-serif font-bold text-lg text-brand-espresso">
-              {isCreating ? t('admin.addCategory') : t('admin.editCategory')}
-            </h2>
-            <button
-              onClick={() => {
-                setIsCreating(false);
-                setEditingCategory(null);
-              }}
-              className="p-1 rounded-full hover:bg-brand-cream-200"
-            >
-              <X size={18} />
-            </button>
+      {/* Category List */}
+      <div className="card divide-y divide-brand-cream-200">
+        {categories.map((cat) => (
+          <div
+            key={cat.id}
+            className="p-4 flex items-center justify-between gap-4 hover:bg-brand-cream-50 transition-colors"
+          >
+            <div className="flex items-center gap-3 min-w-0">
+              <span className="w-6 h-6 rounded-full bg-brand-cream-200 text-brand-olive-600 text-xs font-semibold flex items-center justify-center shrink-0">
+                {cat.display_order}
+              </span>
+              <div className="min-w-0">
+                <h3 className="font-medium text-sm text-brand-espresso truncate">
+                  {localized(cat, 'name', language)}
+                </h3>
+                <p className="text-xs text-brand-olive-400 truncate">
+                  {language === 'ar' ? cat.name_en : cat.name_ar} • /{cat.slug}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-1 shrink-0">
+              <button
+                onClick={() => void toggleVisibility(cat)}
+                className="p-2 rounded-brand text-brand-olive-400 hover:text-brand-olive hover:bg-brand-cream-200 transition-colors"
+                title={cat.is_visible ? t('admin.visible') : t('admin.hidden')}
+              >
+                {cat.is_visible ? <Eye size={16} /> : <EyeOff size={16} className="text-brand-olive-300" />}
+              </button>
+              <button
+                onClick={() => startEdit(cat)}
+                className="p-2 rounded-brand text-brand-olive-400 hover:text-brand-olive hover:bg-brand-cream-200 transition-colors"
+                title={t('common.edit')}
+              >
+                <Edit2 size={16} />
+              </button>
+              <button
+                onClick={() => setDeletingCategory(cat)}
+                className="p-2 rounded-brand text-red-400 hover:text-red-600 hover:bg-red-50 transition-colors"
+                title={t('common.delete')}
+              >
+                <Trash2 size={16} />
+              </button>
+            </div>
           </div>
+        ))}
+      </div>
 
-          <form onSubmit={handleSave} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold mb-1">
-                  {t('admin.nameEn')} *
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={nameEn}
-                  onChange={(e) => {
-                    setNameEn(e.target.value);
-                    if (isCreating && !slug) setSlug(slugify(e.target.value));
-                  }}
-                  placeholder="e.g. Espresso Bar"
-                  className="input-field"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold mb-1">
-                  {t('admin.nameAr')} *
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={nameAr}
-                  onChange={(e) => setNameAr(e.target.value)}
-                  placeholder="مثال: بار الإسبريسو"
-                  className="input-field"
-                  dir="rtl"
-                />
-              </div>
+      {/* Add / Edit Form Modal */}
+      {(isCreating || editingCategory) && (
+        <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-brand max-w-lg w-full p-6 shadow-brand-lg border border-brand-cream-300 animate-scale-in max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between mb-4 pb-3 border-b border-brand-cream-200">
+              <h2 className="font-serif text-lg font-bold text-brand-espresso">
+                {editingCategory ? t('admin.editCategory') : t('admin.addCategory')}
+              </h2>
+              <button
+                onClick={() => {
+                  setIsCreating(false);
+                  setEditingCategory(null);
+                }}
+                className="text-brand-olive-400 hover:text-brand-olive p-1 rounded-brand"
+              >
+                <X size={18} />
+              </button>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold mb-1">
-                  {t('admin.descriptionEn')}
-                </label>
-                <textarea
-                  rows={2}
-                  value={descEn}
-                  onChange={(e) => setDescEn(e.target.value)}
-                  className="input-field resize-none"
-                  placeholder="Brief description of this section"
-                />
+            <form onSubmit={handleSave} className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-semibold text-brand-espresso mb-1">
+                    {t('admin.nameEn')} *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={nameEn}
+                    onChange={(e) => {
+                      setNameEn(e.target.value);
+                      if (!editingCategory) setSlug(slugify(e.target.value));
+                    }}
+                    className="input-field"
+                    placeholder="e.g. Hot Coffee"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-brand-espresso mb-1">
+                    {t('admin.nameAr')} *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={nameAr}
+                    onChange={(e) => setNameAr(e.target.value)}
+                    className="input-field"
+                    placeholder="مثال: قهوة ساخنة"
+                    dir="rtl"
+                  />
+                </div>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold mb-1">
-                  {t('admin.descriptionAr')}
-                </label>
-                <textarea
-                  rows={2}
-                  value={descAr}
-                  onChange={(e) => setDescAr(e.target.value)}
-                  className="input-field resize-none"
-                  placeholder="وصف مختصر للقسم"
-                  dir="rtl"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center">
-              <div>
-                <label className="block text-xs font-semibold mb-1">
+                <label className="block text-xs font-semibold text-brand-espresso mb-1">
                   {t('admin.slug')}
                 </label>
                 <input
                   type="text"
                   value={slug}
                   onChange={(e) => setSlug(e.target.value)}
-                  placeholder="espresso-bar"
+                  className="input-field font-mono text-xs"
+                  placeholder="hot-coffee"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-brand-espresso mb-1">
+                  {t('admin.descEn')}
+                </label>
+                <textarea
+                  rows={2}
+                  value={descEn}
+                  onChange={(e) => setDescEn(e.target.value)}
                   className="input-field"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold mb-1">
-                  {t('admin.displayOrder')}
+                <label className="block text-xs font-semibold text-brand-espresso mb-1">
+                  {t('admin.descAr')}
                 </label>
-                <input
-                  type="number"
-                  min="1"
-                  value={displayOrder}
-                  onChange={(e) => setDisplayOrder(parseInt(e.target.value) || 1)}
+                <textarea
+                  rows={2}
+                  value={descAr}
+                  onChange={(e) => setDescAr(e.target.value)}
                   className="input-field"
+                  dir="rtl"
                 />
               </div>
 
-              <div className="pt-5 flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  id="category_visible"
-                  checked={isVisible}
-                  onChange={(e) => setIsVisible(e.target.checked)}
-                  className="w-4 h-4 rounded text-brand-olive"
-                />
-                <label htmlFor="category_visible" className="text-xs font-semibold text-brand-espresso cursor-pointer">
-                  {t('common.visible')}
-                </label>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-semibold text-brand-espresso mb-1">
+                    {t('admin.order')}
+                  </label>
+                  <input
+                    type="number"
+                    min={1}
+                    value={displayOrder}
+                    onChange={(e) => setDisplayOrder(parseInt(e.target.value) || 1)}
+                    className="input-field"
+                  />
+                </div>
+                <div className="flex items-center gap-2 pt-6">
+                  <input
+                    type="checkbox"
+                    id="isVisible"
+                    checked={isVisible}
+                    onChange={(e) => setIsVisible(e.target.checked)}
+                    className="rounded border-brand-cream-300 text-brand-olive focus:ring-brand-gold"
+                  />
+                  <label htmlFor="isVisible" className="text-xs font-medium text-brand-espresso cursor-pointer">
+                    {t('admin.visible')}
+                  </label>
+                </div>
               </div>
-            </div>
 
-            <div className="flex justify-end gap-3 pt-3 border-t border-brand-cream-300">
-              <button
-                type="button"
-                onClick={() => {
-                  setIsCreating(false);
-                  setEditingCategory(null);
-                }}
-                className="btn-ghost"
-              >
-                {t('common.cancel')}
-              </button>
-              <button type="submit" disabled={submitting} className="btn-primary">
-                {submitting ? t('common.loading') : t('common.save')}
-              </button>
-            </div>
-          </form>
+              <div className="flex items-center justify-end gap-2 pt-4 border-t border-brand-cream-200">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsCreating(false);
+                    setEditingCategory(null);
+                  }}
+                  className="btn-secondary text-xs"
+                >
+                  {t('common.cancel')}
+                </button>
+                <button type="submit" disabled={submitting} className="btn-primary text-xs">
+                  {submitting ? t('common.loading') : t('common.save')}
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       )}
 
-      {/* Categories Table / List */}
-      <div className="card overflow-hidden">
-        <div className="divide-y divide-brand-cream-200">
-          {categories.map((cat) => {
-            const itemCount = products.filter((p) => p.category_id === cat.id).length;
-
-            return (
-              <div
-                key={cat.id}
-                className="p-4 sm:p-5 flex items-center justify-between gap-4 hover:bg-brand-cream-50 transition-colors"
-              >
-                <div className="flex items-center gap-3 min-w-0">
-                  <span className="w-7 h-7 rounded-full bg-brand-cream-200 text-brand-espresso flex items-center justify-center text-xs font-bold shrink-0">
-                    {cat.display_order}
-                  </span>
-                  <div>
-                    <h3 className="font-semibold text-brand-espresso text-sm md:text-base flex items-center gap-2">
-                      <span>{localized(cat, 'name', language)}</span>
-                      <span className="text-xs text-brand-olive-400 font-normal">
-                        ({itemCount} {language === 'ar' ? 'منتجات' : 'items'})
-                      </span>
-                    </h3>
-                    <p className="text-xs text-brand-olive-400">
-                      {cat.name_en} / {cat.name_ar}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2 shrink-0">
-                  <button
-                    onClick={() => void toggleVisibility(cat)}
-                    className="p-2 rounded-brand hover:bg-brand-cream-200 text-brand-olive-500 transition-colors"
-                    title={cat.is_visible ? t('common.visible') : t('common.hidden')}
-                  >
-                    {cat.is_visible ? (
-                      <Eye size={18} className="text-brand-olive" />
-                    ) : (
-                      <EyeOff size={18} className="text-brand-olive-300" />
-                    )}
-                  </button>
-                  <button
-                    onClick={() => startEdit(cat)}
-                    className="p-2 rounded-brand hover:bg-brand-cream-200 text-brand-olive-600 transition-colors"
-                    title={t('common.edit')}
-                  >
-                    <Edit2 size={18} />
-                  </button>
-                  <button
-                    onClick={() => setDeletingCategory(cat)}
-                    className="p-2 rounded-brand hover:bg-red-50 text-red-500 transition-colors"
-                    title={t('common.delete')}
-                  >
-                    <Trash2 size={18} />
-                  </button>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Safe Delete Confirmation Dialog */}
+      {/* Delete Confirmation Dialog */}
       <ConfirmDialog
-        open={Boolean(deletingCategory)}
-        onClose={() => setDeletingCategory(null)}
-        onConfirm={() => void handleDelete()}
-        title={t('admin.deleteCategory')}
-        message={t('admin.deleteCategoryConfirm')}
+        isOpen={Boolean(deletingCategory)}
+        title={t('admin.deleteConfirmTitle')}
+        description={t('admin.deleteConfirmDesc')}
         confirmLabel={t('common.delete')}
         cancelLabel={t('common.cancel')}
-        variant="danger"
-        loading={submitting}
+        isDanger
+        onConfirm={() => void handleDelete()}
+        onCancel={() => setDeletingCategory(null)}
       />
     </div>
   );

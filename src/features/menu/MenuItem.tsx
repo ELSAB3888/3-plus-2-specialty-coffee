@@ -2,10 +2,23 @@ import { ChevronDown, Sparkles, Coffee } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '@/hooks/useLanguage';
 import { localized, formatPrice, cn } from '@/lib/utils';
-import type { ProductWithSizes } from '@/types';
+import type { Product, ProductSize } from '@/types';
+
+const BASE = import.meta.env.BASE_URL; // e.g. '/' or '/repo-name/'
+
+/** Prefix a local asset path with Vite's base so it resolves on GitHub Pages */
+function assetUrl(src: string | null | undefined): string | null {
+  if (!src) return null;
+  // Already absolute URL (http/https) — leave as is
+  if (src.startsWith('http://') || src.startsWith('https://')) return src;
+  // Already prefixed — leave as is
+  if (src.startsWith(BASE)) return src;
+  // Strip leading slash then prepend BASE
+  return BASE + src.replace(/^\//, '');
+}
 
 interface MenuItemProps {
-  product: ProductWithSizes;
+  product: Product;
   isExpanded: boolean;
   onToggleExpand: () => void;
 }
@@ -17,12 +30,17 @@ export function MenuItem({ product, isExpanded, onToggleExpand }: MenuItemProps)
   const name = localized(product, 'name', language);
   const description = localized(product, 'description', language);
 
-  const sizes = product.product_sizes || [];
+  const sizes: ProductSize[] = product.sizes || product.product_sizes || [];
   const hasMultipleSizes = sizes.length > 1;
 
   // Compute display price
-  const minPrice = sizes.length > 0 ? Math.min(...sizes.map((s) => s.price)) : 0;
+  const availableSizes = sizes.filter((s) => s.is_available);
+  const pricingSizes = availableSizes.length > 0 ? availableSizes : sizes;
+  const minPrice = pricingSizes.length > 0 ? Math.min(...pricingSizes.map((s) => s.price)) : 0;
   const singlePrice = sizes[0]?.price ?? 0;
+
+  // Image path: prefer local image path, fallback to image_url
+  const imageSrc = assetUrl(product.image || product.image_url);
 
   return (
     <div
@@ -90,13 +108,17 @@ export function MenuItem({ product, isExpanded, onToggleExpand }: MenuItemProps)
         <div className="mt-4 pt-4 border-t border-brand-cream-300 animate-fade-in-up">
           <div className="flex flex-col sm:flex-row gap-4">
             {/* Product Image */}
-            {product.image_url ? (
-              <div className="sm:w-36 h-36 shrink-0 rounded-brand overflow-hidden shadow-brand-sm">
+            {imageSrc ? (
+              <div className="sm:w-36 h-36 shrink-0 rounded-brand overflow-hidden shadow-brand-sm bg-brand-cream-100">
                 <img
-                  src={product.image_url}
+                  src={imageSrc}
                   alt={name}
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  onError={(e) => {
+                    // Fallback if image fails to load
+                    (e.target as HTMLElement).style.display = 'none';
+                  }}
                 />
               </div>
             ) : (
@@ -120,7 +142,7 @@ export function MenuItem({ product, isExpanded, onToggleExpand }: MenuItemProps)
                     {hasMultipleSizes ? t('menu.sizes') : t('menu.singleSize')}
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {sizes.map((size) => (
+                    {sizes.map((size: ProductSize) => (
                       <div
                         key={size.id}
                         className="flex items-center justify-between px-3 py-2 rounded-lg bg-brand-cream-100/70 border border-brand-cream-300 text-xs"

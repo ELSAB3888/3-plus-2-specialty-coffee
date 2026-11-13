@@ -10,14 +10,13 @@ import {
   Languages,
   ChevronLeft,
   Menu,
+  ShieldCheck,
 } from 'lucide-react';
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useLanguage } from '@/hooks/useLanguage';
 import { cn } from '@/lib/utils';
 import { LoadingScreen } from '@/components/ui/Spinner';
-import { hasValidSupabaseConfig } from '@/lib/supabase';
-import { AlertTriangle } from 'lucide-react';
 
 export function AdminLayout() {
   const { t } = useTranslation();
@@ -32,7 +31,6 @@ export function AdminLayout() {
   }
 
   if (!isAuthenticated) {
-    // Will be redirected by router guard
     return null;
   }
 
@@ -80,8 +78,8 @@ export function AdminLayout() {
             <Coffee size={16} className="text-brand-cream" />
           </div>
           <div>
-            <span className="font-serif font-bold text-sm text-brand-espresso">3+2</span>
-            <p className="text-[9px] text-brand-olive-400 uppercase tracking-widest">Admin</p>
+            <span className="font-serif font-bold text-sm text-brand-espresso">3+2 Specialty Coffee</span>
+            <p className="text-[9px] text-brand-olive-500 uppercase tracking-widest">Local Admin Station</p>
           </div>
         </div>
 
@@ -146,17 +144,17 @@ export function AdminLayout() {
           </span>
         </header>
 
-        {/* Mock Mode Warning Banner */}
-        {!hasValidSupabaseConfig && (
-          <div className="bg-amber-500/15 border-b border-amber-500/30 px-4 py-2.5 text-xs text-amber-900 flex items-center gap-2">
-            <AlertTriangle size={16} className="text-amber-700 shrink-0" />
-            <span>
+        {/* Local Station Status Bar */}
+        <div className="bg-brand-olive-50 border-b border-brand-olive-200/60 px-4 py-2 text-xs text-brand-olive-700 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <ShieldCheck size={15} className="text-brand-olive-600 shrink-0" />
+            <span className="font-medium">
               {isRTL
-                ? '⚠️ تنبيه: التطبيق يعمل في وضع المحاكاة التجريبي (Demo Mode). التعديلات تُحفظ محلياً في متصفحك فقط. لربط الموقع بقاعدة بيانات حقيقية، يرجى إعداد بيانات Supabase في ملف .env.'
-                : '⚠️ Notice: App is currently running in Demo Mock Mode. Admin changes only persist locally in your browser. Connect Supabase in .env to enable real database persistence.'}
+                ? 'محطة إدارة محلية مؤمنة (127.0.0.1:3001) — الحفظ ذري محلياً والنشر عبر GitHub'
+                : 'Secure Local Workstation (127.0.0.1:3001) — Atomic local writes, Git-based deployment'}
             </span>
           </div>
-        )}
+        </div>
 
         <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-auto">
           <Outlet />

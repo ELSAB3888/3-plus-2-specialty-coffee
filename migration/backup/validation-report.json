@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-11-03T15:54:38.197Z",
+  "counts": {
+    "categories": {
+      "expected": 4,
+      "migrated": 15,
+      "match": false
+    },
+    "products": {
+      "expected": 10,
+      "migrated": 115,
+      "match": false
+    },
+    "extras": {
+      "expected": 5,
+      "migrated": 11,
+      "match": false
+    },
+    "product_sizes": {
+      "expected": "n/a",
+      "migrated": 135,
+      "match": true
+    }
+  },
+  "products_without_sizes": [],
+  "products_without_category": [],
+  "duplicate_product_ids": [],
+  "duplicate_category_ids": [],
+  "products_with_local_images": 112,
+  "products_with_external_images": 0,
+  "products_without_images": 3,
+  "categories_with_local_images": 0,
+  "image_download_ok": 223,
+  "image_download_failed": 2,
+  "all_counts_match": false
+}

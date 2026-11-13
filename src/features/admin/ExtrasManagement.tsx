@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Plus, Edit2, Trash2, Eye, EyeOff, X, Sparkles } from 'lucide-react';
+import { Plus, Edit2, Trash2, Eye, EyeOff, X } from 'lucide-react';
 import { useExtras } from '@/hooks/useData';
 import { useLanguage } from '@/hooks/useLanguage';
-import { supabase } from '@/lib/supabase';
-import { localized, formatPrice } from '@/lib/utils';
+import { createExtra, updateExtra, deleteExtra } from '@/lib/adminApi';
+import { formatPrice, localized } from '@/lib/utils';
 import { toast } from '@/components/ui/Toast';
 import { ConfirmDialog } from '@/components/ui/ConfirmDialog';
 import { LoadingScreen } from '@/components/ui/Spinner';
@@ -20,10 +20,10 @@ export function ExtrasManagement() {
   const [deletingExtra, setDeletingExtra] = useState<Extra | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
-  // Form
+  // Form fields
   const [nameEn, setNameEn] = useState('');
   const [nameAr, setNameAr] = useState('');
-  const [price, setPrice] = useState<number>(4);
+  const [price, setPrice] = useState<number>(10);
   const [displayOrder, setDisplayOrder] = useState(1);
   const [isAvailable, setIsAvailable] = useState(true);
 
@@ -31,20 +31,20 @@ export function ExtrasManagement() {
     setEditingExtra(null);
     setNameEn('');
     setNameAr('');
-    setPrice(4);
+    setPrice(10);
     setDisplayOrder(extras.length + 1);
     setIsAvailable(true);
     setIsCreating(true);
   };
 
-  const startEdit = (e: Extra) => {
+  const startEdit = (extra: Extra) => {
     setIsCreating(false);
-    setEditingExtra(e);
-    setNameEn(e.name_en);
-    setNameAr(e.name_ar);
-    setPrice(e.price);
-    setDisplayOrder(e.display_order);
-    setIsAvailable(e.is_available);
+    setEditingExtra(extra);
+    setNameEn(extra.name_en);
+    setNameAr(extra.name_ar);
+    setPrice(extra.price);
+    setDisplayOrder(extra.display_order);
+    setIsAvailable(extra.is_available);
   };
 
   const handleSave = async (e: React.FormEvent) => {
@@ -55,7 +55,7 @@ export function ExtrasManagement() {
     }
 
     setSubmitting(true);
-    const payload = {
+    const extraData = {
       name_en: nameEn.trim(),
       name_ar: nameAr.trim(),
       price: Number(price),
@@ -65,17 +65,10 @@ export function ExtrasManagement() {
 
     try {
       if (editingExtra) {
-        const { error } = await supabase
-          .from('extras')
-          .update(payload)
-          .eq('id', editingExtra.id);
-        if (error) throw error;
+        await updateExtra(editingExtra.id, extraData);
         toast('success', t('admin.saveSuccess'));
       } else {
-        const { error } = await supabase
-          .from('extras')
-          .insert(payload);
-        if (error) throw error;
+        await createExtra(extraData);
         toast('success', t('admin.saveSuccess'));
       }
 
@@ -91,13 +84,10 @@ export function ExtrasManagement() {
 
   const handleDelete = async () => {
     if (!deletingExtra) return;
+
     setSubmitting(true);
     try {
-      const { error } = await supabase
-        .from('extras')
-        .delete()
-        .eq('id', deletingExtra.id);
-      if (error) throw error;
+      await deleteExtra(deletingExtra.id);
       toast('success', t('admin.deleteSuccess'));
       setDeletingExtra(null);
       void refetch();
@@ -108,13 +98,9 @@ export function ExtrasManagement() {
     }
   };
 
-  const toggleAvailability = async (e: Extra) => {
+  const toggleAvailability = async (extra: Extra) => {
     try {
-      const { error } = await supabase
-        .from('extras')
-        .update({ is_available: !e.is_available })
-        .eq('id', e.id);
-      if (error) throw error;
+      await updateExtra(extra.id, { is_available: !extra.is_available });
       void refetch();
       toast('success', t('admin.saveSuccess'));
     } catch (err: any) {
@@ -127,46 +113,101 @@ export function ExtrasManagement() {
   }
 
   return (
-    <div className="space-y-6 animate-fade-in">
-      <div className="flex items-center justify-between">
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="font-serif text-2xl font-bold text-brand-espresso">
             {t('admin.extras')}
           </h1>
           <p className="text-xs text-brand-olive-500 mt-1">
-            {language === 'ar'
-              ? 'إدارة خيارات الإضافات الحرفية وبدائل الحليب المعروضة بنهاية القائمة'
-              : 'Manage signature add-ons, alternative milks, and syrup enhancements'}
+            {language === 'ar' ? 'إدارة الإضافات وخيارات التخصيص المستقلة' : 'Manage independent add-ons and drink customizations'}
           </p>
         </div>
-        <button onClick={startCreate} className="btn-primary text-xs">
-          <Plus size={16} />
-          <span>{t('admin.addExtra')}</span>
-        </button>
+        {!isCreating && !editingExtra && (
+          <button onClick={startCreate} className="btn-primary text-xs self-start">
+            <Plus size={16} />
+            <span>{t('admin.addExtra')}</span>
+          </button>
+        )}
       </div>
 
-      {/* Editor Modal */}
-      {(isCreating || editingExtra) && (
-        <div className="card p-6 border-brand-olive/30 shadow-brand-md bg-white">
-          <div className="flex items-center justify-between mb-4 border-b border-brand-cream-300 pb-3">
-            <h2 className="font-serif font-bold text-lg text-brand-espresso">
-              {isCreating ? t('admin.addExtra') : t('admin.editExtra')}
-            </h2>
-            <button
-              onClick={() => {
-                setIsCreating(false);
-                setEditingExtra(null);
-              }}
-              className="p-1 rounded-full hover:bg-brand-cream-200"
-            >
-              <X size={18} />
-            </button>
-          </div>
+      {/* Extras List */}
+      <div className="card divide-y divide-brand-cream-200">
+        {extras.map((extra) => (
+          <div
+            key={extra.id}
+            className="p-4 flex items-center justify-between gap-4 hover:bg-brand-cream-50 transition-colors"
+          >
+            <div className="flex items-center gap-3 min-w-0">
+              <span className="w-6 h-6 rounded-full bg-brand-cream-200 text-brand-olive-600 text-xs font-semibold flex items-center justify-center shrink-0">
+                {extra.display_order}
+              </span>
+              <div className="min-w-0">
+                <h3 className="font-medium text-sm text-brand-espresso truncate">
+                  {localized(extra, 'name', language)}
+                </h3>
+                <p className="text-xs text-brand-olive-400 truncate">
+                  {language === 'ar' ? extra.name_en : extra.name_ar}
+                </p>
+              </div>
+            </div>
 
-          <form onSubmit={handleSave} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex items-center gap-3 shrink-0">
+              <span className="font-serif font-bold text-sm text-brand-olive">
+                +{formatPrice(extra.price, language)}
+              </span>
+
+              <div className="flex items-center gap-1">
+                <button
+                  onClick={() => void toggleAvailability(extra)}
+                  className="p-2 rounded-brand text-brand-olive-400 hover:text-brand-olive hover:bg-brand-cream-200 transition-colors"
+                  title={extra.is_available ? t('admin.available') : t('admin.unavailable')}
+                >
+                  {extra.is_available ? <Eye size={16} /> : <EyeOff size={16} className="text-brand-olive-300" />}
+                </button>
+                <button
+                  onClick={() => startEdit(extra)}
+                  className="p-2 rounded-brand text-brand-olive-400 hover:text-brand-olive hover:bg-brand-cream-200 transition-colors"
+                  title={t('common.edit')}
+                >
+                  <Edit2 size={16} />
+                </button>
+                <button
+                  onClick={() => setDeletingExtra(extra)}
+                  className="p-2 rounded-brand text-red-400 hover:text-red-600 hover:bg-red-50 transition-colors"
+                  title={t('common.delete')}
+                >
+                  <Trash2 size={16} />
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Form Modal */}
+      {(isCreating || editingExtra) && (
+        <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-brand max-w-md w-full p-6 shadow-brand-lg border border-brand-cream-300 animate-scale-in">
+            <div className="flex items-center justify-between mb-4 pb-3 border-b border-brand-cream-200">
+              <h2 className="font-serif text-lg font-bold text-brand-espresso">
+                {editingExtra ? t('admin.editExtra') : t('admin.addExtra')}
+              </h2>
+              <button
+                onClick={() => {
+                  setIsCreating(false);
+                  setEditingExtra(null);
+                }}
+                className="text-brand-olive-400 hover:text-brand-olive p-1 rounded-brand"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            <form onSubmit={handleSave} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold mb-1">
+                <label className="block text-xs font-semibold text-brand-espresso mb-1">
                   {t('admin.nameEn')} *
                 </label>
                 <input
@@ -174,13 +215,13 @@ export function ExtrasManagement() {
                   required
                   value={nameEn}
                   onChange={(e) => setNameEn(e.target.value)}
-                  placeholder="e.g. Organic Oat Milk"
                   className="input-field"
+                  placeholder="e.g. Vanilla Syrup"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold mb-1">
+                <label className="block text-xs font-semibold text-brand-espresso mb-1">
                   {t('admin.nameAr')} *
                 </label>
                 <input
@@ -188,139 +229,84 @@ export function ExtrasManagement() {
                   required
                   value={nameAr}
                   onChange={(e) => setNameAr(e.target.value)}
-                  placeholder="مثال: حليب شوفان عضوي"
                   className="input-field"
+                  placeholder="مثال: سيروب فانيليا"
                   dir="rtl"
                 />
               </div>
-            </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center">
-              <div>
-                <label className="block text-xs font-semibold mb-1">
-                  {t('admin.price')} *
-                </label>
-                <input
-                  type="number"
-                  step="0.5"
-                  min="0"
-                  required
-                  value={price}
-                  onChange={(e) => setPrice(parseFloat(e.target.value) || 0)}
-                  className="input-field"
-                />
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-semibold text-brand-espresso mb-1">
+                    {t('admin.price')} (ج.م) *
+                  </label>
+                  <input
+                    type="number"
+                    step="0.5"
+                    min="0"
+                    required
+                    value={price}
+                    onChange={(e) => setPrice(parseFloat(e.target.value) || 0)}
+                    className="input-field"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-brand-espresso mb-1">
+                    {t('admin.order')}
+                  </label>
+                  <input
+                    type="number"
+                    min={1}
+                    value={displayOrder}
+                    onChange={(e) => setDisplayOrder(parseInt(e.target.value) || 1)}
+                    className="input-field"
+                  />
+                </div>
               </div>
 
-              <div>
-                <label className="block text-xs font-semibold mb-1">
-                  {t('admin.displayOrder')}
-                </label>
-                <input
-                  type="number"
-                  min="1"
-                  value={displayOrder}
-                  onChange={(e) => setDisplayOrder(parseInt(e.target.value) || 1)}
-                  className="input-field"
-                />
-              </div>
-
-              <div className="pt-5 flex items-center gap-2">
+              <div className="flex items-center gap-2 pt-2">
                 <input
                   type="checkbox"
-                  id="extra_available"
+                  id="extraAvailable"
                   checked={isAvailable}
                   onChange={(e) => setIsAvailable(e.target.checked)}
-                  className="w-4 h-4 rounded text-brand-olive"
+                  className="rounded border-brand-cream-300 text-brand-olive focus:ring-brand-gold"
                 />
-                <label htmlFor="extra_available" className="text-xs font-semibold text-brand-espresso cursor-pointer">
-                  {t('common.available')}
+                <label htmlFor="extraAvailable" className="text-xs font-medium text-brand-espresso cursor-pointer">
+                  {t('admin.available')}
                 </label>
               </div>
-            </div>
 
-            <div className="flex justify-end gap-3 pt-3 border-t border-brand-cream-300">
-              <button
-                type="button"
-                onClick={() => {
-                  setIsCreating(false);
-                  setEditingExtra(null);
-                }}
-                className="btn-ghost"
-              >
-                {t('common.cancel')}
-              </button>
-              <button type="submit" disabled={submitting} className="btn-primary">
-                {submitting ? t('common.loading') : t('common.save')}
-              </button>
-            </div>
-          </form>
+              <div className="flex items-center justify-end gap-2 pt-4 border-t border-brand-cream-200">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsCreating(false);
+                    setEditingExtra(null);
+                  }}
+                  className="btn-secondary text-xs"
+                >
+                  {t('common.cancel')}
+                </button>
+                <button type="submit" disabled={submitting} className="btn-primary text-xs">
+                  {submitting ? t('common.loading') : t('common.save')}
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       )}
 
-      {/* Extras list */}
-      <div className="card overflow-hidden">
-        <div className="divide-y divide-brand-cream-200">
-          {extras.map((extra) => (
-            <div
-              key={extra.id}
-              className="p-4 sm:p-5 flex items-center justify-between gap-4 hover:bg-brand-cream-50 transition-colors"
-            >
-              <div className="flex items-center gap-3 min-w-0">
-                <div className="w-8 h-8 rounded-full bg-brand-gold/15 text-brand-gold flex items-center justify-center shrink-0">
-                  <Sparkles size={16} />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-brand-espresso text-sm md:text-base">
-                    {localized(extra, 'name', language)}
-                  </h3>
-                  <p className="text-xs text-brand-olive-600 font-serif font-bold">
-                    +{formatPrice(extra.price, language)}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2 shrink-0">
-                <button
-                  onClick={() => void toggleAvailability(extra)}
-                  className="p-2 rounded-brand hover:bg-brand-cream-200 text-brand-olive-500 transition-colors"
-                  title={extra.is_available ? t('common.available') : t('common.unavailable')}
-                >
-                  {extra.is_available ? (
-                    <Eye size={18} className="text-brand-olive" />
-                  ) : (
-                    <EyeOff size={18} className="text-brand-olive-300" />
-                  )}
-                </button>
-                <button
-                  onClick={() => startEdit(extra)}
-                  className="p-2 rounded-brand hover:bg-brand-cream-200 text-brand-olive-600 transition-colors"
-                  title={t('common.edit')}
-                >
-                  <Edit2 size={18} />
-                </button>
-                <button
-                  onClick={() => setDeletingExtra(extra)}
-                  className="p-2 rounded-brand hover:bg-red-50 text-red-500 transition-colors"
-                  title={t('common.delete')}
-                >
-                  <Trash2 size={18} />
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
+      {/* Delete Confirmation Dialog */}
       <ConfirmDialog
-        open={Boolean(deletingExtra)}
-        onClose={() => setDeletingExtra(null)}
-        onConfirm={() => void handleDelete()}
-        title={t('admin.deleteExtra')}
-        message={t('admin.deleteExtraConfirm')}
+        isOpen={Boolean(deletingExtra)}
+        title={t('admin.deleteConfirmTitle')}
+        description={t('admin.deleteConfirmDesc')}
         confirmLabel={t('common.delete')}
         cancelLabel={t('common.cancel')}
-        variant="danger"
-        loading={submitting}
+        isDanger
+        onConfirm={() => void handleDelete()}
+        onCancel={() => setDeletingExtra(null)}
       />
     </div>
   );
