@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Languages, Coffee, Menu, X } from 'lucide-react';
+import { Languages, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { cn } from '@/lib/utils';
@@ -22,22 +22,17 @@ export function PublicHeader() {
     <header className="sticky top-0 z-40 glass-panel border-b border-brand-cream-300/60">
       <div className="page-container">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Official Brand Logo */}
           <Link
             to="/"
-            className="flex items-center gap-2.5 group"
+            className="flex items-center group py-1"
+            aria-label="3+2 Specialty Coffee"
           >
-            <div className="w-9 h-9 rounded-full bg-brand-olive flex items-center justify-center group-hover:scale-105 transition-transform">
-              <Coffee size={18} className="text-brand-cream" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-base font-serif font-bold text-brand-espresso leading-tight tracking-tight">
-                3+2
-              </span>
-              <span className="text-[10px] font-medium text-brand-olive-500 uppercase tracking-widest leading-none">
-                Specialty Coffee
-              </span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo.png`}
+              alt="3+2 Specialty Coffee"
+              className="h-10 sm:h-11 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
+            />
           </Link>
 
           {/* Desktop Nav */}
