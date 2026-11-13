@@ -16,8 +16,9 @@ const DIST_DIR = path.resolve(__dirname, '../../../dist');
  */
 export function serveAdminUI(app) {
   if (fs.existsSync(DIST_DIR)) {
-    // Production: serve built files from dist/
+    // Production: serve built files from dist/ (both root and subpath)
     app.use(express.static(DIST_DIR));
+    app.use('/3-plus-2-specialty-coffee', express.static(DIST_DIR));
 
     // SPA fallback: any GET that doesn't match a static file or /api/* returns index.html
     app.get('*', (req, res, next) => {

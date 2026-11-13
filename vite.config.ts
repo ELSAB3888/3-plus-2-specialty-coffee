@@ -1,17 +1,32 @@
-import { defineConfig } from 'vite';
+import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import fs from 'fs';
 
 // When deployed to GitHub Pages, assets must be served from the repo sub-path.
-// With hash routing (createHashRouter) the HTML is always index.html so base='/' works,
-// but explicit repo-name base lets GitHub Pages serve CSS/JS correctly.
 const base = process.env.GITHUB_REPOSITORY
   ? '/' + process.env.GITHUB_REPOSITORY.split('/')[1] + '/'
-  : '/';
+  : '/3-plus-2-specialty-coffee/';
+
+/** Vite plugin to duplicate index.html as 404.html for GitHub Pages SPA routing */
+function copy404Plugin(): Plugin {
+  return {
+    name: 'copy-404-html',
+    closeBundle() {
+      const distDir = path.resolve(__dirname, 'dist');
+      const indexHtml = path.join(distDir, 'index.html');
+      const notFoundHtml = path.join(distDir, '404.html');
+      if (fs.existsSync(indexHtml)) {
+        fs.copyFileSync(indexHtml, notFoundHtml);
+        console.log('✓ Created dist/404.html from dist/index.html');
+      }
+    },
+  };
+}
 
 export default defineConfig({
   base,
-  plugins: [react()],
+  plugins: [react(), copy404Plugin()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

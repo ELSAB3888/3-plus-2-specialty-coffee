@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "postbuild": "node --input-type=module -e \"import fs from 'node:fs'; if (fs.existsSync('dist/index.html')) { fs.copyFileSync('dist/index.html', 'dist/404.html'); console.log('✓ Created dist/404.html from dist/index.html'); }\"",
     "preview": "vite preview",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
