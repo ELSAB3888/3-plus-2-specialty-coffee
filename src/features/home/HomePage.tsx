@@ -29,7 +29,7 @@ export function HomePage() {
       {/* ═══════════════════════════════════════════════════════════════
           HERO — Compact & Balanced
       ════════════════════════════════════════════════════════════════*/}
-      <section className="relative min-h-[60vh] sm:min-h-[65vh] flex flex-col justify-center overflow-hidden bg-gradient-to-br from-brand-espresso via-[#2C3A1E] to-brand-olive-800 py-16 sm:py-20">
+      <section className="relative min-h-[60vh] sm:min-h-[65vh] flex flex-col justify-center overflow-hidden bg-gradient-to-br from-brand-espresso via-[#1B352E] to-brand-olive-800 py-16 sm:py-20">
         {/* Grain texture */}
         <div
           className="absolute inset-0 opacity-40 pointer-events-none"
@@ -61,7 +61,7 @@ export function HomePage() {
           {/* Tagline */}
           <p className="text-sm sm:text-base md:text-lg text-brand-cream-300 max-w-lg mx-auto mb-6 leading-relaxed animate-fade-in-up font-light">
             {language === 'ar'
-              ? '٣ أخوات، أخوان — كوب واحد متقن'
+              ? '٣ أخوات، 2أخوه — كوب واحد متقن'
               : '3 Sisters, 2 Brothers — One Perfect Cup'}
           </p>
 
