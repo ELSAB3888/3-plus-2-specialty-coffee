@@ -27,7 +27,9 @@ export function Footer() {
           {/* Social */}
           <div className="flex items-center gap-4">
             <a
-              href="#"
+              href="https://www.instagram.com/threeplustwo.hur?xtok=MWZnbWl2bTg2YnphZw=="
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 rounded-full bg-brand-cream/10 hover:bg-brand-cream/20 transition-colors"
               aria-label="Instagram"
             >
