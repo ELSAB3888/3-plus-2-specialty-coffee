@@ -41,12 +41,18 @@ export function AdminLoginPage() {
     }
 
     try {
-      // Validate token with local backend
-      const res = await fetch('http://127.0.0.1:3001/api/git/status', {
+      // Validate token with local backend (uses Vite proxy / same-origin or direct localhost fallback)
+      const res = await fetch('/api/git/status', {
         headers: {
           'X-Admin-Token': token,
         },
-      });
+      }).catch(() =>
+        fetch('http://127.0.0.1:3001/api/git/status', {
+          headers: {
+            'X-Admin-Token': token,
+          },
+        })
+      );
 
       if (!res.ok) {
         if (res.status === 401) {

@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import fs from 'fs';
 
 // Routes
 import categoriesRouter from './routes/categories.js';
@@ -25,6 +26,7 @@ const allowedOrigins = [
   'http://localhost:5173',
   'http://127.0.0.1:5173',
   'http://127.0.0.1:3001',
+  'http://localhost:3001',
 ];
 
 app.use(
@@ -47,7 +49,11 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // ── Static files (built admin dashboard) ─────────────────────────────────────
 const distDir = path.resolve(__dirname, '../../dist');
+const indexHtml = path.join(distDir, 'index.html');
+
+// Serve static assets from dist for both root and /3-plus-2-specialty-coffee subpath
 app.use(express.static(distDir));
+app.use('/3-plus-2-specialty-coffee', express.static(distDir));
 
 // ── Routes ────────────────────────────────────────────────────────────────────
 app.use('/api', healthRouter);
@@ -58,9 +64,16 @@ app.use('/api/images', imagesRouter);
 app.use('/api/backups', backupRouter);
 app.use('/api/git', gitRouter);
 
-// ── SPA fallback (hash routing — serves index.html for any non-API GET) ──────
-import fs from 'fs';
-const indexHtml = path.join(distDir, 'index.html');
+// ── Asset 404 guard ───────────────────────────────────────────────────────────
+// Never return index.html for missing static assets (prevents JS MIME type errors)
+app.use((req, res, next) => {
+  if (/\.(js|mjs|css|png|jpg|jpeg|svg|ico|json|woff2?|ttf|map)$/i.test(req.path)) {
+    return res.status(404).type('text/plain').send('Asset not found');
+  }
+  next();
+});
+
+// ── SPA fallback (serves index.html for any client-side route) ───────────────
 app.get('*', (req, res, next) => {
   if (req.path.startsWith('/api/')) return next();
   if (fs.existsSync(indexHtml)) {
@@ -84,13 +97,20 @@ app.use((err, req, res, _next) => {
 });
 
 // ── Start ─────────────────────────────────────────────────────────────────────
-app.listen(PORT, HOST, () => {
-  const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] 3+2 Admin Server started`);
-  console.log(`[${timestamp}]   Listening on http://${HOST}:${PORT}`);
-  console.log(`[${timestamp}]   Allowed origins: ${allowedOrigins.join(', ')}`);
-  console.log(`[${timestamp}]   Auth token configured: ${Boolean(process.env.ADMIN_TOKEN)}`);
-  console.log(`[${timestamp}]   Git remote: ${process.env.GIT_REMOTE ? 'configured' : 'not configured'}`);
-});
+const isDirectRun = process.argv[1] && (
+  process.argv[1].endsWith('server.js') ||
+  process.argv[1] === fileURLToPath(import.meta.url)
+);
+
+if (isDirectRun) {
+  app.listen(PORT, HOST, () => {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] 3+2 Admin Server started`);
+    console.log(`[${timestamp}]   Listening on http://${HOST}:${PORT}`);
+    console.log(`[${timestamp}]   Allowed origins: ${allowedOrigins.join(', ')}`);
+    console.log(`[${timestamp}]   Auth token configured: ${Boolean(process.env.ADMIN_TOKEN)}`);
+    console.log(`[${timestamp}]   Git remote: ${process.env.GIT_REMOTE ? 'configured' : 'not configured'}`);
+  });
+}
 
 export default app;

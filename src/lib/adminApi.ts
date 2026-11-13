@@ -23,7 +23,12 @@ import type {
 } from '@/types';
 import { isLocalAdminEnvironment } from '@/hooks/useAuth';
 
-const BASE_URL = 'http://127.0.0.1:3001/api';
+// In local browser environment, prefer relative /api (handled by Vite proxy on 5173 or directly on 3001)
+const BASE_URL =
+  typeof window !== 'undefined' &&
+  (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? '/api'
+    : 'http://127.0.0.1:3001/api';
 const TOKEN_KEY = '3plus2_admin_session_token';
 
 function getAdminToken(): string | null {

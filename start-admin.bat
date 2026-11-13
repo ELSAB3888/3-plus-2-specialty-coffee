@@ -48,12 +48,12 @@ timeout /t 2 /nobreak >nul
 
 :: Open admin dashboard in Chrome
 echo Opening admin dashboard in browser...
-start chrome "http://127.0.0.1:3001/#/admin" 2>nul || start msedge "http://127.0.0.1:3001/#/admin" 2>nul || start "http://127.0.0.1:3001/#/admin"
+start chrome "http://127.0.0.1:3001/admin/login" 2>nul || start msedge "http://127.0.0.1:3001/admin/login" 2>nul || start "http://127.0.0.1:3001/admin/login"
 
 echo.
 echo  Admin system is running!
-echo  Admin URL: http://127.0.0.1:3001/#/admin
-echo  Customer website: https://[your-username].github.io/3-plus-2-specialty-coffee/
+echo  Admin URL: http://127.0.0.1:3001/admin/login
+echo  Customer website: https://elsab3888.github.io/3-plus-2-specialty-coffee/
 echo.
 echo  Close the "3+2 Admin Backend" window to stop the server.
 echo.
