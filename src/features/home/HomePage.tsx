@@ -19,70 +19,6 @@ function assetUrl(src: string | null | undefined): string | null {
 // ─── Animated grain texture (SVG base64 inline) ───────────────────────────────
 const GRAIN_SVG = `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E")`;
 
-// ─── Decorative coffee-cup SVG ─────────────────────────────────────────────────
-function CoffeeCupSVG({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 120 120"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-hidden="true"
-    >
-      {/* Steam wisps */}
-      <path
-        d="M42 28 Q44 20 42 12"
-        stroke="#C5A572"
-        strokeWidth="2"
-        strokeLinecap="round"
-        opacity="0.6"
-      />
-      <path
-        d="M54 24 Q56 14 54 4"
-        stroke="#C5A572"
-        strokeWidth="2"
-        strokeLinecap="round"
-        opacity="0.8"
-      />
-      <path
-        d="M66 28 Q68 20 66 12"
-        stroke="#C5A572"
-        strokeWidth="2"
-        strokeLinecap="round"
-        opacity="0.6"
-      />
-      {/* Cup body */}
-      <path
-        d="M28 40 L32 96 Q32 102 40 102 L80 102 Q88 102 88 96 L92 40 Z"
-        fill="#3C2A1E"
-        opacity="0.9"
-      />
-      {/* Cup rim */}
-      <rect x="24" y="36" width="72" height="8" rx="4" fill="#4A5D3A" opacity="0.9" />
-      {/* Handle */}
-      <path
-        d="M88 52 Q106 52 106 68 Q106 84 88 84"
-        stroke="#4A5D3A"
-        strokeWidth="6"
-        strokeLinecap="round"
-        fill="none"
-        opacity="0.9"
-      />
-      {/* Coffee surface */}
-      <ellipse cx="60" cy="44" rx="32" ry="4" fill="#C5A572" opacity="0.5" />
-      {/* Latte art swirl */}
-      <path
-        d="M44 44 Q54 40 60 44 Q66 48 76 44"
-        stroke="#F5F0E8"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        opacity="0.4"
-      />
-      {/* Saucer */}
-      <ellipse cx="60" cy="104" rx="38" ry="5" fill="#4A5D3A" opacity="0.4" />
-    </svg>
-  );
-}
 
 // ─── Animated scroll fade-in hook ─────────────────────────────────────────────
 function useFadeInOnScroll<T extends HTMLElement>() {
@@ -174,8 +110,6 @@ export function HomePage() {
             {language === 'ar' ? 'قهوة مختصة' : 'Specialty Coffee'}
           </p>
 
-          {/* Decorative coffee cup illustration */}
-          <CoffeeCupSVG className="w-28 h-28 sm:w-36 sm:h-36 my-6 animate-fade-in-up drop-shadow-2xl" />
 
           {/* Tagline */}
           <p className="text-base sm:text-lg md:text-xl text-brand-cream-300 max-w-lg mx-auto mb-10 leading-relaxed animate-fade-in-up font-light">
