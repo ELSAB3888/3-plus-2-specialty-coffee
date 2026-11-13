@@ -10,7 +10,7 @@
     "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791642758149-25vtmo.png",
     "display_order": 1,
     "is_visible": true,
-    "is_featured": true,
+    "is_featured": false,
     "sizes": [
       {
         "id": "afc81d31-c564-4a85-ad89-8d4770b80736",
@@ -19,12 +19,13 @@
         "price": 80,
         "display_order": 1,
         "is_available": true,
-        "created_at": "2026-10-10T14:32:47.154663+00:00"
+        "created_at": "2026-11-13T16:07:27.152Z"
       }
     ],
     "extra_ids": [],
     "created_at": "2026-10-10T11:43:20.662587+00:00",
-    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+    "updated_at": "2026-11-13T16:07:27.152Z",
+    "image_url": "/images/products/storage-1791642758149-25vtmo.png"
   },
   {
     "id": "20202020-2020-2020-2020-202020202020",
@@ -118,7 +119,7 @@
     "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791642971206-3f81zc.jpeg",
     "display_order": 2,
     "is_visible": true,
-    "is_featured": true,
+    "is_featured": false,
     "sizes": [
       {
         "id": "eddcff12-efab-4e2a-bf58-af5142fbd074",
@@ -127,7 +128,7 @@
         "price": 90,
         "display_order": 1,
         "is_available": true,
-        "created_at": "2026-10-10T14:37:16.090979+00:00"
+        "created_at": "2026-11-13T16:07:33.954Z"
       },
       {
         "id": "78fb83c4-4124-4b2f-b30d-1d2fdf1882d0",
@@ -136,12 +137,13 @@
         "price": 110,
         "display_order": 2,
         "is_available": true,
-        "created_at": "2026-10-10T14:37:16.090979+00:00"
+        "created_at": "2026-11-13T16:07:33.954Z"
       }
     ],
     "extra_ids": [],
     "created_at": "2026-10-10T11:43:20.662587+00:00",
-    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+    "updated_at": "2026-11-13T16:07:33.954Z",
+    "image_url": "/images/products/storage-1791642971206-3f81zc.jpeg"
   },
   {
     "id": "cccccccc-cccc-cccc-cccc-cccccccccccc",
@@ -523,7 +525,7 @@
     "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791645559336-geruvg.jpeg",
     "display_order": 18,
     "is_visible": true,
-    "is_featured": false,
+    "is_featured": true,
     "sizes": [
       {
         "id": "c8fa1224-7c89-461e-a95a-f1543e7fe2e8",
@@ -532,7 +534,7 @@
         "price": 120,
         "display_order": 1,
         "is_available": true,
-        "created_at": "2026-10-10T15:19:24.473294+00:00"
+        "created_at": "2026-11-13T16:06:50.544Z"
       },
       {
         "id": "ac44cf4d-b1f4-4fdd-aeeb-9288ab5503f2",
@@ -541,12 +543,13 @@
         "price": 140,
         "display_order": 2,
         "is_available": true,
-        "created_at": "2026-10-10T15:19:24.473294+00:00"
+        "created_at": "2026-11-13T16:06:50.544Z"
       }
     ],
     "extra_ids": [],
     "created_at": "2026-10-10T15:19:24.017677+00:00",
-    "updated_at": "2026-10-10T15:19:24.017677+00:00"
+    "updated_at": "2026-11-13T16:06:50.544Z",
+    "image_url": "/images/products/storage-1791645559336-geruvg.jpeg"
   },
   {
     "id": "992fdc8b-d37a-4a2a-bbad-6e5f677ba27b",
