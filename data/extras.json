@@ -1,0 +1,112 @@
+[
+  {
+    "id": "070195c4-daeb-4459-9217-21363ef4eddd",
+    "name_en": "1 Scoop Ice Cream",
+    "name_ar": "سكوب آيس كريم",
+    "price": 35,
+    "is_available": true,
+    "display_order": 1,
+    "created_at": "2026-10-10T11:43:20.662587+00:00",
+    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+  },
+  {
+    "id": "a82260cd-470c-4e46-85f6-a2cee26c7b51",
+    "name_en": "Honey",
+    "name_ar": "عسل",
+    "price": 30,
+    "is_available": true,
+    "display_order": 2,
+    "created_at": "2026-10-10T11:43:20.662587+00:00",
+    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+  },
+  {
+    "id": "7f2b8fce-f81d-458c-9e53-bdd9d98fe3eb",
+    "name_en": "1 Small Water",
+    "name_ar": "مياه صغيرة",
+    "price": 20,
+    "is_available": true,
+    "display_order": 3,
+    "created_at": "2026-10-10T11:43:20.662587+00:00",
+    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+  },
+  {
+    "id": "b247edab-8b94-4e07-ab48-b2c0e1fabf8b",
+    "name_en": "Shot Espresso",
+    "name_ar": "شوت إسبريسو",
+    "price": 40,
+    "is_available": true,
+    "display_order": 4,
+    "created_at": "2026-10-10T11:43:20.662587+00:00",
+    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+  },
+  {
+    "id": "6714d257-9c17-4917-a5af-1bb6199dc02f",
+    "name_en": "Nuts",
+    "name_ar": "مكسرات",
+    "price": 50,
+    "is_available": true,
+    "display_order": 5,
+    "created_at": "2026-10-10T11:43:20.662587+00:00",
+    "updated_at": "2026-10-10T11:43:20.662587+00:00"
+  },
+  {
+    "id": "c84d632d-7ee6-400d-ab71-43cec2713c8f",
+    "name_en": "Sauce",
+    "name_ar": "صوص",
+    "price": 50,
+    "is_available": true,
+    "display_order": 6,
+    "created_at": "2026-10-10T16:58:53.064164+00:00",
+    "updated_at": "2026-10-10T16:58:53.064164+00:00"
+  },
+  {
+    "id": "abee1531-afcc-43fc-995a-66334940529f",
+    "name_en": "Whipped Cream",
+    "name_ar": "كريمة مخفوقة",
+    "price": 25,
+    "is_available": true,
+    "display_order": 7,
+    "created_at": "2026-10-10T17:01:19.284199+00:00",
+    "updated_at": "2026-10-10T17:01:19.284199+00:00"
+  },
+  {
+    "id": "06778231-2cff-4bc1-8522-044941c30742",
+    "name_en": "Coconut Milk",
+    "name_ar": "لبن جوز الهند",
+    "price": 45,
+    "is_available": true,
+    "display_order": 8,
+    "created_at": "2026-10-12T11:48:31.460675+00:00",
+    "updated_at": "2026-10-12T11:48:31.460675+00:00"
+  },
+  {
+    "id": "e71527c7-183b-467c-a42a-94bcd4b40632",
+    "name_en": "Almond Milk",
+    "name_ar": "لبن اللوز",
+    "price": 45,
+    "is_available": true,
+    "display_order": 9,
+    "created_at": "2026-10-12T11:48:53.718713+00:00",
+    "updated_at": "2026-10-12T11:48:53.718713+00:00"
+  },
+  {
+    "id": "0f680c9b-2215-4f6c-a02f-1bb4a825c6b7",
+    "name_en": "Oat Milk",
+    "name_ar": "لبن الشوفان",
+    "price": 35,
+    "is_available": true,
+    "display_order": 10,
+    "created_at": "2026-10-12T11:49:43.895163+00:00",
+    "updated_at": "2026-10-12T11:49:43.895163+00:00"
+  },
+  {
+    "id": "9f03c231-e953-4542-ad00-80d202a9f739",
+    "name_en": "Lactose-Free Milk",
+    "name_ar": "لبن خالي من اللاكتوز",
+    "price": 35,
+    "is_available": true,
+    "display_order": 11,
+    "created_at": "2026-10-12T11:51:04.216746+00:00",
+    "updated_at": "2026-10-12T11:51:04.216746+00:00"
+  }
+]
