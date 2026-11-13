@@ -7,6 +7,7 @@
  *  3. Validates Origin/Referer against allowed local origins for CSRF defense.
  *  4. Health check GET /api/health is open for local monitoring.
  */
+import '../env.js';
 
 const ALLOWED_ORIGINS = [
   'http://localhost:5173',
