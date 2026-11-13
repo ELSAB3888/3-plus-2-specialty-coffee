@@ -1706,7 +1706,7 @@
     "image_url_original": "https://saxnhzpfwdhkpkmffbiy.supabase.co/storage/v1/object/public/menu-images/products/1791649658004-q4rjie.jpeg",
     "display_order": 59,
     "is_visible": true,
-    "is_featured": false,
+    "is_featured": true,
     "sizes": [
       {
         "id": "197c17c3-aa4e-40e9-b2f2-6db295bade50",
@@ -1715,12 +1715,13 @@
         "price": 120,
         "display_order": 1,
         "is_available": true,
-        "created_at": "2026-10-10T16:27:46.496569+00:00"
+        "created_at": "2026-11-13T17:00:24.186Z"
       }
     ],
     "extra_ids": [],
     "created_at": "2026-10-10T16:27:46.128768+00:00",
-    "updated_at": "2026-10-10T16:27:46.128768+00:00"
+    "updated_at": "2026-11-13T17:00:24.186Z",
+    "image_url": "/images/products/storage-1791649658004-q4rjie.jpeg"
   },
   {
     "id": "939df3c8-4ed2-44c2-8685-2612e56625d0",
