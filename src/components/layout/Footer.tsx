@@ -51,7 +51,9 @@ export function Footer() {
               <Instagram size={18} />
             </a>
             <a
-              href="#"
+              href="https://www.tiktok.com/@threeplustwo.hur?_r=1&_t=ZS-9BN6qf5ADbA"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 rounded-full bg-brand-cream/10 hover:bg-brand-cream/20 transition-colors"
               aria-label="TikTok"
             >
